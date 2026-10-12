@@ -223,6 +223,33 @@
 .live-banner{gap:14px}
 .live-table-wrap{max-width:100%;overflow-x:auto}
 @media(max-width:650px){.live-banner{flex-wrap:wrap}.live-banner button{width:100%}}
+
+/* MATCHCENTER / detaljer – Night Circuit */
+.sp-match-link{display:block;text-decoration:none;color:var(--text);border:1px solid transparent;transition:border-color .15s,background .15s,transform .15s;cursor:pointer}
+.sp-match-link:hover,.sp-match-link:focus-visible{border-color:var(--cyan);background:var(--surface2);transform:translateY(-1px)}
+.sp-open-report{display:block;text-align:right;margin-top:6px;color:var(--cyan);font:800 10px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.3px}
+.sp-report-hero{padding:26px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(145deg,var(--surface),var(--surface2));margin:16px 0 20px;box-shadow:0 14px 48px #0003}
+.sp-report-score{display:grid;grid-template-columns:minmax(0,1fr)auto minmax(0,1fr);align-items:center;gap:12px;margin:15px 0}
+.sp-report-score strong{font-size:clamp(14px,2vw,23px);line-height:1.25;overflow-wrap:anywhere}
+.sp-report-score strong:last-child{text-align:right}
+.sp-report-score>span{font:800 clamp(18px,3vw,32px) 'Space Grotesk',system-ui,sans-serif;color:var(--lime);white-space:nowrap;text-shadow:0 0 16px #c2ff9c26}
+.sp-report-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:15px;margin:15px 0}
+.sp-event{display:grid;grid-template-columns:55px minmax(0,1fr);gap:10px;padding:12px 0;border-bottom:1px solid var(--border)}
+.sp-event:last-child{border-bottom:0}
+.sp-event-time{font-weight:800;color:var(--cyan);font-variant-numeric:tabular-nums}
+.sp-event-body{min-width:0;overflow-wrap:anywhere}
+.sp-event-body small{display:block;color:var(--muted);line-height:1.45;margin-top:3px}
+.sp-stat-head,.sp-stat-row{display:grid;grid-template-columns:1fr minmax(0,2fr) 1fr;gap:8px;align-items:center;text-align:center;padding:11px 0;border-bottom:1px solid var(--border)}
+.sp-stat-head{grid-template-columns:1fr 1fr;color:var(--muted);font-size:11px}
+.sp-stat-head b:first-child{text-align:left}.sp-stat-head b:last-child{text-align:right}
+.sp-stat-row b{font-size:14px;font-variant-numeric:tabular-nums;color:var(--text)}
+.sp-stat-row span{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.sp-player-card{margin-top:16px}.sp-player-group{margin:14px 0 24px}.sp-player-group h4{margin-bottom:10px;color:var(--cyan)}
+.sp-scroll-table{overflow-x:auto;max-width:100%}.sp-scroll-table .live-table{min-width:650px;width:100%}
+.sp-scroll-table .live-table td:first-child,.sp-scroll-table .live-table th:first-child{text-align:left;white-space:nowrap}
+.sp-report-note{margin-top:15px}
+@media(max-width:750px){.sp-report-grid{grid-template-columns:minmax(0,1fr)}.sp-report-hero{padding:17px}.sp-report-score{gap:8px}.sp-report-score>span{font-size:21px}.sp-report-score strong{font-size:14px}}
+
 </style></head><body><div class="app"><aside class="side" id="side"></aside><main class="main"><div class="topbar"><div class="crumb" id="crumb"><span>SPORTPULS</span></div><div class="tools"><button class="ibtn" type="button" data-action="search" aria-label="Sök">⌕ <span class="smallhide">Sök</span></button><button class="ibtn" type="button" data-action="date" aria-label="Välj datum">▦ <span class="smallhide">11 okt</span></button><button class="ibtn" type="button" data-action="theme" aria-label="Växla tema">◐</button><button class="ibtn" type="button" data-action="share" aria-label="Kopiera sidlänk">↗</button></div></div><div id="appview" aria-live="polite"><div class="fallback-page" id="sportpuls-fallback">
 <div class="fb-banner"><strong>SPORTPULS · Förenklad visning</strong><br>Om du ser den här rutan visar din förhandsvisning sidan utan den interaktiva appen. Resultat och tabeller nedan går ändå att läsa. För sökning, favoriter och klickbara profiler behöver HTML-filen öppnas i en webbläsare som kör JavaScript, helst via en vanlig HTTPS-adress.</div>
 <div class="fb-kicker">SÖNDAG 11 OKTOBER 2026 · EUROPE/STOCKHOLM</div><h1 class="fb-title">GÅRDAGEN<br>I SIFFROR.</h1>
@@ -332,7 +359,11 @@ function liveStatus(m) {
 function liveMatch(m,l) {
   const state = ['post','in','pre'].includes(m.state)?m.state:'pre';
   const score = state === 'pre' || m.home_score == null || m.away_score == null ? '–' : H(m.home_score) + '<span>–</span>' + H(m.away_score);
-  return `<div class="currentmatch"><div class="currentmatch-top"><span>${H(sportDate(m.start))}</span><span class="current-state ${state}">${H(liveStatus(m))}</span></div><div class="currentmatch-teams"><strong>${H(m.home)}</strong><span class="current-score">${score}</span><strong>${H(m.away)}</strong></div></div>`;
+  const valid=/^\d{7,12}$/.test(String(m.id||'')) && [...leagueIds,'nba'].includes(l);
+  const route=valid?'/live-match/'+l+'/'+m.id:'';
+  const tag=valid?'a':'div';
+  const attrs=valid?' href="#'+H(route)+'" aria-label="Visa matchrapport: '+H(m.home)+' mot '+H(m.away)+'"':'';
+  return `<${tag} class="currentmatch ${valid?'sp-match-link':''}"${attrs}><div class="currentmatch-top"><span>${H(sportDate(m.start))}</span><span class="current-state ${state}">${H(liveStatus(m))}</span></div><div class="currentmatch-teams"><strong>${H(m.home)}</strong><span class="current-score">${score}</span><strong>${H(m.away)}</strong></div>${valid?'<span class="sp-open-report">Visa matchrapport ↗</span>':''}</${tag}>`;
 }
 function liveSnapshotInfo(l) {
   if (!matchLeagueData(l)) return '<p class="small">Ingen matchinformation inläst för denna liga ännu.</p>';
@@ -341,6 +372,77 @@ function liveSnapshotInfo(l) {
   if (!item.matches.length) return '<p class="small">Inga matcher registrerade i perioden igår–imorgon.</p>';
   return item.matches.map(m=>liveMatch(m,l)).join('');
 }
+
+/* Aktuella matchrapporter. Det äldre rapportarkivet ligger kvar under /match. */
+const MATCH_REPORTS=new Map();
+const MATCH_REPORT_LOADING=new Set();
+const MATCH_REPORT_ERRORS=new Map();
+const matchRouteLive=(l,id)=>'/live-match/'+l+'/'+id;
+function chosenMatch(){
+  const p=path.split('/');
+  const league=p[2],id=p[3];
+  return [...leagueIds,'nba'].includes(league)&&/^\d{7,12}$/.test(id||'')?{league,id}:null;
+}
+function matchFromScoreboard(l,id){
+  return matchLeagueData(l)?.matches?.find(m=>String(m.id)===id)||null;
+}
+function safeStat(x){return x===null||x===undefined||x===''?'–':H(x)}
+function viewLiveMatch(){
+  const selection=chosenMatch();
+  if(!selection)return notFound();
+  const {league,id}=selection;
+  const key=league+':'+id;
+  const report=MATCH_REPORTS.get(key);
+  const base=matchFromScoreboard(league,id);
+  const home=report?.home||base?.home||'Hemmalag';
+  const away=report?.away||base?.away||'Bortalag';
+  const status=report?.status||base?.status||'Matchstatus saknas';
+  const homeScore=report?.home_score??base?.home_score;
+  const awayScore=report?.away_score??base?.away_score;
+  const played=report?.start||base?.start;
+  const score=homeScore==null||awayScore==null?'–':H(homeScore)+' – '+H(awayScore);
+  const pending=MATCH_REPORT_LOADING.has(key);
+  const error=MATCH_REPORT_ERRORS.get(key);
+  const matchHeader=`<div class="sp-report-hero"><div class="eyebrow">${H(lgName(league))} · ${played?H(svDateTime(played)):'Matchdatum saknas'}</div><div class="sp-report-score"><strong>${H(home)}</strong><span>${score}</span><strong>${H(away)}</strong></div><p class="small">${H(status)}${report?.venue?' · '+H(report.venue):''}${report?.attendance?' · Publik '+H(report.attendance):''}</p></div>`;
+  const reload=`<button class="button secondary" data-match-refresh="1" ${pending?'disabled aria-busy="true"':''}>${pending?'◌ Hämtar matchrapport…':'↻ Uppdatera matchrapport'}</button>`;
+  let details='';
+  if(report){
+    const events=(report.events||[]).filter(e=>e.text||e.type||e.player);
+    const eventsHtml=events.length?events.map(e=>`<div class="sp-event"><span class="sp-event-time">${H(e.clock||'•')}</span><span class="sp-event-body"><b>${H(e.player||e.type||'Matchhändelse')}</b>${e.team?` <small>· ${H(e.team)}</small>`:''}<small>${H(e.text||e.type||'')} ${e.assist?' · Assist: '+H(e.assist):''}</small></span></div>`).join(''):'<p class="small">Inga matchhändelser tillgängliga från källan för den här matchen.</p>';
+    const stats=(report.team_stats||[]);
+    const statsHtml=stats.length?`<div class="sp-stat-head"><b>${H(home)}</b><b>${H(away)}</b></div>`+stats.map(st=>`<div class="sp-stat-row"><b>${safeStat(st.home)}</b><span>${H(st.label)}</span><b>${safeStat(st.away)}</b></div>`).join(''):'<p class="small">Ingen verifierad lagstatistik tillgänglig.</p>';
+    const playerGroups=report.player_stats||[];
+    const playersHtml=playerGroups.length?playerGroups.map(g=>{
+      const columns=(g.labels||[]).slice(0,13);
+      return `<div class="sp-player-group"><h4>${H(g.team||(g.side==='home'?home:away))}${g.title?' · '+H(g.title):''}</h4><div class="sp-scroll-table"><table class="live-table"><thead><tr><th>SPELARE</th>${columns.map(label=>`<th>${H(label)}</th>`).join('')}</tr></thead><tbody>${(g.players||[]).map(p=>`<tr><td>${H(p.name)}</td>${columns.map((_,i)=>`<td>${safeStat(p.stats?.[i])}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
+    }).join(''):'<p class="small">ESPN har inte tillhandahållit någon spelarstatistik för den här matchen.</p>';
+    details=`<div class="sp-report-grid"><div class="card"><h3>Matchhändelser</h3>${eventsHtml}</div><div class="card"><h3>Lagstatistik</h3>${statsHtml}</div></div><div class="card sp-player-card"><h3>Spelarstatistik${league==='nba'?' · NBA':''}</h3>${playersHtml}</div><p class="small sp-report-note">Källa: ESPN:s matchsammanfattning via Cloudflare. Detaljer visas bara när källan innehåller uppgifterna. Senast hämtad: ${H(svDateTime(report.updated_at))}.</p>`;
+  }else details=`<div class="card"><h3>${pending?'Hämtar matchdetaljer…':'Matchrapport'}</h3><p class="small">${pending?'Hämtar matchhändelser och statistik från sportkällan.':error?'Det gick inte att hämta matchdetaljer: '+H(error):DIRECT_API_URL?'Väntar på matchdetaljer från sportkällan.':'Anslut din Cloudflare Worker för matchdetaljer.'}</p><p class="small">${base?'Resultatet ovan är senaste tillgängliga resultat från Matchcenter.':''} Matchen kan sakna statistik innan den har startat.</p></div>`;
+  return `${heading('MATCHCENTER / MATCHRAPPORT','Matchdetaljer','Målskyttar, händelser och statistik när datakällan har uppgifterna.')}
+    <div class="actionrow">${btnRoute('/live/'+league,'← Tillbaka till '+lgName(league))}${reload}</div>
+    ${matchHeader}${details}`;
+}
+async function loadMatchReport(manual=false){
+  const sel=chosenMatch();
+  if(!sel)return;
+  const {league,id}=sel,key=league+':'+id;
+  if(MATCH_REPORT_LOADING.has(key))return;
+  if(!manual&&MATCH_REPORTS.has(key))return;
+  if(!DIRECT_API_URL){MATCH_REPORT_ERRORS.set(key,'Cloudflare Workern är inte ansluten.');refreshMatchView();return;}
+  MATCH_REPORT_LOADING.add(key);MATCH_REPORT_ERRORS.delete(key);
+  refreshMatchView();
+  try{
+    const base=DIRECT_API_URL.replace(/\/+$/,'');
+    const response=await fetch(base+'/match?league='+encodeURIComponent(league)+'&id='+encodeURIComponent(id),{cache:'no-store'});
+    if(!response.ok)throw new Error('Datakällan svarade med HTTP '+response.status);
+    const detail=await response.json();
+    if(detail?.schema!==1||detail?.league!==league||String(detail?.id)!==id||!detail.home||!detail.away)throw new Error('Felaktigt svar från matchtjänsten');
+    MATCH_REPORTS.set(key,detail);
+  }catch(e){MATCH_REPORT_ERRORS.set(key,e?.message||'Okänt fel');}
+  finally{MATCH_REPORT_LOADING.delete(key);refreshMatchView();}
+}
+function refreshMatchView(){if(!path.startsWith('/live-match/'))return;const old=window.scrollY;render();window.scrollTo(0,old);}
+
 function liveF1List(kind) {
   const o = LIVE_F1_DIRECT?.[kind] || LIVE?.f1?.[kind];
   if (!o?.items?.length) return '<p class="small">Mästerskapsställningen har ännu inte hämtats.</p>';
@@ -706,8 +808,8 @@ function notFound(){return `${heading('404 / HITTADES INTE','Den här sidan finn
 function mobileNav(){let mobile=[['/','⌂','Start'],['/live','◎','Matcher'],['/tables','▤','Tabeller'],['/search','⌕','Sök']];Q('#mobilebar').innerHTML=mobile.map(([p,ic,t])=>`<a href="#${p}" class="${p===path?'active':''}"><b>${ic}</b>${t}</a>`).join('')}
 function sideNav(){Q('#side').innerHTML=`<div class="brand">SPORT<b>PULS</b><small>THE DAILY SPORTS EDITION</small></div><div><div class="navlabel">DIN RAPPORT</div><div class="snav">${navs.slice(0,2).map(nav).join('')}${nav(['/live','◎','Matchcenter'])}${nav(['/tables','▤','Ligatabeller'])}</div><div class="navlabel">FOTBOLL</div><div class="snav">${navs.slice(2,8).map(nav).join('')}</div><div class="navlabel">BASKET & MOTORSPORT</div><div class="snav">${navs.slice(8,11).map(nav).join('')}</div><div class="navlabel">VERKTYG</div><div class="snav">${navs.slice(11).map(nav).join('')}</div></div><div class="sfoot"><strong>📅 11 OKTOBER 2026</strong><br>Arkiverad utgåva · 9 tävlingar<br>All matchdata enligt svensk tid.<br><br>ⓘ Klubbemblem visas när bildkälla fungerar; annars bokstavsmarkörer.</div>`}
 function nav([p,ic,t]){let active=p===path||(p.startsWith('/league/')&&path.startsWith(p))||((p==='/live'||p==='/tables')&&path.startsWith(p+'/'));return `<a class="navlink ${active?'active':''} ${p.includes('nba')||p.includes('euro')?'orange':p.includes('f1')?'red':''}" href="#${p}"><span class="navicon">${ic}</span>${H(t)}</a>`}
-function breadcrumbs(){let b=[{t:'SPORTPULS',p:'/'}];let p=path.split('/').filter(Boolean);if(p[0]==='league')b.push({t:lgName(p[1])});else if(p[0]==='team')b.push({t:lgName(p[1]),p:leagueRoute(p[1])},{t:dec(p.slice(2).join('/'))});else if(p[0]==='match')b.push({t:lgName(p[1]),p:leagueRoute(p[1])},{t:'Matchrapport'});else if(p[0]==='driver')b.push({t:'Formel 1',p:'/league/f1'},{t:dec(p.slice(1).join('/'))});else if(p[0]==='constructor')b.push({t:'Formel 1',p:'/league/f1'},{t:dec(p.slice(1).join('/'))});else if(p[0]==='race')b.push({t:'Formel 1',p:'/league/f1'},{t:'Singapore GP'});else if(p[0]==='live'||p[0]==='tables'){const title=p[0]==='live'?'Matchcenter':'Tabeller';b.push({t:title,p:p[1]?'/'+p[0]:undefined});if(p[1])b.push({t:p[1]==='f1'?'Formel 1':p[1]==='euro'?'EuroLeague':lgName(p[1])});}else if(p[0])b.push({t:({'results':'Alla resultat','search':'Sök','sources':'Källor'})[p[0]]||p[0]});Q('#crumb').innerHTML=b.map((x,i)=>`${i?'<span class="sep">/</span>':''}${x.p?`<a href="#${x.p}" class="link">${H(x.t)}</a>`:`<span>${H(x.t)}</span>`}`).join('')}
-function render(){path=decodeURI(location.hash.replace(/^#/,''))||'/';if(path==='/favorites'){location.hash='#/';path='/'}let parts=path.split('/').filter(Boolean),body;try{switch(parts[0]||''){case '':body=viewOverview();break;case 'results':body=viewResults();break;case 'live':body=viewLive();break;case 'tables':body=viewTables();break;case 'league':body=leagueIds.includes(parts[1])?leagueFootball(parts[1]):parts[1]==='nba'?viewNBA():parts[1]==='euro'?viewEuro():parts[1]==='f1'?viewF1():notFound();break;case 'match':body=viewMatch(parts[1],Number(parts[2]));break;case 'team':body=viewTeam(parts[1],dec(parts.slice(2).join('/')));break;case 'driver':body=viewDriver(dec(parts.slice(1).join('/')));break;case 'constructor':body=viewConstructor(dec(parts.slice(1).join('/')));break;case 'race':body=viewRace();break;case 'search':body=viewSearch();break;case 'sources':body=viewSources();break;default:body=notFound()}}catch(e){console.error('Rendering error',e);body=`<div class="callout red">Sidan kunde inte visas. ${H(e.message)}</div>${btnRoute('/','Till startsidan')}`};Q('#appview').innerHTML=body;sideNav();mobileNav();breadcrumbs();document.title='SPORTPULS · '+(parts[0]==='league'?lgName(parts[1]):parts[0]||'11 oktober 2026');window.scrollTo({top:0,behavior:'instant'})}
+function breadcrumbs(){let b=[{t:'SPORTPULS',p:'/'}];let p=path.split('/').filter(Boolean);if(p[0]==='league')b.push({t:lgName(p[1])});else if(p[0]==='team')b.push({t:lgName(p[1]),p:leagueRoute(p[1])},{t:dec(p.slice(2).join('/'))});else if(p[0]==='live-match')b.push({t:'Matchcenter',p:'/live'},{t:lgName(p[1]),p:'/live/'+p[1]},{t:'Matchrapport'});else if(p[0]==='match')b.push({t:lgName(p[1]),p:leagueRoute(p[1])},{t:'Matchrapport'});else if(p[0]==='driver')b.push({t:'Formel 1',p:'/league/f1'},{t:dec(p.slice(1).join('/'))});else if(p[0]==='constructor')b.push({t:'Formel 1',p:'/league/f1'},{t:dec(p.slice(1).join('/'))});else if(p[0]==='race')b.push({t:'Formel 1',p:'/league/f1'},{t:'Singapore GP'});else if(p[0]==='live'||p[0]==='tables'){const title=p[0]==='live'?'Matchcenter':'Tabeller';b.push({t:title,p:p[1]?'/'+p[0]:undefined});if(p[1])b.push({t:p[1]==='f1'?'Formel 1':p[1]==='euro'?'EuroLeague':lgName(p[1])});}else if(p[0])b.push({t:({'results':'Alla resultat','search':'Sök','sources':'Källor'})[p[0]]||p[0]});Q('#crumb').innerHTML=b.map((x,i)=>`${i?'<span class="sep">/</span>':''}${x.p?`<a href="#${x.p}" class="link">${H(x.t)}</a>`:`<span>${H(x.t)}</span>`}`).join('')}
+function render(){path=decodeURI(location.hash.replace(/^#/,''))||'/';if(path==='/favorites'){location.hash='#/';path='/'}let parts=path.split('/').filter(Boolean),body;try{switch(parts[0]||''){case '':body=viewOverview();break;case 'results':body=viewResults();break;case 'live':body=viewLive();break;case 'live-match':body=viewLiveMatch();break;case 'tables':body=viewTables();break;case 'league':body=leagueIds.includes(parts[1])?leagueFootball(parts[1]):parts[1]==='nba'?viewNBA():parts[1]==='euro'?viewEuro():parts[1]==='f1'?viewF1():notFound();break;case 'match':body=viewMatch(parts[1],Number(parts[2]));break;case 'team':body=viewTeam(parts[1],dec(parts.slice(2).join('/')));break;case 'driver':body=viewDriver(dec(parts.slice(1).join('/')));break;case 'constructor':body=viewConstructor(dec(parts.slice(1).join('/')));break;case 'race':body=viewRace();break;case 'search':body=viewSearch();break;case 'sources':body=viewSources();break;default:body=notFound()}}catch(e){console.error('Rendering error',e);body=`<div class="callout red">Sidan kunde inte visas. ${H(e.message)}</div>${btnRoute('/','Till startsidan')}`};Q('#appview').innerHTML=body;sideNav();mobileNav();breadcrumbs();document.title='SPORTPULS · '+(parts[0]==='league'?lgName(parts[1]):parts[0]||'11 oktober 2026');window.scrollTo({top:0,behavior:'instant'})}
 let timer=null;function toast(s){let el=Q('#toast');el.textContent=s;el.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>el.classList.remove('show'),2700)}
 function modal(title,body){Q('#dialogtitle').textContent=title;Q('#dialogbody').innerHTML=body;Q('#overlay').hidden=false;document.body.style.overflow='hidden'}
 function close(){Q('#overlay').hidden=true;document.body.style.overflow=''}
@@ -718,7 +820,8 @@ function download(blob,name){let u=URL.createObjectURL(blob),a=document.createEl
 function exportJSON(){download(new Blob([JSON.stringify(DB,null,2)],{type:'application/json;charset=utf-8'}),'SPORTPULS_data_2026-10-11.json')}
 async function copyLink(){let link=location.href;try{await navigator.clipboard.writeText(link);toast('Sidans länk kopierad')}catch(e){modal('Dela SPORTPULS',`<p class="small">Kopiera adressen här nedan. Eftersom det är en lokal HTML-fil behöver mottagaren också själva filen.</p><input class="input full" readonly value="${H(link)}" onclick="this.select()">`)}}
 function dateDialog(){modal('Rapportarkiv',`<p>Den här filen är utgåvan för <b>11 oktober 2026</b>.</p><label class="small" for="onlydate">Tillgänglig utgåva</label><select id="onlydate" class="select full"><option value="2026-10-11">Söndag 11 oktober 2026</option></select><p class="small">När fler rapporter har skapats kan de läggas till som separata filer. Vi visar inga påhittade resultat för andra datum.</p><button class="button" data-action="close">Öppna 11 oktober</button>`)}
-document.addEventListener('click',e=>{let a=e.target.closest('[data-route],[data-action],[data-result-filter],[data-tablesort],[data-compare],[data-export],[data-live-refresh],[data-worker-save]');if(!a)return;
+document.addEventListener('click',e=>{let a=e.target.closest('[data-route],[data-action],[data-result-filter],[data-tablesort],[data-compare],[data-export],[data-live-refresh],[data-worker-save],[data-match-refresh]');if(!a)return;
+if(a.dataset.matchRefresh){loadMatchReport(true);return}
 if(a.dataset.workerSave){saveWorkerUrl();return}
 if(a.dataset.liveRefresh){if(path==='/live'||path.startsWith('/live/')||path==='/tables/f1')refreshDirect(true);else loadLive(true);return}
 if(a.dataset.route){e.preventDefault();close();setRoute(a.dataset.route);return}
@@ -729,10 +832,12 @@ if(a.dataset.export){exportCSV(a.dataset.export);return}
 if(a.dataset.action){let act=a.dataset.action;switch(act){case 'search':openSearch();break;case 'close':close();break;case 'theme':theme=theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;lsSet('sportpuls-theme',theme);toast(theme==='dark'?'Mörkt tema':'Ljust tema');break;case 'date':dateDialog();break;case 'share':copyLink();break;case 'export-json':exportJSON();break;case 'print':window.print();break;}}});
 document.addEventListener('input',e=>{if(e.target.id==='resultquery'){let pos=e.target.selectionStart;filters.text=e.target.value;let query=Q('#resultquery');let scroll=window.scrollY;let container=Q('#appview');container.innerHTML=viewResults();query=Q('#resultquery');query.focus();query.setSelectionRange(pos,pos);window.scrollTo(0,scroll)}if(e.target.dataset.tablequery){let id=e.target.dataset.tablequery;tableState[id]??={sort:null,desc:false,query:''};tableState[id].query=e.target.value;let caret=e.target.selectionStart,el=Q('#tbl-'+id);if(el){el.innerHTML=makeTable(id,leagueIds.includes(id)?'football':id);let q=Q(`[data-tablequery="${id}"]`);q.focus();q.setSelectionRange(caret,caret)}}if(e.target.id==='globalsearch')Q('#globalresults').innerHTML=hitList(e.target.value);if(e.target.id==='searchpageinput')Q('#searchpageresults').innerHTML=hitList(e.target.value)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();openSearch()}if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-route][tabindex="0"]')){e.preventDefault();setRoute(e.target.dataset.route)}});
-window.addEventListener('hashchange',()=>{close();render();if(path.startsWith('/live')||path==='/tables/f1')refreshDirect(false)});
+window.addEventListener('hashchange',()=>{close();render();if(path.startsWith('/live-match/'))loadMatchReport();else if(path.startsWith('/live')||path==='/tables/f1')refreshDirect(false)});
 render();loadLive();
+if(path.startsWith('/live-match/'))loadMatchReport();
 if(path.startsWith('/live')||path==='/tables/f1')refreshDirect(false);
 window.setInterval(()=>{if(!document.hidden&&(path.startsWith('/live')||path==='/tables/f1'))refreshDirect(false)},60*1000);
+window.setInterval(()=>{if(!document.hidden&&path.startsWith('/live-match/')){const sel=chosenMatch();const base=sel&&matchFromScoreboard(sel.league,sel.id);if(base?.state==='in')loadMatchReport(true)}} ,60*1000);
 window.setInterval(()=>{if(!document.hidden)loadLive()},15*60*1000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&(path.startsWith('/live')||path==='/tables/f1'))refreshDirect(false)});
 })();</script></body></html>
