@@ -295,7 +295,7 @@ function quickLeagues(){return `<div class="leaguegrid">${[...leagueIds,'nba','e
 let LIVE = null, LIVE_LOADING = false, LIVE_FAILED = false, LIVE_REFRESH_RESULT = null;
 // Steg efter Cloudflare-installationen: klistra in hela Worker-adressen här.
 // Exempel: https://sportpuls-live.dittkonto.workers.dev (ingen slash i slutet).
-const SPORTPULS_WORKER_URL = '';
+const SPORTPULS_WORKER_URL = 'https://fragrant-dream-5421.bualoykiwi.workers.dev';
 let DIRECT_API_URL = SPORTPULS_WORKER_URL.trim() || lsGet('sportpuls-worker-url') || '';
 let LIVE_DIRECT = {}, LIVE_F1_DIRECT = null, DIRECT_LOADING = false;
 let DIRECT_NOTICE = {type:'hint',message:'Direktuppdatering ansluts via Cloudflare Worker. Tills dess visas sparade GitHub-resultat.'};
