@@ -1,8 +1,759 @@
 {
+  "errors": {},
+  "f1": {
+    "constructors": {
+      "items": [
+        {
+          "name": "Mercedes",
+          "points": 578.0,
+          "position": 1,
+          "wins": 11
+        },
+        {
+          "name": "Ferrari",
+          "points": 444.0,
+          "position": 2,
+          "wins": 2
+        },
+        {
+          "name": "McLaren",
+          "points": 339.0,
+          "position": 3,
+          "wins": 2
+        },
+        {
+          "name": "Red Bull",
+          "points": 332.0,
+          "position": 4,
+          "wins": 2
+        },
+        {
+          "name": "RB F1 Team",
+          "points": 100.0,
+          "position": 5,
+          "wins": 0
+        },
+        {
+          "name": "Alpine F1 Team",
+          "points": 68.0,
+          "position": 6,
+          "wins": 0
+        },
+        {
+          "name": "Haas F1 Team",
+          "points": 30.0,
+          "position": 7,
+          "wins": 0
+        },
+        {
+          "name": "Audi",
+          "points": 23.0,
+          "position": 8,
+          "wins": 0
+        },
+        {
+          "name": "Williams",
+          "points": 12.0,
+          "position": 9,
+          "wins": 0
+        },
+        {
+          "name": "Aston Martin",
+          "points": 7.0,
+          "position": 10,
+          "wins": 0
+        },
+        {
+          "name": "Cadillac F1 Team",
+          "points": 0.0,
+          "position": 11,
+          "wins": 0
+        }
+      ],
+      "round": "17",
+      "season": "2026",
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    },
+    "drivers": {
+      "items": [
+        {
+          "name": "Andrea Kimi Antonelli",
+          "number": "12",
+          "points": 340.0,
+          "position": 1,
+          "team": "Mercedes",
+          "wins": 8
+        },
+        {
+          "name": "George Russell",
+          "number": "63",
+          "points": 238.0,
+          "position": 2,
+          "team": "Mercedes",
+          "wins": 3
+        },
+        {
+          "name": "Lewis Hamilton",
+          "number": "44",
+          "points": 229.0,
+          "position": 3,
+          "team": "Ferrari",
+          "wins": 1
+        },
+        {
+          "name": "Max Verstappen",
+          "number": "3",
+          "points": 221.0,
+          "position": 4,
+          "team": "Red Bull",
+          "wins": 2
+        },
+        {
+          "name": "Charles Leclerc",
+          "number": "16",
+          "points": 215.0,
+          "position": 5,
+          "team": "Ferrari",
+          "wins": 1
+        },
+        {
+          "name": "Lando Norris",
+          "number": "1",
+          "points": 201.0,
+          "position": 6,
+          "team": "McLaren",
+          "wins": 2
+        },
+        {
+          "name": "Oscar Piastri",
+          "number": "81",
+          "points": 138.0,
+          "position": 7,
+          "team": "McLaren",
+          "wins": 0
+        },
+        {
+          "name": "Isack Hadjar",
+          "number": "6",
+          "points": 97.0,
+          "position": 8,
+          "team": "Red Bull",
+          "wins": 0
+        },
+        {
+          "name": "Liam Lawson",
+          "number": "30",
+          "points": 75.0,
+          "position": 9,
+          "team": "RB F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Pierre Gasly",
+          "number": "10",
+          "points": 41.0,
+          "position": 10,
+          "team": "Alpine F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Arvid Lindblad",
+          "number": "41",
+          "points": 38.0,
+          "position": 11,
+          "team": "RB F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Franco Colapinto",
+          "number": "43",
+          "points": 27.0,
+          "position": 12,
+          "team": "Alpine F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Oliver Bearman",
+          "number": "87",
+          "points": 23.0,
+          "position": 13,
+          "team": "Haas F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Nico Hülkenberg",
+          "number": "27",
+          "points": 13.0,
+          "position": 14,
+          "team": "Audi",
+          "wins": 0
+        },
+        {
+          "name": "Gabriel Bortoleto",
+          "number": "5",
+          "points": 10.0,
+          "position": 15,
+          "team": "Audi",
+          "wins": 0
+        },
+        {
+          "name": "Esteban Ocon",
+          "number": "31",
+          "points": 7.0,
+          "position": 16,
+          "team": "Haas F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Fernando Alonso",
+          "number": "14",
+          "points": 7.0,
+          "position": 17,
+          "team": "Aston Martin",
+          "wins": 0
+        },
+        {
+          "name": "Carlos Sainz",
+          "number": "55",
+          "points": 7.0,
+          "position": 18,
+          "team": "Williams",
+          "wins": 0
+        },
+        {
+          "name": "Alexander Albon",
+          "number": "23",
+          "points": 5.0,
+          "position": 19,
+          "team": "Williams",
+          "wins": 0
+        },
+        {
+          "name": "Yuki Tsunoda",
+          "number": "22",
+          "points": 1.0,
+          "position": 20,
+          "team": "RB F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Lance Stroll",
+          "number": "18",
+          "points": 0.0,
+          "position": 21,
+          "team": "Aston Martin",
+          "wins": 0
+        },
+        {
+          "name": "Valtteri Bottas",
+          "number": "77",
+          "points": 0.0,
+          "position": 22,
+          "team": "Cadillac F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Sergio Pérez",
+          "number": "11",
+          "points": 0.0,
+          "position": 23,
+          "team": "Cadillac F1 Team",
+          "wins": 0
+        }
+      ],
+      "round": "17",
+      "season": "2026",
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    }
+  },
+  "last_attempt": "2026-10-12T18:24:56+00:00",
+  "leagues": {
+    "all": {
+      "matches": [
+        {
+          "away": "Djurgården",
+          "away_score": "1",
+          "home": "Hammarby IF",
+          "home_score": "0",
+          "id": "401842837",
+          "start": "2026-10-11T12:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Örgryte IS",
+          "away_score": "0",
+          "home": "BK Häcken",
+          "home_score": "3",
+          "id": "401842836",
+          "start": "2026-10-11T14:30Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Kalmar FF",
+          "away_score": "0",
+          "home": "Malmö FF",
+          "home_score": "0",
+          "id": "401874018",
+          "start": "2026-10-12T17:00Z",
+          "state": "in",
+          "status": "67'"
+        },
+        {
+          "away": "Halmstads BK",
+          "away_score": "0",
+          "home": "IF Elfsborg",
+          "home_score": "3",
+          "id": "401874019",
+          "start": "2026-10-12T17:00Z",
+          "state": "in",
+          "status": "68'"
+        }
+      ],
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    },
+    "bl": {
+      "matches": [
+        {
+          "away": "Borussia Mönchengladbach",
+          "away_score": "1",
+          "home": "FC Cologne",
+          "home_score": "2",
+          "id": "401884774",
+          "start": "2026-10-11T13:30Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Schalke 04",
+          "away_score": "1",
+          "home": "SC Freiburg",
+          "home_score": "2",
+          "id": "401884778",
+          "start": "2026-10-11T15:30Z",
+          "state": "post",
+          "status": "FT"
+        }
+      ],
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    },
+    "ch": {
+      "matches": [
+        {
+          "away": "Portsmouth",
+          "away_score": "0",
+          "home": "Southampton",
+          "home_score": "1",
+          "id": "401880237",
+          "start": "2026-10-11T11:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "West Bromwich Albion",
+          "away_score": "0",
+          "home": "Wrexham",
+          "home_score": "0",
+          "id": "401880225",
+          "start": "2026-10-13T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Bolton Wanderers",
+          "away_score": "0",
+          "home": "Wolverhampton Wanderers",
+          "home_score": "0",
+          "id": "401880226",
+          "start": "2026-10-13T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Swansea City",
+          "away_score": "0",
+          "home": "Millwall",
+          "home_score": "0",
+          "id": "401880228",
+          "start": "2026-10-13T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Watford",
+          "away_score": "0",
+          "home": "Cardiff City",
+          "home_score": "0",
+          "id": "401880229",
+          "start": "2026-10-13T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Charlton Athletic",
+          "away_score": "0",
+          "home": "Burnley",
+          "home_score": "0",
+          "id": "401880230",
+          "start": "2026-10-13T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Blackburn Rovers",
+          "away_score": "0",
+          "home": "Bristol City",
+          "home_score": "0",
+          "id": "401880231",
+          "start": "2026-10-13T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Middlesbrough",
+          "away_score": "0",
+          "home": "Stoke City",
+          "home_score": "0",
+          "id": "401880227",
+          "start": "2026-10-13T19:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Preston North End",
+          "away_score": "0",
+          "home": "Birmingham City",
+          "home_score": "0",
+          "id": "401880232",
+          "start": "2026-10-13T19:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    },
+    "ll": {
+      "matches": [
+        {
+          "away": "Celta Vigo",
+          "away_score": "0",
+          "home": "Elche",
+          "home_score": "0",
+          "id": "401882854",
+          "start": "2026-10-11T12:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Deportivo",
+          "away_score": "2",
+          "home": "Real Sociedad",
+          "home_score": "3",
+          "id": "401882847",
+          "start": "2026-10-11T14:15Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Osasuna",
+          "away_score": "2",
+          "home": "Real Betis",
+          "home_score": "5",
+          "id": "401882855",
+          "start": "2026-10-11T16:30Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Valencia",
+          "away_score": "2",
+          "home": "Racing Santander",
+          "home_score": "2",
+          "id": "401882850",
+          "start": "2026-10-11T19:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Sevilla",
+          "away_score": "0",
+          "home": "Levante",
+          "home_score": "0",
+          "id": "401882852",
+          "start": "2026-10-12T19:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    },
+    "nba": {
+      "matches": [
+        {
+          "away": "Dallas Mavericks",
+          "away_score": "132",
+          "home": "Houston Rockets",
+          "home_score": "115",
+          "id": "401898400",
+          "start": "2026-10-11T10:00Z",
+          "state": "post",
+          "status": "Final"
+        },
+        {
+          "away": "Orlando Magic",
+          "away_score": "105",
+          "home": "Cleveland Cavaliers",
+          "home_score": "119",
+          "id": "401898401",
+          "start": "2026-10-11T22:30Z",
+          "state": "post",
+          "status": "Final"
+        },
+        {
+          "away": "Milwaukee Bucks",
+          "away_score": "90",
+          "home": "Charlotte Hornets",
+          "home_score": "105",
+          "id": "401901821",
+          "start": "2026-10-11T23:00Z",
+          "state": "post",
+          "status": "Final"
+        },
+        {
+          "away": "Chicago Bulls",
+          "away_score": "128",
+          "home": "Denver Nuggets",
+          "home_score": "133",
+          "id": "401908941",
+          "start": "2026-10-12T01:00Z",
+          "state": "post",
+          "status": "Final"
+        },
+        {
+          "away": "London Lions",
+          "away_score": "0",
+          "home": "Portland Trail Blazers",
+          "home_score": "0",
+          "id": "401914130",
+          "start": "2026-10-12T20:00Z",
+          "state": "pre",
+          "status": "10/12 - 4:00 PM EDT"
+        },
+        {
+          "away": "Oklahoma City Thunder",
+          "away_score": "0",
+          "home": "Atlanta Hawks",
+          "home_score": "0",
+          "id": "401898402",
+          "start": "2026-10-12T23:00Z",
+          "state": "pre",
+          "status": "10/12 - 7:00 PM EDT"
+        },
+        {
+          "away": "Brooklyn Nets",
+          "away_score": "0",
+          "home": "Washington Wizards",
+          "home_score": "0",
+          "id": "401901824",
+          "start": "2026-10-12T23:00Z",
+          "state": "pre",
+          "status": "10/12 - 7:00 PM EDT"
+        },
+        {
+          "away": "Minnesota Timberwolves",
+          "away_score": "0",
+          "home": "New York Knicks",
+          "home_score": "0",
+          "id": "401914124",
+          "start": "2026-10-12T23:30Z",
+          "state": "pre",
+          "status": "10/12 - 7:30 PM EDT"
+        },
+        {
+          "away": "San Antonio Spurs",
+          "away_score": "0",
+          "home": "Utah Jazz",
+          "home_score": "0",
+          "id": "401898721",
+          "start": "2026-10-13T01:00Z",
+          "state": "pre",
+          "status": "10/12 - 9:00 PM EDT"
+        },
+        {
+          "away": "Cleveland Cavaliers",
+          "away_score": "0",
+          "home": "Orlando Magic",
+          "home_score": "0",
+          "id": "401898403",
+          "start": "2026-10-13T23:00Z",
+          "state": "pre",
+          "status": "10/13 - 7:00 PM EDT"
+        },
+        {
+          "away": "New York Knicks",
+          "away_score": "0",
+          "home": "Toronto Raptors",
+          "home_score": "0",
+          "id": "401908944",
+          "start": "2026-10-13T23:00Z",
+          "state": "pre",
+          "status": "10/13 - 7:00 PM EDT"
+        },
+        {
+          "away": "Indiana Pacers",
+          "away_score": "0",
+          "home": "Oklahoma City Thunder",
+          "home_score": "0",
+          "id": "401908621",
+          "start": "2026-10-14T00:00Z",
+          "state": "pre",
+          "status": "10/13 - 8:00 PM EDT"
+        },
+        {
+          "away": "Golden State Warriors",
+          "away_score": "0",
+          "home": "Los Angeles Lakers",
+          "home_score": "0",
+          "id": "401898718",
+          "start": "2026-10-14T02:00Z",
+          "state": "pre",
+          "status": "10/13 - 10:00 PM EDT"
+        },
+        {
+          "away": "Portland Trail Blazers",
+          "away_score": "0",
+          "home": "Sacramento Kings",
+          "home_score": "0",
+          "id": "401901826",
+          "start": "2026-10-14T02:00Z",
+          "state": "pre",
+          "status": "10/13 - 10:00 PM EDT"
+        }
+      ],
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    },
+    "pl": {
+      "matches": [
+        {
+          "away": "Everton",
+          "away_score": "2",
+          "home": "Hull City",
+          "home_score": "2",
+          "id": "401878774",
+          "start": "2026-10-11T13:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Nottingham Forest",
+          "away_score": "1",
+          "home": "Crystal Palace",
+          "home_score": "3",
+          "id": "401879266",
+          "start": "2026-10-11T13:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Manchester City",
+          "away_score": "3",
+          "home": "Liverpool",
+          "home_score": "0",
+          "id": "401879264",
+          "start": "2026-10-11T15:30Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Newcastle United",
+          "away_score": "0",
+          "home": "Coventry City",
+          "home_score": "0",
+          "id": "401879267",
+          "start": "2026-10-12T19:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    },
+    "sa": {
+      "matches": [
+        {
+          "away": "AS Roma",
+          "away_score": "0",
+          "home": "Como",
+          "home_score": "0",
+          "id": "401874940",
+          "start": "2026-10-11T10:30Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Bologna",
+          "away_score": "2",
+          "home": "Lecce",
+          "home_score": "1",
+          "id": "401874776",
+          "start": "2026-10-11T13:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Monza",
+          "away_score": "1",
+          "home": "Lazio",
+          "home_score": "3",
+          "id": "401874951",
+          "start": "2026-10-11T13:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "AC Milan",
+          "away_score": "1",
+          "home": "Sassuolo",
+          "home_score": "1",
+          "id": "401874789",
+          "start": "2026-10-11T16:00Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Juventus",
+          "away_score": "1",
+          "home": "Cagliari",
+          "home_score": "1",
+          "id": "401874764",
+          "start": "2026-10-11T18:45Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Venezia",
+          "away_score": "1",
+          "home": "Atalanta",
+          "home_score": "3",
+          "id": "401875005",
+          "start": "2026-10-12T16:30Z",
+          "state": "post",
+          "status": "FT"
+        },
+        {
+          "away": "Udinese",
+          "away_score": "0",
+          "home": "Torino",
+          "home_score": "0",
+          "id": "401874763",
+          "start": "2026-10-12T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-10-12T18:24:56+00:00"
+    }
+  },
   "schema": 1,
-  "updated_at": null,
-  "last_attempt": null,
-  "leagues": {},
-  "f1": {},
-  "errors": {}
+  "updated_at": "2026-10-12T18:24:56+00:00"
 }
