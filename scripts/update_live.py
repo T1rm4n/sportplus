@@ -136,6 +136,118 @@ def parse_f1_standings(data: dict, category: str) -> dict:
     return {"season": current.get("season", ""), "round": current.get("round", ""), "items": entries}
 
 
+
+
+def _stat_map(stats: object) -> dict:
+    """ESPN encodes standings stats in a list, with some fields present only on certain leagues."""
+    out = {}
+    if isinstance(stats, list):
+        for stat in stats:
+            if not isinstance(stat, dict):
+                continue
+            for label in (stat.get("name"), stat.get("type")):
+                if isinstance(label, str) and label.strip():
+                    out[label.casefold()] = stat
+    return out
+
+
+def _value(stats: dict, keys: tuple[str, ...]) -> object:
+    for key in keys:
+        item = stats.get(key.casefold())
+        if not isinstance(item, dict):
+            continue
+        val = item.get("value")
+        if val is None:
+            val = item.get("displayValue")
+        if val is not None and str(val).strip() not in ('', '--', '-'):
+            return val
+    return None
+
+
+def _number(value: object) -> int | float | None:
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        num = float(str(value).replace(',', '.').replace('%','').strip())
+        if not (-1e8 < num < 1e8):
+            return None
+        return int(num) if num.is_integer() else round(num, 4)
+    except (ValueError, TypeError):
+        return None
+
+
+def normalize_standings(payload: dict, sport: str) -> dict:
+    """Extract season and table groups from ESPN's /apis/v2/ standings response.
+
+    Preserve distinct NBA conferences. Do not invent missing stats as zero.
+    """
+    groups = []
+    def visit(node: dict, inherited: str = '') -> None:
+        if not isinstance(node, dict):
+            return
+        name = node.get('name') or node.get('displayName') or inherited
+        raw = node.get('standings') or {}
+        if isinstance(raw, dict):
+            raw_entries = raw.get('entries') or []
+        else:
+            raw_entries = []
+        if isinstance(raw_entries, list) and raw_entries:
+            entries = []
+            for idx, row in enumerate(raw_entries):
+                if not isinstance(row, dict):
+                    continue
+                team = row.get('team') or {}
+                title = team.get('displayName') or team.get('name') or team.get('shortDisplayName')
+                if not title:
+                    continue
+                stats = _stat_map(row.get('stats'))
+                rank = _number(_value(stats, ('rank','playoffSeed','seed')))
+                if rank is None:
+                    rank = _number(row.get('rank') or row.get('position'))
+                item = {'name': title, 'id': str(team.get('id') or ''), 'rank': int(rank) if rank and rank > 0 else idx+1}
+                if sport == 'soccer':
+                    mapping = {
+                        'p': ('gamesPlayed','played','matchesPlayed'),
+                        'w': ('wins',), 'd': ('ties','draws'), 'l': ('losses',),
+                        'gf': ('pointsFor','goalsFor','goalsScored'),
+                        'ga': ('pointsAgainst','goalsAgainst','goalsConceded'),
+                        'gd': ('pointDifferential','goalDifference','goalDifferential','differential'),
+                        'pts': ('points',)
+                    }
+                else:
+                    mapping = {
+                        'w': ('wins',), 'l': ('losses',),
+                        'pct': ('winPercent','winPercentage','winPct'),
+                        'gb': ('gamesBehind','gamesBack'),
+                        'diff': ('pointDifferential','differential'),
+                    }
+                for key, possibilities in mapping.items():
+                    item[key] = _number(_value(stats, possibilities))
+                if sport == 'soccer' and item['gd'] is None and item['gf'] is not None and item['ga'] is not None:
+                    item['gd'] = item['gf'] - item['ga']
+                entries.append(item)
+            if entries:
+                # Group order is meaningful, but explicit rank takes precedence.
+                entries.sort(key=lambda r:r['rank'])
+                groups.append({'name': str(name or 'Tabell'), 'items': entries})
+        for child in node.get('children') or []:
+            visit(child, str(name or ''))
+    visit(payload)
+    # ESPN returns only a stub or empty JSON in some paths; reject it explicitly.
+    if not groups or sum(len(group['items']) for group in groups) < 4:
+        raise ValueError('Standings endpoint returned no usable table')
+    season=payload.get('season') or {}
+    if isinstance(season, dict):
+        season_name=season.get('displayName') or str(season.get('year') or '')
+    else:
+        season_name=str(season) if season else ''
+    return {'season': season_name, 'groups': groups}
+
+
+def update_standings(sport: str, slug: str) -> dict:
+    url=f'https://site.api.espn.com/apis/v2/sports/{sport}/{slug}/standings'
+    return normalize_standings(fetch_json(url), sport)
+
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     now = datetime.now(timezone.utc)
@@ -156,6 +268,7 @@ def main() -> None:
         "last_attempt": now.isoformat(timespec="seconds"),
         "leagues": old.get("leagues") or {},
         "f1": old.get("f1") or {},
+        "standings": old.get("standings") or {},
         "errors": {},
     }
     refreshed = 0
@@ -168,6 +281,17 @@ def main() -> None:
             logging.info("%s: %d matches", key, len(matches))
         except Exception as exc:
             data["errors"][key] = str(exc)[:260]
+    # Update current league tables independently from match feeds.
+    for key, (sport, slug) in LEAGUES.items():
+        try:
+            table = update_standings(sport, slug)
+            table['updated_at'] = stamp
+            data['standings'][key] = table
+            refreshed += 1
+            logging.info('%s standings: %d groups', key, len(table['groups']))
+        except Exception as exc:
+            logging.warning('%s standings: %s', key, exc)
+            data['errors'][f'standings_{key}'] = str(exc)[:260]
     for category, ending in [("drivers", "driverstandings.json"), ("constructors", "constructorstandings.json")]:
         try:
             parsed = parse_f1_standings(fetch_json(f"{F1_ROOT}/{ending}"), category)

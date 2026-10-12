@@ -183,6 +183,28 @@
 :root[data-theme=light] .current-state.in{background:#e4f7e8;color:#146b3e}
 @media(max-width:700px){.live-banner{display:block}.live-banner .button{margin-top:12px}.currentmatch-teams{grid-template-columns:minmax(0,1fr) 60px minmax(0,1fr)}.currentmatch-teams strong{font-size:12px}.current-score{font-size:16px}.live-grid .card{padding:15px}}
 
+
+/* Live standings v2: compact tables that fit the Night Circuit design. */
+.live-table-meta{font-size:11px;color:var(--muted);margin:0 0 13px;line-height:1.5}
+.live-standing-group+.live-standing-group{margin-top:25px}
+.live-standing-group h4{font-size:12px;letter-spacing:.04em;color:var(--cyan);margin:0 0 11px;font-weight:800}
+.live-table-wrap{overflow-x:auto;max-width:100%;border:1px solid var(--border);border-radius:12px;background:linear-gradient(135deg,#111e2b,#101823)}
+.live-table{width:100%;min-width:510px;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.live-table th{padding:11px 10px;text-align:right;background:#1a2838;color:var(--muted);font-size:10px;letter-spacing:.7px;white-space:nowrap}
+.live-table td{padding:11px 10px;text-align:right;border-top:1px solid #3443567a;color:var(--text);font-size:12px}
+.live-table td:nth-child(1),.live-table th:nth-child(1){width:42px;text-align:center;color:var(--cyan)}
+.live-table td:nth-child(2),.live-table th:nth-child(2){text-align:left;min-width:142px}
+.live-table-team{font-weight:750}.live-table-points{color:var(--lime)!important;font-weight:850}
+.live-table tbody tr:hover{background:#1a32403b}
+.live-table tbody tr:nth-child(-n+3) .live-table-rank{color:#71f5d3}
+.live-empty{color:var(--muted);padding:15px;border:1px dashed #435870;border-radius:12px;font-size:12px;line-height:1.6}
+.live-standings-hint{margin-top:10px;font-size:11px;color:var(--cyan)}
+.live-home-table{margin-top:0;margin-bottom:15px}.live-home-table .button{margin-top:15px}
+:root[data-theme=light] .live-table-wrap{background:#fff}
+:root[data-theme=light] .live-table th{background:#eaf0f7}
+:root[data-theme=light] .live-table td{border-color:#dce5ed}
+@media(max-width:700px){.live-table{min-width:490px}.live-table th,.live-table td{padding:10px 8px}.live-table td:nth-child(2),.live-table th:nth-child(2){min-width:122px}}
+
 </style></head><body><div class="app"><aside class="side" id="side"></aside><main class="main"><div class="topbar"><div class="crumb" id="crumb"><span>SPORTPULS</span></div><div class="tools"><button class="ibtn" type="button" data-action="search" aria-label="Sök">⌕ <span class="smallhide">Sök</span></button><button class="ibtn" type="button" data-action="date" aria-label="Välj datum">▦ <span class="smallhide">11 okt</span></button><button class="ibtn" type="button" data-action="theme" aria-label="Växla tema">◐</button><button class="ibtn" type="button" data-action="share" aria-label="Kopiera sidlänk">↗</button></div></div><div id="appview" aria-live="polite"><div class="fallback-page" id="sportpuls-fallback">
 <div class="fb-banner"><strong>SPORTPULS · Förenklad visning</strong><br>Om du ser den här rutan visar din förhandsvisning sidan utan den interaktiva appen. Resultat och tabeller nedan går ändå att läsa. För sökning, favoriter och klickbara profiler behöver HTML-filen öppnas i en webbläsare som kör JavaScript, helst via en vanlig HTTPS-adress.</div>
 <div class="fb-kicker">SÖNDAG 11 OKTOBER 2026 · EUROPE/STOCKHOLM</div><h1 class="fb-title">GÅRDAGEN<br>I SIFFROR.</h1>
@@ -294,6 +316,47 @@ function liveBanner() {
   const old = stamp && (Date.now() - new Date(stamp).getTime() > 4 * 60 * 60 * 1000);
   return `<div class="live-banner"><div><span class="live-led ${stamp&&!old?'good':''}"></span><strong>${stamp ? old?'Senast sparade resultat · äldre uppdatering':'Senaste resultatöversikt' : LIVE_LOADING?'Hämtar aktuella resultat…':'Inväntar första automatiska uppdateringen'}</strong><p class="small">${stamp?'Senast hämtat: '+H(svDateTime(stamp)):'När GitHub-uppdateringen har körts visas matcherna här.'} · Ingen sekund-för-sekund-rapportering.</p></div><button type="button" class="button secondary" data-live-refresh="1">↻ Uppdatera vyn</button></div>`;
 }
+function liveTableNumber(value, suffix='') {
+  if(value === null || value === undefined || value === '') return '–';
+  const n=Number(value);
+  if(!Number.isFinite(n)) return H(value);
+  return H(Number.isInteger(n)?String(n):String(Number(n.toFixed(3))))+suffix;
+}
+function liveTableGroup(kind, group, short=false) {
+  let rows = Array.isArray(group.items) ? group.items : [];
+  if(!rows.length) return '<p class="small">Inga lag tillgängliga.</p>';
+  const basketball=kind==='nba';
+  if(short) rows=rows.slice(0,5);
+  const cells = basketball ? '<th title="Vinster">V</th><th title="Förluster">F</th><th title="Vinstprocent">V%</th><th title="Matcher bakom">GB</th>' : '<th title="Matcher">M</th><th title="Vinster">V</th><th title="Oavgjorda">O</th><th title="Förluster">F</th><th title="Målskillnad">MS</th><th title="Poäng">P</th>';
+  const body=rows.map((r,i)=>{
+    let rank=liveTableNumber(r.rank||i+1);
+    let fields=basketball
+      ? `<td>${liveTableNumber(r.w)}</td><td>${liveTableNumber(r.l)}</td><td>${r.pct==null?'–':liveTableNumber(r.pct>1?r.pct:100*r.pct,'%')}</td><td>${liveTableNumber(r.gb)}</td>`
+      : `<td>${liveTableNumber(r.p)}</td><td>${liveTableNumber(r.w)}</td><td>${liveTableNumber(r.d)}</td><td>${liveTableNumber(r.l)}</td><td>${liveTableNumber(r.gd)}</td><td class="live-table-points">${liveTableNumber(r.pts)}</td>`;
+    return `<tr><td class="live-table-rank">${rank}</td><td class="live-table-team">${H(r.name||'Okänt lag')}</td>${fields}</tr>`;
+  }).join('');
+  return `<div class="live-table-wrap"><table class="live-table"><thead><tr><th>#</th><th>LAG</th>${cells}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+function liveStandings(l,short=false) {
+  const snapshot=LIVE?.standings?.[l];
+  const groups=snapshot?.groups;
+  if(!Array.isArray(groups)||!groups.length){
+    return `<div class="live-empty">Inga aktuella tabeller inlästa ännu. ${LIVE?.errors?.['standings_'+l]?'Tabellkällan svarade inte vid senaste uppdateringen.':''}</div>`;
+  }
+  const stamp=snapshot.updated_at;
+  const freshness=stamp && (Date.now()-new Date(stamp).getTime()>6*60*60*1000);
+  const meta=`<div class="live-table-meta">${snapshot.season?'Säsong '+H(snapshot.season)+' · ':''}Hämtad ${H(svDateTime(stamp))}${freshness?' · ÄLDRE UPPGIFTER':''}</div>`;
+  return meta+groups.map(g=>`<div class="live-standing-group"><h4>${H(g.name)}</h4>${liveTableGroup(l,g,short)}</div>`).join('');
+}
+function liveStandingTeaser(){
+  if(!LIVE?.standings?.pl?.groups?.length) return '';
+  return `${section('Aktuell tabell','PREMIER LEAGUE',btnRoute('/live','Alla ligatabeller ↗'))}<div class="card live-home-table">${liveStandings('pl',true)}<button class="button secondary" data-liveleague="pl" data-go-live="1">Se fullständig tabell →</button></div>`;
+}
+
+function currentLeaguePanel(l) {
+  return `${section('Aktuell tabell','SPORTPULS / AKTUELLT',btnRoute('/live','Alla aktuella resultat ↗'))}<div class="card live-league-panel">${liveStandings(l)}</div>${section('Rapport från 11 oktober 2026','HISTORISKT ARKIV')}`;
+}
+
 function liveHomePreview() {
   let l = ['pl','ch','ll','bl','sa','all','nba'].flatMap(id=>(LIVE?.leagues?.[id]?.matches||[]).map(m=>({...m,l:id})));
   l.sort((a,b)=>Math.abs(new Date(a.start).getTime()-Date.now())-Math.abs(new Date(b.start).getTime()-Date.now()));
@@ -308,18 +371,18 @@ function viewLive() {
   if(active === 'f1'){
     sectionHtml = `<div class="grid2"><div class="card"><h3>Förare</h3>${liveF1List('drivers')}</div><div class="card"><h3>Stall</h3>${liveF1List('constructors')}</div></div>`;
   } else if (active !== 'overview') {
-    sectionHtml = `<div class="card"><h3>${H(lgName(active))} · ${current.length} matcher</h3>${liveSnapshotInfo(active)}</div>`;
+    sectionHtml = `<div class="card"><h3>${H(lgName(active))} · aktuell tabell</h3>${liveStandings(active)}</div><div class="card"><h3>${H(lgName(active))} · ${current.length} matcher</h3>${liveSnapshotInfo(active)}</div>`;
   } else {
     sectionHtml = [...leagueIds,'nba'].map(l => {
       const count=LIVE?.leagues?.[l]?.matches?.length||0;
-      return `<div class="card"><div class="cardhead"><h3>${H(lgName(l))} · ${count} matcher</h3></div>${liveSnapshotInfo(l)}</div>`;
+      return `<div class="card"><div class="cardhead"><h3>${H(lgName(l))} · ${count} matcher</h3><button class="ibtn" data-liveleague="${l}">Se tabell ↗</button></div>${liveSnapshotInfo(l)}${(LIVE?.standings?.[l]?.groups?.length?`<div class="live-standings-hint">${LIVE.standings[l].groups.map(g=>`${H(g.name)}: ${g.items.length} lag`).join(' · ')}</div>`:'')}</div>`;
     }).join('') + `<div class="card"><h3>Formel 1 · senaste VM-ställningen</h3>${liveF1List('drivers')}${btnRoute('/league/f1','Historisk F1-rapport →','button secondary')}</div>`;
   }
   return `${heading('AKTUELLT / MATCHCENTER','Senaste resultaten','Fotboll, NBA och Formel 1. Uppdateringar hämtas ungefär varannan timme via GitHub. Datum och matchtider anges i svensk tid.')}
     ${liveBanner()}
     <div class="live-tabs">${tabs.map(([k,n])=>`<button class="live-tab ${liveLeague===k?'active':''}" data-liveleague="${k}">${H(n)}</button>`).join('')}</div>
     <div class="live-grid">${sectionHtml}</div>
-    <p class="small live-disclaimer"><b>Datakällor:</b> Matchresultat från ESPNs publika men inofficiella gränssnitt. Formel 1-ställningar via Jolpica F1 API. Datakällor kan fördröjas eller sluta fungera. EuroLeague-resultat och aktuella ligatabeller ansluter vi i nästa steg. Den gamla rapporten från 11 oktober 2026 är ett separat arkiv.</p>`;
+    <p class="small live-disclaimer"><b>Datakällor:</b> Matchresultat från ESPNs publika men inofficiella gränssnitt. Formel 1-ställningar via Jolpica F1 API. Datakällor kan fördröjas eller sluta fungera. EuroLeague-resultat och detaljerad spelarstatistik ansluter vi i senare steg. Aktuella ligatabeller baseras också på ESPN. Den gamla rapporten från 11 oktober 2026 är ett separat arkiv.</p>`;
 }
 async function loadLive() {
   if(LIVE_LOADING) return;
@@ -342,26 +405,26 @@ async function loadLive() {
     if(result) LIVE=result; else LIVE_FAILED=true;
   }finally{
     LIVE_LOADING=false;
-    if(path === '/' || path.startsWith('/live')){
+    if(path === '/' || path.startsWith('/live') || path.startsWith('/league/')){
       const y=window.scrollY; render(); window.scrollTo(0,y);
     }
   }
 }
 
-function viewOverview(){const top=topGoalGames(6),highest=top[0],all=allMatches();return `<div class="hero"><div class="inner"><div class="eyebrow">ARKIVERAD RAPPORT · 11 OKTOBER 2026</div><h1 class="title">GÅRDAGEN<br><span>I SIFFROR.</span></h1><p>Din personliga sportredaktion. Klicka dig från dagens höjdpunkter till varje match, lag, tabell och mästerskapsställning.</p><div class="pills"><span class="pill">⚽ 6 fotbollsligor</span><span class="pill">🏀 2 basketligor</span><span class="pill">🏎 Formel 1</span><span class="pill">📍 11 oktober 2026</span></div></div></div><div class="metrics">${metric('Fotbollsmatcher','17','6 ligor')}${metric('NBA försäsong','8','Slutresultat i svensk tid')}${metric('Formel 1','1 GP','Singapore · 62 varv')}${metric('Mest mål i en match',highest.goal,highest.m[0]+' – '+highest.m[2])}</div>${liveHomePreview()}${section('Rubriker du kan öppna','REDAKTIONENS VAL')}<div class="grid2"><div class="card"><h3>Det här stack ut</h3>${DB.features.map((f,i)=>`<div class="story" role="link" tabindex="0" data-route="${H(f.route)}"><span class="nr">${String(i+1).padStart(2,'0')}</span><div><div class="eyebrow" style="font-size:9px;letter-spacing:1px">${H(f.tag)}</div><h4>${H(f.title)} ↗</h4><p>${H(f.body)}</p></div></div>`).join('')}</div><div class="card"><h3>Målrikaste fotbollsmatcherna</h3>${barChart(top.map(x=>({name:x.m[0]+' – '+x.m[2],value:x.goal,path:matchRoute(x.l,x.i)})),{route:'match',limit:6})}<p class="small">Prickarna öppnar respektive matchrapport.</p></div></div>${section('Välj liga och utforska','ALLA NIO TÄVLINGAR')}${quickLeagues()}${section('Samtliga matcher','RESULTAT',btnRoute('/results','Alla 25 matcher →'))}<div class="card">${all.slice(0,7).map(x=>score(x.m,x.l,x.i)).join('')}<div class="spacer"></div>${btnRoute('/results','Visa samtliga matcher','button secondary full')}</div>`}
+function viewOverview(){const top=topGoalGames(6),highest=top[0],all=allMatches();return `<div class="hero"><div class="inner"><div class="eyebrow">ARKIVERAD RAPPORT · 11 OKTOBER 2026</div><h1 class="title">GÅRDAGEN<br><span>I SIFFROR.</span></h1><p>Din personliga sportredaktion. Klicka dig från dagens höjdpunkter till varje match, lag, tabell och mästerskapsställning.</p><div class="pills"><span class="pill">⚽ 6 fotbollsligor</span><span class="pill">🏀 2 basketligor</span><span class="pill">🏎 Formel 1</span><span class="pill">📍 11 oktober 2026</span></div></div></div><div class="metrics">${metric('Fotbollsmatcher','17','6 ligor')}${metric('NBA försäsong','8','Slutresultat i svensk tid')}${metric('Formel 1','1 GP','Singapore · 62 varv')}${metric('Mest mål i en match',highest.goal,highest.m[0]+' – '+highest.m[2])}</div>${liveHomePreview()}${liveStandingTeaser()}${section('Rubriker du kan öppna','REDAKTIONENS VAL')}<div class="grid2"><div class="card"><h3>Det här stack ut</h3>${DB.features.map((f,i)=>`<div class="story" role="link" tabindex="0" data-route="${H(f.route)}"><span class="nr">${String(i+1).padStart(2,'0')}</span><div><div class="eyebrow" style="font-size:9px;letter-spacing:1px">${H(f.tag)}</div><h4>${H(f.title)} ↗</h4><p>${H(f.body)}</p></div></div>`).join('')}</div><div class="card"><h3>Målrikaste fotbollsmatcherna</h3>${barChart(top.map(x=>({name:x.m[0]+' – '+x.m[2],value:x.goal,path:matchRoute(x.l,x.i)})),{route:'match',limit:6})}<p class="small">Prickarna öppnar respektive matchrapport.</p></div></div>${section('Välj liga och utforska','ALLA NIO TÄVLINGAR')}${quickLeagues()}${section('Samtliga matcher','RESULTAT',btnRoute('/results','Alla 25 matcher →'))}<div class="card">${all.slice(0,7).map(x=>score(x.m,x.l,x.i)).join('')}<div class="spacer"></div>${btnRoute('/results','Visa samtliga matcher','button secondary full')}</div>`}
 function viewResults(){let matches=allMatches().filter(x=>filters.results==='all'||filters.results===x.l||(filters.results==='football'&&x.l!=='nba'));let ft=(filters.text||'').toLowerCase();if(ft)matches=matches.filter(x=>(x.m[0]+' '+x.m[2]+' '+lgName(x.l)).toLowerCase().includes(ft));let groups={};matches.forEach(x=>(groups[x.l]??=[]).push(x));return `${heading('MATCHCENTER / 11 OKT','Alla slutresultat','Tryck på vilken match som helst för att öppna dess egen matchsida. Samtliga matcher i denna rapport visas i svensk kalenderdag.')}
 <div class="card"><div class="tabletools"><div class="seg">${[['all','Alla'],['football','Fotboll'],['nba','NBA']].map(([v,t])=>`<button class="segbtn ${filters.results===v?'active':''}" data-result-filter="${v}">${t}</button>`).join('')}</div><input class="input" id="resultquery" placeholder="Sök lag eller liga…" value="${H(filters.text)}" aria-label="Filtrera matcher"></div><p class="small">${matches.length} matcher hittades · EuroLeague hade inga matcher · Formel 1-resultatet finns på <a href="#/league/f1">F1-sidan</a>.</p></div><div class="spacer"></div>${Object.keys(groups).map(l=>`<div class="card" style="margin-bottom:14px"><div class="cardhead"><h3>${H(lgName(l))} · ${groups[l].length} matcher</h3>${btnRoute(leagueRoute(l),'Ligans sida ↗','ibtn')}</div>${groups[l].map(x=>score(x.m,l,x.i)).join('')}</div>`).join('')||'<div class="empty">Ingen match matchar sökningen.</div>'}`}
 function rankingStats(l){let rows=DB.football[l],maxGF=Math.max(...rows.map(r=>r.gf)),bestOff=rows.filter(r=>r.gf===maxGF),best=Math.min(...rows.filter(r=>r.p>0).map(r=>r.ga/r.p)),def=rows.filter(r=>r.p>0&&Math.abs(r.ga/r.p-best)<.0001),sc=DB.leagues[l].scorer;return `<div class="grid3">${sc?stat('Skytteligaledare',sc[2]+' mål',sc[0],sc[1]):stat('Skytteligaledare','Saknas','Ej verifierad','Individuell spelardata ingår inte i detta historiska utdrag.')}${stat('Bästa offensiv',maxGF+' mål',bestOff.map(r=>r.name).join(' / '),bestOff.map(r=>r.p+' matcher').join(' · '))}${stat('Bästa försvar',best.toFixed(2).replace('.',',')+' / match',def.map(r=>r.name).join(' / '),def.map(r=>r.ga+' insläppta på '+r.p+' matcher').join(' · '))}</div>`}
 const footballCols=[['name','LAG'],['p','M'],['w','V'],['d','O'],['l','F'],['gf','GM'],['ga','IM'],['gd','MS'],['pts','P']];
 function makeTable(l,view='football'){const entries=view==='football'?DB.football[l]:view==='euro'?DB.euro:view==='drivers'?DB.drivers:view==='constructors'?DB.constructors:DB.race;const cols=view==='football'?footballCols:view==='euro'?[['name','LAG'],['p','M'],['w','V'],['l','F'],['pf','PF'],['pa','PA'],['pd','DIFF']]:view==='drivers'?[['name','FÖRARE'],['team','STALL'],['pts','POÄNG']]:view==='constructors'?[['name','STALL'],['pts','POÄNG']]:[['name','FÖRARE'],['team','STALL'],['time','TID/STATUS'],['pts','POÄNG']];const identifier=view==='football'?l:view;tableState[identifier]??={sort:null,desc:false,query:''};let s=tableState[identifier];const comparable=['football','euro'].includes(view);let rows=entries.map((r,i)=>({...r,rank:i+1})).filter(r=>r.name.toLowerCase().includes(s.query.toLowerCase()));if(s.sort)rows.sort((a,b)=>{let x=a[s.sort],y=b[s.sort],c=typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y),'sv');return s.desc?-c:c});let renderCell=(r,k)=>{if(k==='name'){let route=view==='football'?teamRoute(l,r.name):view==='euro'?teamRoute('euro',r.name):view==='drivers'||view==='race'?driverRoute(r.name):constructorRoute(r.name);return `<span class="namecell">${crest(r.name,tone(l))}<span>${H(r.name)}</span><span class="arrow">↗</span></span>`}if(k==='gd'||k==='pd')return r[k]>0?'+'+r[k]:r[k];return H(r[k]??'–')};const sortHeader=(k,txt)=>`<th data-tablesort="${H(identifier)}|${k}" scope="col">${H(txt)} ${s.sort===k?(s.desc?'↓':'↑'):'↕'}</th>`;return `<div class="tabletools"><input class="input" data-tablequery="${H(identifier)}" placeholder="Sök lag eller förare…" aria-label="Sök tabell" value="${H(s.query)}"><div class="small">${rows.length} av ${entries.length} · tryck på rubriker för sortering</div><button class="ibtn" data-export="${H(identifier)}">↓ CSV</button></div><div class="tablewrap"><table class="data"><thead><tr><th scope="col">#</th>${cols.map(x=>sortHeader(...x)).join('')}</tr></thead><tbody>${rows.map(r=>{let dest=view==='football'?teamRoute(l,r.name):view==='euro'?teamRoute('euro',r.name):view==='constructors'?constructorRoute(r.name):driverRoute(r.name);return `<tr data-route="${H(dest)}" tabindex="0" aria-label="Öppna ${H(r.name)}"><td><span class="rank ${r.rank<=3?'top':view==='football'&&r.rank>entries.length-3?'bottom':''}">${r.rank}</span></td>${cols.map(([k])=>`<td class="${k==='pts'?'points':''}">${renderCell(r,k)}</td>`).join('')}</tr>`}).join('')}</tbody></table></div>${rows.length===0?'<p class="empty">Inga träffar i tabellen.</p>':''}${comparable?`<div class="actionrow"><button class="button secondary" data-compare="${H(l)}">⚖ Jämför två lag</button></div>`:''}`}
-function leagueFootball(l){let league=DB.leagues[l],rows=DB.football[l],matches=league.matches;let bestOff=[...rows].sort((a,b)=>b.gf-a.gf).slice(0,7),bestDef=[...rows].filter(r=>r.p>0).sort((a,b)=>a.ga/a.p-b.ga/b.p).slice(0,7);return `${heading('FOTBOLL / '+league.place, H(league.name), 'Fullständig ligaställning, söndagens resultat, säsongens nyckeltal och jämförelser. Öppna varje lag eller match för en egen detaljvy.')}
-<div class="actionrow">${fav(keyLeague(l))}<a class="button secondary" href="${H(league.src)}" target="_blank" rel="noopener noreferrer">Källtabell ↗</a><button class="button secondary" data-compare="${H(l)}">⚖ Jämför lag</button>${btnRoute('/results','Matchcenter →')}</div>
+function leagueFootball(l){let league=DB.leagues[l],rows=DB.football[l],matches=league.matches;let bestOff=[...rows].sort((a,b)=>b.gf-a.gf).slice(0,7),bestDef=[...rows].filter(r=>r.p>0).sort((a,b)=>a.ga/a.p-b.ga/b.p).slice(0,7);return `${heading('FOTBOLL / '+league.place, H(league.name), 'Aktuell ligatabell överst. Matcher och statistik från 11 oktober 2026 är ett separat historiskt arkiv.')}
+${currentLeaguePanel(l)}<div class="actionrow">${fav(keyLeague(l))}<a class="button secondary" href="${H(league.src)}" target="_blank" rel="noopener noreferrer">Källtabell ↗</a><button class="button secondary" data-compare="${H(l)}">⚖ Jämför lag</button>${btnRoute('/results','Matchcenter →')}</div>
 <div class="metrics">${metric('Spelade matcher i går',matches.length,'Söndag 11 okt')}${metric('Lag i ligan',rows.length,'Fullständig tabell')}${metric('Mål i går',matches.reduce((s,m)=>s+m[1]+m[3],0),'Samtliga söndagsmatcher')}${metric('Serieledare',rows[0].pts+' p',rows[0].name)}</div>
 ${section('Alla söndagens resultat','MATCHCENTER')}<div class="grid2"><div class="card"><h3>${H(league.name)} · ${matches.length} matcher</h3>${matches.map((m,i)=>score(m,l,i)).join('')}</div><div class="card"><h3>Offensiva topplag</h3>${barChart(bestOff.map(x=>({name:x.name,value:x.gf})),{l})}<p class="small">Samtliga gjorda ligamål under säsongen.</p></div></div>
 ${section('Tre huvudstatistikpunkter','LIGASTATISTIK')}${rankingStats(l)}${section('Ligaställning','FULLSTÄNDIG TABELL')}<div class="card" id="tbl-${H(l)}">${makeTable(l)}</div>${league.note?`<p class="small">${H(league.note)}</p>`:''}<p class="small">M = matcher, V = vinster, O = oavgjorda, F = förluster, GM = gjorda mål, IM = insläppta mål, MS = målskillnad, P = poäng. Tillgängliga klubbemblem visas från externa bildkällor; annars används typografiska ersättare.</p>
 ${section('Fördjupad analys','DIAGRAM')}<div class="grid2"><div class="card"><h3>Mål per match · offensiv</h3>${barChart([...rows].filter(x=>x.p).sort((a,b)=>b.gf/b.p-a.gf/a.p).slice(0,7).map(x=>({name:x.name,value:+(x.gf/x.p).toFixed(2)})),{l})}</div><div class="card"><h3>Minst insläppta mål per match</h3>${barChart(bestDef.map(x=>({name:x.name,value:+(x.ga/x.p).toFixed(2)})),{l})}<p class="small">Lägre värde betyder starkare försvar. Denna visning sorteras stigande.</p></div></div>`}
-function viewNBA(){let max=Math.max(...DB.nba.flatMap(m=>[m[1],m[3]]));let best=DB.nba.flatMap((m,i)=>[{name:m[0],value:m[1],i},{name:m[2],value:m[3],i}]).sort((a,b)=>b.value-a.value);let wide=[...DB.nba].map((m,i)=>({m,i,diff:Math.abs(m[1]-m[3])})).sort((a,b)=>b.diff-a.diff);return `${heading('BASKET / NBA','NBA · Försäsong','Alla avslutade försäsongsmatcher inom svenskt kalenderdygn den 11 oktober. Det är ännu inte grundserie, så dessa resultat påverkar ingen grundserietabell.')}
-<div class="actionrow">${fav(keyLeague('nba'))}${btnRoute('/results','Alla matcher →')}<a class="button secondary" href="https://www.nba.com/games" target="_blank" rel="noopener noreferrer">NBA:s matchcenter ↗</a></div><div class="callout">🏀 <b>Försäsong:</b> NBA:s grundserietabell för 2026/27 kan inte beräknas utifrån dessa matcher. Individuella snitt för poäng, returer och assist visas inte utan verifierade spelarprotokoll.</div>
+function viewNBA(){let max=Math.max(...DB.nba.flatMap(m=>[m[1],m[3]]));let best=DB.nba.flatMap((m,i)=>[{name:m[0],value:m[1],i},{name:m[2],value:m[3],i}]).sort((a,b)=>b.value-a.value);let wide=[...DB.nba].map((m,i)=>({m,i,diff:Math.abs(m[1]-m[3])})).sort((a,b)=>b.diff-a.diff);return `${heading('BASKET / NBA','NBA','Alla avslutade försäsongsmatcher inom svenskt kalenderdygn den 11 oktober. Det är ännu inte grundserie, så dessa resultat påverkar ingen grundserietabell.')}
+${currentLeaguePanel('nba')}<div class="actionrow">${fav(keyLeague('nba'))}${btnRoute('/results','Alla matcher →')}<a class="button secondary" href="https://www.nba.com/games" target="_blank" rel="noopener noreferrer">NBA:s matchcenter ↗</a></div><div class="callout">🏀 <b>Försäsong:</b> NBA:s grundserietabell för 2026/27 kan inte beräknas utifrån dessa matcher. Individuella snitt för poäng, returer och assist visas inte utan verifierade spelarprotokoll.</div>
 <div class="metrics">${metric('Matcher',DB.nba.length,'Avslutade i rapportdygnet')}${metric('Högsta lagpoäng',max,'Boston Celtics')}${metric('Största seger',wide[0].diff+' p',wide[0].m[0]+' – '+wide[0].m[2])}${metric('Jämnaste match',Math.min(...wide.map(x=>x.diff))+' p','Minsta segermarginal')}</div>
 ${section('Alla NBA-resultat','FÖRSÄSONG')}<div class="grid2"><div class="card"><h3>Söndagens matcher</h3>${DB.nba.map((m,i)=>score(m,'nba',i)).join('')}</div><div class="card"><h3>Högsta lagpoängen</h3>${barChart(best.slice(0,9).map(x=>({name:x.name,value:x.value,path:matchRoute('nba',x.i)})),{color:'orange',route:'match'})}<p class="small">Poäng i enskilda matcher under rapportdygnet. Klicka för matchen.</p></div></div>
 ${section('Basketens tre klassiska statistikmått','SPELARSTATISTIK')}<div class="grid3">${stat('Poäng per match','Ej verifierat','Spelarledare saknas','Försäsong och otillräckligt underlag.','orange')}${stat('Returer per match','Ej verifierat','Spelarledare saknas','Visa först efter verifierat boxscore-underlag.','orange')}${stat('Assists per match','Ej verifierat','Spelarledare saknas','Visa först efter verifierat boxscore-underlag.','orange')}</div>${section('Konferensställning','NBA 2026/27')}<div class="callout blue">Eastern och Western Conference har ännu ingen grundserieställning i den här rapporten. En korrekt liveversion kan hämta aktuell konferensställning när säsongen har startat.</div>`}
@@ -419,7 +482,7 @@ function exportJSON(){download(new Blob([JSON.stringify(DB,null,2)],{type:'appli
 async function copyLink(){let link=location.href;try{await navigator.clipboard.writeText(link);toast('Sidans länk kopierad')}catch(e){modal('Dela SPORTPULS',`<p class="small">Kopiera adressen här nedan. Eftersom det är en lokal HTML-fil behöver mottagaren också själva filen.</p><input class="input full" readonly value="${H(link)}" onclick="this.select()">`)}}
 function dateDialog(){modal('Rapportarkiv',`<p>Den här filen är utgåvan för <b>11 oktober 2026</b>.</p><label class="small" for="onlydate">Tillgänglig utgåva</label><select id="onlydate" class="select full"><option value="2026-10-11">Söndag 11 oktober 2026</option></select><p class="small">När fler rapporter har skapats kan de läggas till som separata filer. Vi visar inga påhittade resultat för andra datum.</p><button class="button" data-action="close">Öppna 11 oktober</button>`)}
 document.addEventListener('click',e=>{let a=e.target.closest('[data-route],[data-fav],[data-action],[data-result-filter],[data-tablesort],[data-compare],[data-export],[data-liveleague],[data-live-refresh]');if(!a)return;
-if(a.dataset.liveleague){liveLeague=a.dataset.liveleague;render();return}
+if(a.dataset.liveleague){liveLeague=a.dataset.liveleague;if(a.dataset.goLive){setRoute('/live')}else{render()}return}
 if(a.dataset.liveRefresh){loadLive();return}
 if(a.dataset.route){e.preventDefault();close();setRoute(a.dataset.route);return}
 if(a.dataset.fav){let k=a.dataset.fav;if(favorites.has(k))favorites.delete(k);else favorites.add(k);lsSet('sportpuls-favs',JSON.stringify([...favorites]));toast(favorites.has(k)?'Sparad i favoriter':'Borttagen från favoriter');render();return}
