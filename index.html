@@ -250,6 +250,18 @@
 .sp-report-note{margin-top:15px}
 @media(max-width:750px){.sp-report-grid{grid-template-columns:minmax(0,1fr)}.sp-report-hero{padding:17px}.sp-report-score{gap:8px}.sp-report-score>span{font-size:21px}.sp-report-score strong{font-size:14px}}
 
+
+/* Compact goal summary below the existing status line. */
+.sp-goals{margin-top:18px;padding-top:15px;border-top:1px solid var(--border);text-align:left}
+.sp-goals h3{margin:0 0 11px;font-size:11px;text-transform:uppercase;letter-spacing:1.1px;color:var(--lime)}
+.sp-goals h3 span{font-weight:500;color:var(--muted);text-transform:none;letter-spacing:0}
+.sp-goals ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.sp-goal{display:flex;align-items:flex-start;gap:11px;padding:10px 12px;background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--dim);border-radius:10px;min-width:0}
+.sp-goal.home{border-left-color:var(--lime)}.sp-goal.away{border-left-color:var(--cyan)}
+.sp-goal-minute{color:var(--lime);font-weight:800;font-size:12px;min-width:35px;padding-top:2px}
+.sp-goal-info{min-width:0;font-size:12px;line-height:1.5;overflow-wrap:anywhere}.sp-goal-team{display:block;font-size:10px;font-weight:700;color:var(--cyan)}
+.sp-goal-info small{display:block;color:var(--muted);font-size:11px}.sp-goal-kind{font-size:10px;color:var(--orange)}.sp-goals-empty{margin:15px 0 0}
+@media(max-width:650px){.sp-goals ul{grid-template-columns:1fr}.sp-goal{padding:9px 10px}}
 </style></head><body><div class="app"><aside class="side" id="side"></aside><main class="main"><div class="topbar"><div class="crumb" id="crumb"><span>SPORTPULS</span></div><div class="tools"><button class="ibtn" type="button" data-action="search" aria-label="Sök">⌕ <span class="smallhide">Sök</span></button><button class="ibtn" type="button" data-action="date" aria-label="Välj datum">▦ <span class="smallhide">11 okt</span></button><button class="ibtn" type="button" data-action="theme" aria-label="Växla tema">◐</button><button class="ibtn" type="button" data-action="share" aria-label="Kopiera sidlänk">↗</button></div></div><div id="appview" aria-live="polite"><div class="fallback-page" id="sportpuls-fallback">
 <div class="fb-banner"><strong>SPORTPULS · Förenklad visning</strong><br>Om du ser den här rutan visar din förhandsvisning sidan utan den interaktiva appen. Resultat och tabeller nedan går ändå att läsa. För sökning, favoriter och klickbara profiler behöver HTML-filen öppnas i en webbläsare som kör JavaScript, helst via en vanlig HTTPS-adress.</div>
 <div class="fb-kicker">SÖNDAG 11 OKTOBER 2026 · EUROPE/STOCKHOLM</div><h1 class="fb-title">GÅRDAGEN<br>I SIFFROR.</h1>
@@ -387,6 +399,37 @@ function matchFromScoreboard(l,id){
   return matchLeagueData(l)?.matches?.find(m=>String(m.id)===id)||null;
 }
 function safeStat(x){return x===null||x===undefined||x===''?'–':H(x)}
+// Prefer explicit Worker fields; only parse known ESPN goal sentence formats.
+function reportGoals(report){
+  const seen=new Set();
+  return (Array.isArray(report?.events)?report.events:[]).filter(e=>{
+    const type=String(e?.type||'');
+    if(!e||e.shootout||/shootout|disallowed|cancelled|overturned|no goal/i.test(type))return false;
+    if(!(e.goal===true||/^Goal(?:$|\s|-)|^Own Goal$|^Penalty - Scored$/i.test(type)))return false;
+    const key=e.id||[e.clock,e.team,e.player,e.text].join('|');
+    if(seen.has(key))return false;
+    seen.add(key);return true;
+  }).map(e=>{
+    const text=String(e.text||'');
+    const own=/own goal/i.test(e.type||'')||/^Own Goal by /i.test(text);
+    const scorer=text.match(/^Goal!\s+.*?\.\s+([^()]+?)\s+\(([^()]+)\)/);
+    const ownScorer=text.match(/^Own Goal by ([^,]+),\s*([^,.]+)[,.]/i);
+    const assisted=text.match(/\bAssisted by ([^.!]+?)(?=\s+(?:with|following|after)\b|[.!]|$)/);
+    return {clock:e.clock||'–',player:e.player||scorer?.[1]?.trim()||ownScorer?.[1]?.trim()||'Målskytt saknas',
+      team:e.team||scorer?.[2]?.trim()||ownScorer?.[2]?.trim()||'Laguppgift saknas',
+      assist:own?'':e.assist||assisted?.[1]?.trim()||'',own,
+      penalty:/penalty/i.test(e.type||'')||/converts the penalty|\(penalty\)/i.test(text)};
+  });
+}
+function matchGoalsHtml(report,league){
+  if(!report||league==='nba')return '';
+  const goals=reportGoals(report);
+  if(!goals.length){
+    const goalless=report.state==='post'&&report.home_score!=null&&report.away_score!=null&&Number(report.home_score)===0&&Number(report.away_score)===0;
+    return `<p class="small sp-goals-empty">${goalless?'Inga mål i matchen.':report.state==='pre'?'Målskyttar visas när matchen har startat.':'Målskyttsuppgifter saknas från källan.'}</p>`;
+  }
+  return `<section class="sp-goals" aria-label="Målskyttar och assist"><h3>Målskyttar <span>· assist när uppgift finns</span></h3><ul>${goals.map(g=>`<li class="sp-goal ${g.team===report.home?'home':g.team===report.away?'away':''}"><span class="sp-goal-minute">${H(g.clock)}</span><div class="sp-goal-info"><strong>${H(g.player)}</strong>${g.own?' <span class="sp-goal-kind">Självmål</span>':g.penalty?' <span class="sp-goal-kind">Straff</span>':''}<span class="sp-goal-team">${H(g.team)}</span><small>${g.own?'Självmål för motståndarlaget':g.assist?'Assist: '+H(g.assist):'Assistuppgift saknas'}</small></div></li>`).join('')}</ul></section>`;
+}
 function viewLiveMatch(){
   const selection=chosenMatch();
   if(!selection)return notFound();
@@ -403,7 +446,7 @@ function viewLiveMatch(){
   const score=homeScore==null||awayScore==null?'–':H(homeScore)+' – '+H(awayScore);
   const pending=MATCH_REPORT_LOADING.has(key);
   const error=MATCH_REPORT_ERRORS.get(key);
-  const matchHeader=`<div class="sp-report-hero"><div class="eyebrow">${H(lgName(league))} · ${played?H(svDateTime(played)):'Matchdatum saknas'}</div><div class="sp-report-score"><strong>${H(home)}</strong><span>${score}</span><strong>${H(away)}</strong></div><p class="small">${H(status)}${report?.venue?' · '+H(report.venue):''}${report?.attendance?' · Publik '+H(report.attendance):''}</p></div>`;
+  const matchHeader=`<div class="sp-report-hero"><div class="eyebrow">${H(lgName(league))} · ${played?H(svDateTime(played)):'Matchdatum saknas'}</div><div class="sp-report-score"><strong>${H(home)}</strong><span>${score}</span><strong>${H(away)}</strong></div><p class="small">${H(status)}${report?.venue?' · '+H(report.venue):''}${report?.attendance?' · Publik '+H(report.attendance):''}</p>${matchGoalsHtml(report,league)}</div>`;
   const reload=`<button class="button secondary" data-match-refresh="1" ${pending?'disabled aria-busy="true"':''}>${pending?'◌ Hämtar matchrapport…':'↻ Uppdatera matchrapport'}</button>`;
   let details='';
   if(report){
