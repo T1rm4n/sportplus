@@ -206,6 +206,23 @@
 :root[data-theme=light] .live-table td{border-color:#dce5ed}
 @media(max-width:700px){.live-table{min-width:490px}.live-table th,.live-table td{padding:10px 8px}.live-table td:nth-child(2),.live-table th:nth-child(2){min-width:122px}}
 
+
+/* Diskret och tydlig återkoppling när en resultatkontroll körs. */
+.live-refresh-feedback{margin:7px 0 0;color:var(--muted);font-size:12px;line-height:1.45}
+.live-refresh-feedback.updated{color:var(--lime)}
+.live-refresh-feedback.error{color:var(--red)}
+.live-refresh-feedback.loading{color:var(--cyan)}
+[data-live-refresh][disabled]{opacity:.75;cursor:wait}
+
+/* SPORTPULS LIVE: tydliga källstatusar och mobilanpassning */
+.live-banner .live-refresh-feedback{margin:8px 0 0;color:var(--muted)}
+.live-banner .live-refresh-feedback.updated{color:var(--lime)}
+.live-banner .live-refresh-feedback.error{color:var(--orange)}
+.live-banner .live-refresh-feedback.loading{color:var(--cyan)}
+.live-banner button[disabled]{opacity:.65;cursor:progress}
+.live-banner{gap:14px}
+.live-table-wrap{max-width:100%;overflow-x:auto}
+@media(max-width:650px){.live-banner{flex-wrap:wrap}.live-banner button{width:100%}}
 </style></head><body><div class="app"><aside class="side" id="side"></aside><main class="main"><div class="topbar"><div class="crumb" id="crumb"><span>SPORTPULS</span></div><div class="tools"><button class="ibtn" type="button" data-action="search" aria-label="Sök">⌕ <span class="smallhide">Sök</span></button><button class="ibtn" type="button" data-action="date" aria-label="Välj datum">▦ <span class="smallhide">11 okt</span></button><button class="ibtn" type="button" data-action="theme" aria-label="Växla tema">◐</button><button class="ibtn" type="button" data-action="share" aria-label="Kopiera sidlänk">↗</button></div></div><div id="appview" aria-live="polite"><div class="fallback-page" id="sportpuls-fallback">
 <div class="fb-banner"><strong>SPORTPULS · Förenklad visning</strong><br>Om du ser den här rutan visar din förhandsvisning sidan utan den interaktiva appen. Resultat och tabeller nedan går ändå att läsa. För sökning, favoriter och klickbara profiler behöver HTML-filen öppnas i en webbläsare som kör JavaScript, helst via en vanlig HTTPS-adress.</div>
 <div class="fb-kicker">SÖNDAG 11 OKTOBER 2026 · EUROPE/STOCKHOLM</div><h1 class="fb-title">GÅRDAGEN<br>I SIFFROR.</h1>
@@ -275,7 +292,27 @@ function leagueLogo(l){
 }
 function quickLeagues(){return `<div class="leaguegrid">${[...leagueIds,'nba','euro','f1'].map(l=>`<button class="leaguecard" data-route="${leagueRoute(l)}">${leagueLogo(l)}<div class="ln">${lgName(l)}</div><div class="sub">${l==='f1'?'Singapore Grand Prix':l==='nba'?'8 försäsongsmatcher':l==='euro'?'Ingen match under rapportdygnet':`${DB.leagues[l].matches.length} matcher · ${DB.football[l].length} lag`}</div><div class="go">UTFORSKA ↗</div></button>`).join('')}</div>`}
 /* SPORTPULS: current-data display, separate from the archived edition. */
-let LIVE = null, LIVE_LOADING = false, LIVE_FAILED = false;
+let LIVE = null, LIVE_LOADING = false, LIVE_FAILED = false, LIVE_REFRESH_RESULT = null;
+// Steg efter Cloudflare-installationen: klistra in hela Worker-adressen här.
+// Exempel: https://sportpuls-live.dittkonto.workers.dev (ingen slash i slutet).
+const SPORTPULS_WORKER_URL = '';
+let DIRECT_API_URL = SPORTPULS_WORKER_URL.trim() || lsGet('sportpuls-worker-url') || '';
+let LIVE_DIRECT = {}, LIVE_F1_DIRECT = null, DIRECT_LOADING = false;
+let DIRECT_NOTICE = {type:'hint',message:'Direktuppdatering ansluts via Cloudflare Worker. Tills dess visas sparade GitHub-resultat.'};
+function matchLeagueData(l){return LIVE_DIRECT[l] || LIVE?.leagues?.[l] || null}
+function directStatus(message,type='hint'){
+  DIRECT_NOTICE={type,message};
+  document.querySelectorAll('[data-direct-status]').forEach(el=>{
+    el.textContent=message;
+    el.className='small live-refresh-feedback '+type;
+  });
+}
+function refreshPageKeepScroll(){
+  const y=window.scrollY;
+  render();
+  window.scrollTo(0,y);
+}
+
 
 function svDateTime(stamp) {
   if (!stamp) return 'Ingen uppdatering ännu';
@@ -298,22 +335,48 @@ function liveMatch(m,l) {
   return `<div class="currentmatch"><div class="currentmatch-top"><span>${H(sportDate(m.start))}</span><span class="current-state ${state}">${H(liveStatus(m))}</span></div><div class="currentmatch-teams"><strong>${H(m.home)}</strong><span class="current-score">${score}</span><strong>${H(m.away)}</strong></div></div>`;
 }
 function liveSnapshotInfo(l) {
-  if (!LIVE?.leagues?.[l]) return '<p class="small">Ingen matchinformation inläst för denna liga ännu.</p>';
-  let item = LIVE.leagues[l];
+  if (!matchLeagueData(l)) return '<p class="small">Ingen matchinformation inläst för denna liga ännu.</p>';
+  let item = matchLeagueData(l);
   if (!Array.isArray(item.matches)) return '<p class="small">Den här datakällan har inte svarat.</p>';
   if (!item.matches.length) return '<p class="small">Inga matcher registrerade i perioden igår–imorgon.</p>';
   return item.matches.map(m=>liveMatch(m,l)).join('');
 }
 function liveF1List(kind) {
-  const o = LIVE?.f1?.[kind];
+  const o = LIVE_F1_DIRECT?.[kind] || LIVE?.f1?.[kind];
   if (!o?.items?.length) return '<p class="small">Mästerskapsställningen har ännu inte hämtats.</p>';
   const label = kind === 'drivers' ? 'Förarmästerskapet' : 'Konstruktörsmästerskapet';
   return `<div class="live-minihead">${H(label)} · ${H(o.season)} · omgång ${H(o.round)}</div><div class="live-f1-list">${o.items.slice(0,11).map(x=>`<div class="live-f1-row"><span class="live-rank">${H(x.position)}</span><span class="live-name">${H(x.name)}${x.team?`<small>${H(x.team)}</small>`:''}</span><b>${H(x.points)} p</b></div>`).join('')}</div>`;
 }
+function liveRefreshFeedback(){
+  const message=LIVE_REFRESH_RESULT?.message || 'Kontrollerar sparade data. Nya sportresultat hämtas automatiskt av GitHub Actions ungefär varannan timme.';
+  const type=LIVE_REFRESH_RESULT?.type || 'hint';
+  return `<p class="small live-refresh-feedback ${H(type)}" data-refresh-state="1" role="status" aria-live="polite">${H(message)}</p>`;
+}
+function liveRefreshButton(){
+  return `<button type="button" class="button secondary" data-live-refresh="1" ${LIVE_LOADING?'disabled aria-busy="true"':''}>${LIVE_LOADING?'◌ Kontrollerar…':'↻ Uppdatera vyn'}</button>`;
+}
 function liveBanner() {
-  const stamp = LIVE?.updated_at;
-  const old = stamp && (Date.now() - new Date(stamp).getTime() > 4 * 60 * 60 * 1000);
-  return `<div class="live-banner"><div><span class="live-led ${stamp&&!old?'good':''}"></span><strong>${stamp ? old?'Senast sparade resultat · äldre uppdatering':'Senaste resultatöversikt' : LIVE_LOADING?'Hämtar aktuella resultat…':'Inväntar första automatiska uppdateringen'}</strong><p class="small">${stamp?'Senast hämtat: '+H(svDateTime(stamp)):'När GitHub-uppdateringen har körts visas matcherna här.'} · Ingen sekund-för-sekund-rapportering.</p></div><button type="button" class="button secondary" data-live-refresh="1">↻ Uppdatera vyn</button></div>`;
+  const active=sportSelection('live');
+  const source=active!=='overview'&&active!=='euro'&&active!=='f1'?LIVE_DIRECT[active]:null;
+  const directStamp=active==='overview'?Object.values(LIVE_DIRECT).map(x=>x.updated_at).sort().at(-1):active==='f1'?LIVE_F1_DIRECT?.updated_at:source?.updated_at;
+  const stamp=directStamp || LIVE?.updated_at;
+  const isDirect=!!source || (active==='overview'&&Object.keys(LIVE_DIRECT).length>0) || (active==='f1'&&LIVE_F1_DIRECT);
+  const old=stamp&&(Date.now()-new Date(stamp).getTime()>4*60*60*1000);
+  const label=DIRECT_LOADING?'Kontrollerar sportkällorna…':isDirect?'Direktkontakt med sportkällan':stamp?(old?'Sparade resultat · äldre uppgifter':'Senaste sparade resultat'):'Inväntar resultat';
+  const explain=isDirect?'Källa: '+(active==='f1'?'Jolpica F1':'ESPN')+' · senast kontrollerat '+svDateTime(stamp):
+    stamp?'Reservdata från GitHub · sparad '+svDateTime(stamp):'Inga uppgifter inlästa ännu';
+  return `<div class="live-banner"><div><span class="live-led ${isDirect?'good':''}"></span><strong>${H(label)}</strong><p class="small">${H(explain)}. Uppdateringar är inte sekundsnabba.</p>
+    <p class="small live-refresh-feedback ${H(DIRECT_NOTICE.type)}" data-direct-status="1" role="status" aria-live="polite">${H(DIRECT_NOTICE.message)}</p></div>
+    <button type="button" class="button secondary" data-live-refresh="1" ${DIRECT_LOADING?'disabled aria-busy="true"':''}>${DIRECT_LOADING?'◌ Hämtar…':'↻ Uppdatera från källorna'}</button></div>`;
+}
+function directSetupCard(){
+  if(DIRECT_API_URL)return '';
+  return `<div class="card" style="border-color:var(--cyan)"><h3>Aktivera direktuppdatering</h3>
+    <p class="small">Matchcentret visar just nu GitHubs sparade resultat. När du har skapat Cloudflare Workern, klistra in dess offentliga adress här för att provköra direktuppdatering i den här webbläsaren.</p>
+    <div class="actionrow"><input id="sportpuls-worker-input" type="url" inputmode="url" placeholder="https://sportpuls-live.dittkonto.workers.dev" style="flex:1;min-width:220px;max-width:560px;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:12px">
+    <button type="button" class="button" data-worker-save="1">Anslut Worker</button></div>
+    <p class="small">För att alla besökare ska få direktuppdatering, lägg även in adressen i <code>SPORTPULS_WORKER_URL</code> i index.html.</p>
+  </div>`;
 }
 function liveTableNumber(value, suffix='') {
   if(value === null || value === undefined || value === '') return '–';
@@ -357,7 +420,7 @@ function currentLeaguePanel(l) {
 }
 
 function liveHomePreview() {
-  let l = ['pl','ch','ll','bl','sa','all','nba'].flatMap(id=>(LIVE?.leagues?.[id]?.matches||[]).map(m=>({...m,l:id})));
+  let l = ['pl','ch','ll','bl','sa','all','nba'].flatMap(id=>(matchLeagueData(id)?.matches||[]).map(m=>({...m,l:id})));
   l.sort((a,b)=>Math.abs(new Date(a.start).getTime()-Date.now())-Math.abs(new Date(b.start).getTime()-Date.now()));
   let list = l.slice(0,3);
   return `${section('Aktuella sportresultat','UPPDATERAS AUTOMATISKT',btnRoute('/live','Öppna matchcentret ↗'))}<div class="card current-preview">${liveBanner()}${list.length?list.map(m=>liveMatch(m,m.l)).join(''):`<p class="small">${LIVE?.updated_at?'Inga matcher finns i det aktuella datumintervallet.':'Första resultatuppdateringen har inte körts ännu. Din historiska rapport finns kvar nedanför.'}</p>`}${btnRoute('/live','Se alla matchresultat →','button secondary full')}</div>`;
@@ -374,30 +437,39 @@ function sportTabs(section,active){
 function liveTablesBanner() {
   const stamp=LIVE?.updated_at;
   const old=stamp&&(Date.now()-new Date(stamp).getTime()>4*60*60*1000);
-  return `<div class="live-banner"><div><span class="live-led ${stamp&&!old?'good':''}"></span><strong>${stamp?(old?'Senast sparade tabeller · äldre uppdatering':'Aktuella ligatabeller'):(LIVE_LOADING?'Hämtar tabeller…':'Inväntar första tabelluppdateringen')}</strong><p class="small">${stamp?'Senast hämtat: '+H(svDateTime(stamp)):'GitHub hämtar tabellerna automatiskt.'} · Uppdateras periodiskt, inte sekund för sekund.</p></div><button type="button" class="button secondary" data-live-refresh="1">↻ Uppdatera vyn</button></div>`;
+  return `<div class="live-banner"><div><span class="live-led ${stamp&&!old?'good':''}"></span><strong>${stamp?(old?'Senast sparade tabeller · äldre uppdatering':'Aktuella ligatabeller'):(LIVE_LOADING?'Hämtar tabeller…':'Inväntar första tabelluppdateringen')}</strong><p class="small">${stamp?'Senast hämtat: '+H(svDateTime(stamp)):'GitHub hämtar tabellerna automatiskt.'} · Uppdateras periodiskt, inte sekund för sekund.</p>${liveRefreshFeedback()}</div>${liveRefreshButton()}</div>`;
 }
 function viewLive(){
   const active=sportSelection('live');
   let content='';
   if(active==='f1'){
-    content=`<div class="card"><h3>Formel 1 · tävlingsresultat</h3><p class="small">Resultat från enskilda F1-lopp är ännu inte kopplade till matchcentret. Förare och stall har däremot aktuella mästerskapsställningar under Tabeller.</p>${btnRoute('/tables/f1','Visa F1-ställningar ↗','button secondary')}</div>`;
+    const race=LIVE_F1_DIRECT?.race;
+    if(race){
+      content=`<div class="card"><h3>${H(race.name)} · senaste avslutade F1-loppet</h3><p class="small">${H(race.circuit)} · ${H(race.date)} · ${H(race.season)} · omgång ${H(race.round)}. Detta är slutresultatet, inte varv-för-varv-live-timing.</p>
+        <div class="live-table-wrap"><table class="live-table"><thead><tr><th>#</th><th>FÖRARE</th><th>STALL</th><th>TID / STATUS</th><th>POÄNG</th></tr></thead><tbody>
+        ${race.results.map(r=>`<tr><td>${H(r.position)}</td><td>${H(r.driver)}</td><td>${H(r.team)}</td><td>${H(r.time)}</td><td>${H(r.points)}</td></tr>`).join('')}
+        </tbody></table></div>${btnRoute('/tables/f1','Visa VM-tabeller ↗','button secondary')}</div>`;
+    } else {
+      content=`<div class="card"><h3>Formel 1 · tävlingsresultat</h3><p class="small">Senaste avslutade loppet hämtas via Cloudflare Workern när den är ansluten. Fram till dess visas mästerskapsställningarna under Tabeller.</p>${btnRoute('/tables/f1','Visa F1-ställningar ↗','button secondary')}</div>`;
+    }
   }else if(active==='euro'){
     content=`<div class="card"><h3>EuroLeague · matcher</h3><p class="small">Aktuella EuroLeague-resultat är ännu inte anslutna till den automatiska hämtningen.</p>${btnRoute('/league/euro','Se historiskt EuroLeague-arkiv ↗','button secondary')}</div>`;
   }else if(active!=='overview'){
-    const count=LIVE?.leagues?.[active]?.matches?.length||0;
+    const count=matchLeagueData(active)?.matches?.length||0;
     content=`<div class="card"><h3>${H(lgName(active))} · ${count} matcher</h3>${liveSnapshotInfo(active)}</div>`;
   }else{
     content=[...leagueIds,'nba'].map(l=>{
-      const count=LIVE?.leagues?.[l]?.matches?.length||0;
+      const count=matchLeagueData(l)?.matches?.length||0;
       return `<div class="card"><div class="cardhead"><h3>${H(lgName(l))} · ${count} matcher</h3>${btnRoute('/live/'+l,'Visa endast matcher ↗','button secondary')}</div>${liveSnapshotInfo(l)}</div>`;
     }).join('');
   }
-  return `${heading('AKTUELLT / MATCHCENTER','Matcher & resultat','Här hittar du bara matcher och resultat för fotboll och NBA. För F1-lopp och EuroLeague visas information om täckningen. Alla ligatabeller har en egen avdelning.')}
+  return `${heading('AKTUELLT / MATCHCENTER','Matcher & resultat','Här ser du matcher för fotboll och NBA samt senaste avslutade F1-loppet när direktkopplingen är aktiv. EuroLeague är ännu inte anslutet. Ligatabeller finns på sin egen sida.')}
     <div class="actionrow">${btnRoute('/tables','▤ Gå till ligatabeller','button secondary')}</div>
     ${liveBanner()}
+    ${directSetupCard()}
     ${sportTabs('live',active)}
     <div class="live-grid">${content}</div>
-    <p class="small live-disclaimer"><b>Datakällor:</b> Matcher hämtas periodiskt från ESPNs inofficiella gränssnitt. Matchlistorna omfattar normalt igår, idag och imorgon i svensk tid. Historiska data från 11 oktober 2026 visas separat i arkivet.</p>`;
+    <p class="small live-disclaimer"><b>Datakällor:</b> Med ansluten Worker hämtas matcher direkt från ESPN (inofficiellt API), annars från GitHub-snapshot. Matchlistorna omfattar normalt igår, idag och imorgon i svensk tid. Historiska data från 11 oktober 2026 visas separat i arkivet.</p>`;
 }
 function viewTables(){
   const active=sportSelection('tables');
@@ -419,30 +491,161 @@ function viewTables(){
     <div class="live-grid">${content}</div>
     <p class="small live-disclaimer"><b>Datakällor:</b> Fotboll och NBA via ESPNs inofficiella API, F1-mästerskapsställningar via Jolpica F1 API. Tabellen visar senast sparade data och kan vara fördröjd. Rapporten från 11 oktober 2026 är ett separat arkiv.</p>`;
 }
-async function loadLive() {
-  if(LIVE_LOADING) return;
-  LIVE_LOADING = true;
-  LIVE_FAILED = false;
-  const ver=Math.floor(Date.now()/300000);
-  const urls=[`https://raw.githubusercontent.com/T1rm4n/sportplus/main/data/live.json?v=${ver}`,`./data/live.json?v=${ver}`];
-  try{
-    let result=null;
-    for(const src of urls){
+// Klientkontakt med SPORTPULS Worker. Befintlig GitHub-snapshot fortsätter som fallback.
+function sourceWorkerUrl(path){return DIRECT_API_URL.replace(/\/+$/,'')+path}
+async function refreshDirect(manual=false){
+  if(DIRECT_LOADING)return;
+  if(!DIRECT_API_URL){
+    if(manual)directStatus('Direktuppdatering är ännu inte ansluten. Skapa och anslut Cloudflare Workern nedan.','error');
+    return;
+  }
+  if(document.hidden&&!manual)return;
+  const inLive=path==='/live'||path.startsWith('/live/');
+  const inF1Tables=path==='/tables/f1';
+  if(!inLive&&!inF1Tables)return;
+  const active=inLive?sportSelection('live'):'f1';
+  if(active==='euro'){
+    if(manual)directStatus('EuroLeague saknar fortfarande en ansluten direktkälla.','hint');
+    return;
+  }
+  const ids=active==='overview'?[...leagueIds,'nba']:active==='f1'?[]:[active];
+  const fetchF1=active==='f1';
+  DIRECT_LOADING=true;
+  directStatus('Hämtar senaste uppgifter direkt från '+(fetchF1?'Jolpica':'ESPN')+'…','loading');
+  document.querySelectorAll('[data-live-refresh]').forEach(btn=>{btn.disabled=true;btn.textContent='◌ Hämtar…'});
+  let successes=0,errors=0,changes=0;
+  const jobs=ids.map(async id=>{
+    try{
+      const ctrl=new AbortController();
+      const timer=setTimeout(()=>ctrl.abort(),17000);
+      let data;
       try{
-        const resp=await fetch(src,{cache:'no-store'});
-        if(!resp.ok) throw new Error('HTTP '+resp.status);
-        const payload=await resp.json();
-        if(payload?.schema!==1 || typeof payload.leagues!=='object') throw new Error('Fel dataformat');
-        if(!result || (payload.updated_at && !result.updated_at) || (payload.updated_at && result.updated_at && new Date(payload.updated_at)>new Date(result.updated_at))) result=payload;
-        if(result.updated_at) break;
-      }catch(e){console.warn('SPORTPULS: kunde inte hämta resultat',src,e)}
+        const res=await fetch(sourceWorkerUrl('/scores?league='+id),{cache:'no-store',signal:ctrl.signal});
+        if(!res.ok)throw Error('Svar '+res.status);
+        data=await res.json();
+      }finally{clearTimeout(timer)}
+      if(data?.schema!==1||data.league!==id||!Array.isArray(data.matches)) throw Error('Fel svar från Worker');
+      const before=matchLeagueData(id)?.matches||[];
+      if(JSON.stringify(before)!==JSON.stringify(data.matches))changes++;
+      LIVE_DIRECT[id]={updated_at:data.updated_at,matches:data.matches};
+      successes++;
+    }catch(e){errors++;console.warn('SPORTPULS: direktkälla svarade inte',id,e)}
+  });
+  if(fetchF1){
+    jobs.push((async()=>{
+      try{
+        const ctrl=new AbortController(); const timer=setTimeout(()=>ctrl.abort(),17000);
+        let data;
+        try{
+          const res=await fetch(sourceWorkerUrl('/f1'),{cache:'no-store',signal:ctrl.signal});
+          if(!res.ok)throw Error('Svar '+res.status);
+          data=await res.json();
+        }finally{clearTimeout(timer)}
+        if(data?.schema!==1||!data.drivers?.items?.length||!data.constructors?.items?.length||!data.race?.results?.length)throw Error('Fel F1-data');
+        const before=JSON.stringify(LIVE_F1_DIRECT?.race?.results||[]);
+        if(before!==JSON.stringify(data.race.results))changes++;
+        LIVE_F1_DIRECT=data;
+        successes++;
+      }catch(e){errors++;console.warn('SPORTPULS: F1-källa svarade inte',e)}
+    })());
+  }
+  try{await Promise.all(jobs)}finally{
+    DIRECT_LOADING=false;
+    const time=svDateTime(new Date().toISOString());
+    if(successes&&!errors){
+      directStatus(`${time}: ${successes} källa${successes===1?'':'or'} kontrollerade${changes?' · nya uppgifter hämtade':' · inga nya resultat'}.`,'updated');
+    }else if(successes){
+      directStatus(`${time}: ${successes} källa${successes===1?'':'or'} uppdaterade, ${errors} misslyckades. Senast sparade data används där det behövs.`,'error');
+    }else{
+      directStatus(`${time}: Direktkällan svarar inte. Tidigare GitHub-resultat visas.`,'error');
     }
-    if(result) LIVE=result; else LIVE_FAILED=true;
+    if(path==='/live'||path.startsWith('/live/')||path==='/tables/f1') refreshPageKeepScroll();
+  }
+}
+function saveWorkerUrl(){
+  const el=Q('#sportpuls-worker-input');
+  const value=(el?.value||'').trim().replace(/\/+$/,'').replace(/\/(health|scores|f1)$/,'');
+  let u;
+  try{u=new URL(value)}catch(e){}
+  if(!u||u.protocol!=='https:'||!u.hostname.endsWith('.workers.dev')||u.pathname!=='/'||u.search||u.hash){
+    directStatus('Klistra in hela https-adressen till din Cloudflare Worker (*.workers.dev).','error');
+    return;
+  }
+  DIRECT_API_URL=u.origin;
+  lsSet('sportpuls-worker-url',DIRECT_API_URL);
+  directStatus('Worker ansluten i den här webbläsaren. Kontrollerar källorna…','updated');
+  refreshPageKeepScroll();
+  refreshDirect(true);
+}
+async function loadLive(manual=false) {
+  if(LIVE_LOADING){
+    if(manual) toast('En kontroll pågår redan.');
+    return;
+  }
+  LIVE_LOADING=true;
+  LIVE_FAILED=false;
+  const old=LIVE;
+  if(manual){
+    LIVE_REFRESH_RESULT={type:'loading',message:'Kontrollerar senaste sparade resultat från GitHub…'};
+    document.querySelectorAll('[data-live-refresh]').forEach(button=>{
+      button.disabled=true;
+      button.setAttribute('aria-busy','true');
+      button.textContent='◌ Kontrollerar…';
+    });
+    document.querySelectorAll('[data-refresh-state]').forEach(item=>{
+      item.textContent=LIVE_REFRESH_RESULT.message;
+      item.className='small live-refresh-feedback loading';
+    });
+  }
+  // Varje kontroll använder en egen URL och jämför båda källorna.
+  const ver=Date.now();
+  const urls=[`./data/live.json?refresh=${ver}`,
+              `https://raw.githubusercontent.com/T1rm4n/sportplus/main/data/live.json?refresh=${ver}`];
+  let result=null;
+  try{
+    const fetched=await Promise.all(urls.map(async src=>{
+      const controller=new AbortController();
+      const timeout=setTimeout(()=>controller.abort(),10000);
+      try{
+        const resp=await fetch(src,{cache:'no-store',signal:controller.signal});
+        if(!resp.ok) throw new Error('HTTP '+resp.status);
+        const data=await resp.json();
+        if(data?.schema!==1 || typeof data.leagues!=='object' || Array.isArray(data.leagues)) throw new Error('Fel dataformat');
+        return data;
+      }catch(err){
+        console.warn('SPORTPULS: kunde inte hämta sparade resultat',src,err);
+        return null;
+      }finally{clearTimeout(timeout)}
+    }));
+    // Välj nyaste datafilen och gå inte bakåt om en CDN fortfarande är fördröjd.
+    for(const item of fetched){
+      if(item && (!result || new Date(item.updated_at||0)>new Date(result.updated_at||0))) result=item;
+    }
+    if(result && old?.updated_at && new Date(result.updated_at||0)<new Date(old.updated_at)) result=old;
+    if(result) LIVE=result;
+    else LIVE_FAILED=true;
+    if(manual){
+      const checked=svDateTime(new Date().toISOString());
+      if(!result){
+        LIVE_REFRESH_RESULT={type:'error',message:`Kontrollerat ${checked}: Kunde inte nå resultatfilen. Tidigare uppgifter visas om de finns.`};
+      }else if(old && JSON.stringify(old)===JSON.stringify(result)){
+        LIVE_REFRESH_RESULT={type:'same',message:`Kontrollerat ${checked}: Inga nya uppgifter sedan senaste GitHub-uppdateringen.`};
+      }else{
+        LIVE_REFRESH_RESULT={type:'updated',message:`Kontrollerat ${checked}: ${old?'Nya uppgifter hämtade!':'Resultat hämtade!'} (${svDateTime(result.updated_at)}).`};
+      }
+    }
+  }catch(err){
+    LIVE_FAILED=true;
+    console.error('SPORTPULS: oväntat fel vid uppdatering',err);
+    if(manual) LIVE_REFRESH_RESULT={type:'error',message:'Det gick inte att kontrollera nya resultat. Försök igen senare.'};
   }finally{
     LIVE_LOADING=false;
-    if(path === '/' || path.startsWith('/live') || path.startsWith('/tables') || path.startsWith('/league/')){
-      const y=window.scrollY; render(); window.scrollTo(0,y);
+    if(path==='/' || path.startsWith('/live') || path.startsWith('/tables') || path.startsWith('/league/')){
+      const y=window.scrollY;
+      render();
+      window.scrollTo(0,y);
     }
+    if(manual && LIVE_REFRESH_RESULT) toast(LIVE_REFRESH_RESULT.message);
   }
 }
 
@@ -515,8 +718,9 @@ function download(blob,name){let u=URL.createObjectURL(blob),a=document.createEl
 function exportJSON(){download(new Blob([JSON.stringify(DB,null,2)],{type:'application/json;charset=utf-8'}),'SPORTPULS_data_2026-10-11.json')}
 async function copyLink(){let link=location.href;try{await navigator.clipboard.writeText(link);toast('Sidans länk kopierad')}catch(e){modal('Dela SPORTPULS',`<p class="small">Kopiera adressen här nedan. Eftersom det är en lokal HTML-fil behöver mottagaren också själva filen.</p><input class="input full" readonly value="${H(link)}" onclick="this.select()">`)}}
 function dateDialog(){modal('Rapportarkiv',`<p>Den här filen är utgåvan för <b>11 oktober 2026</b>.</p><label class="small" for="onlydate">Tillgänglig utgåva</label><select id="onlydate" class="select full"><option value="2026-10-11">Söndag 11 oktober 2026</option></select><p class="small">När fler rapporter har skapats kan de läggas till som separata filer. Vi visar inga påhittade resultat för andra datum.</p><button class="button" data-action="close">Öppna 11 oktober</button>`)}
-document.addEventListener('click',e=>{let a=e.target.closest('[data-route],[data-action],[data-result-filter],[data-tablesort],[data-compare],[data-export],[data-live-refresh]');if(!a)return;
-if(a.dataset.liveRefresh){loadLive();return}
+document.addEventListener('click',e=>{let a=e.target.closest('[data-route],[data-action],[data-result-filter],[data-tablesort],[data-compare],[data-export],[data-live-refresh],[data-worker-save]');if(!a)return;
+if(a.dataset.workerSave){saveWorkerUrl();return}
+if(a.dataset.liveRefresh){if(path==='/live'||path.startsWith('/live/')||path==='/tables/f1')refreshDirect(true);else loadLive(true);return}
 if(a.dataset.route){e.preventDefault();close();setRoute(a.dataset.route);return}
 if(a.dataset.resultFilter){filters.results=a.dataset.resultFilter;render();return}
 if(a.dataset.tablesort){let [id,k]=a.dataset.tablesort.split('|');tableState[id]??={sort:null,desc:false,query:''};let s=tableState[id];if(s.sort===k)s.desc=!s.desc;else{s.sort=k;s.desc=['pts','gf','w','pf','pd'].includes(k)}let oldScroll=window.scrollY;let current=Q('#tbl-'+id);if(current){let query=Q(`[data-tablequery="${id}"]`);let focused=document.activeElement===query;current.innerHTML=makeTable(id,leagueIds.includes(id)?'football':id);if(focused)Q(`[data-tablequery="${id}"]`)?.focus();window.scrollTo(0,oldScroll)}else render();return}
@@ -525,5 +729,10 @@ if(a.dataset.export){exportCSV(a.dataset.export);return}
 if(a.dataset.action){let act=a.dataset.action;switch(act){case 'search':openSearch();break;case 'close':close();break;case 'theme':theme=theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;lsSet('sportpuls-theme',theme);toast(theme==='dark'?'Mörkt tema':'Ljust tema');break;case 'date':dateDialog();break;case 'share':copyLink();break;case 'export-json':exportJSON();break;case 'print':window.print();break;}}});
 document.addEventListener('input',e=>{if(e.target.id==='resultquery'){let pos=e.target.selectionStart;filters.text=e.target.value;let query=Q('#resultquery');let scroll=window.scrollY;let container=Q('#appview');container.innerHTML=viewResults();query=Q('#resultquery');query.focus();query.setSelectionRange(pos,pos);window.scrollTo(0,scroll)}if(e.target.dataset.tablequery){let id=e.target.dataset.tablequery;tableState[id]??={sort:null,desc:false,query:''};tableState[id].query=e.target.value;let caret=e.target.selectionStart,el=Q('#tbl-'+id);if(el){el.innerHTML=makeTable(id,leagueIds.includes(id)?'football':id);let q=Q(`[data-tablequery="${id}"]`);q.focus();q.setSelectionRange(caret,caret)}}if(e.target.id==='globalsearch')Q('#globalresults').innerHTML=hitList(e.target.value);if(e.target.id==='searchpageinput')Q('#searchpageresults').innerHTML=hitList(e.target.value)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();openSearch()}if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-route][tabindex="0"]')){e.preventDefault();setRoute(e.target.dataset.route)}});
-window.addEventListener('hashchange',()=>{close();render()});render();loadLive();window.setInterval(loadLive,15*60*1000);
+window.addEventListener('hashchange',()=>{close();render();if(path.startsWith('/live')||path==='/tables/f1')refreshDirect(false)});
+render();loadLive();
+if(path.startsWith('/live')||path==='/tables/f1')refreshDirect(false);
+window.setInterval(()=>{if(!document.hidden&&(path.startsWith('/live')||path==='/tables/f1'))refreshDirect(false)},60*1000);
+window.setInterval(()=>{if(!document.hidden)loadLive()},15*60*1000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&(path.startsWith('/live')||path==='/tables/f1'))refreshDirect(false)});
 })();</script></body></html>
