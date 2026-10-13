@@ -72,7 +72,7 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "drivers": {
       "items": [
@@ -263,33 +263,13 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     }
   },
-  "last_attempt": "2026-10-12T18:46:37+00:00",
+  "last_attempt": "2026-10-13T02:00:35+00:00",
   "leagues": {
     "all": {
       "matches": [
-        {
-          "away": "Djurgården",
-          "away_score": "1",
-          "home": "Hammarby IF",
-          "home_score": "0",
-          "id": "401842837",
-          "start": "2026-10-11T12:00Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Örgryte IS",
-          "away_score": "0",
-          "home": "BK Häcken",
-          "home_score": "3",
-          "id": "401842836",
-          "start": "2026-10-11T14:30Z",
-          "state": "post",
-          "status": "FT"
-        },
         {
           "away": "Kalmar FF",
           "away_score": "0",
@@ -297,8 +277,8 @@
           "home_score": "1",
           "id": "401874018",
           "start": "2026-10-12T17:00Z",
-          "state": "in",
-          "status": "89'"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Halmstads BK",
@@ -307,49 +287,18 @@
           "home_score": "4",
           "id": "401874019",
           "start": "2026-10-12T17:00Z",
-          "state": "in",
-          "status": "90'"
+          "state": "post",
+          "status": "FT"
         }
       ],
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "bl": {
-      "matches": [
-        {
-          "away": "Borussia Mönchengladbach",
-          "away_score": "1",
-          "home": "FC Cologne",
-          "home_score": "2",
-          "id": "401884774",
-          "start": "2026-10-11T13:30Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Schalke 04",
-          "away_score": "1",
-          "home": "SC Freiburg",
-          "home_score": "2",
-          "id": "401884778",
-          "start": "2026-10-11T15:30Z",
-          "state": "post",
-          "status": "FT"
-        }
-      ],
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "matches": [],
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "ch": {
       "matches": [
-        {
-          "away": "Portsmouth",
-          "away_score": "0",
-          "home": "Southampton",
-          "home_score": "1",
-          "id": "401880237",
-          "start": "2026-10-11T11:00Z",
-          "state": "post",
-          "status": "FT"
-        },
         {
           "away": "West Bromwich Albion",
           "away_score": "0",
@@ -429,156 +378,116 @@
           "start": "2026-10-13T19:00Z",
           "state": "pre",
           "status": "Scheduled"
-        }
-      ],
-      "updated_at": "2026-10-12T18:46:37+00:00"
-    },
-    "ll": {
-      "matches": [
+        },
         {
-          "away": "Celta Vigo",
+          "away": "Derby County",
           "away_score": "0",
-          "home": "Elche",
+          "home": "Queens Park Rangers",
           "home_score": "0",
-          "id": "401882854",
-          "start": "2026-10-11T12:00Z",
-          "state": "post",
-          "status": "FT"
+          "id": "401880221",
+          "start": "2026-10-14T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
         },
         {
-          "away": "Deportivo",
-          "away_score": "2",
-          "home": "Real Sociedad",
-          "home_score": "3",
-          "id": "401882847",
-          "start": "2026-10-11T14:15Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Osasuna",
-          "away_score": "2",
-          "home": "Real Betis",
-          "home_score": "5",
-          "id": "401882855",
-          "start": "2026-10-11T16:30Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Valencia",
-          "away_score": "2",
-          "home": "Racing Santander",
-          "home_score": "2",
-          "id": "401882850",
-          "start": "2026-10-11T19:00Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Sevilla",
+          "away": "Sheffield United",
           "away_score": "0",
-          "home": "Levante",
+          "home": "Portsmouth",
           "home_score": "0",
-          "id": "401882852",
-          "start": "2026-10-12T19:00Z",
+          "id": "401880222",
+          "start": "2026-10-14T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Southampton",
+          "away_score": "0",
+          "home": "Norwich City",
+          "home_score": "0",
+          "id": "401880223",
+          "start": "2026-10-14T18:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "West Ham United",
+          "away_score": "0",
+          "home": "Lincoln City",
+          "home_score": "0",
+          "id": "401880224",
+          "start": "2026-10-14T19:00Z",
           "state": "pre",
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
+    },
+    "ll": {
+      "matches": [
+        {
+          "away": "Sevilla",
+          "away_score": "3",
+          "home": "Levante",
+          "home_score": "3",
+          "id": "401882852",
+          "start": "2026-10-12T19:00Z",
+          "state": "post",
+          "status": "FT"
+        }
+      ],
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "nba": {
       "matches": [
         {
-          "away": "Dallas Mavericks",
-          "away_score": "132",
-          "home": "Houston Rockets",
-          "home_score": "115",
-          "id": "401898400",
-          "start": "2026-10-11T10:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Orlando Magic",
-          "away_score": "105",
-          "home": "Cleveland Cavaliers",
-          "home_score": "119",
-          "id": "401898401",
-          "start": "2026-10-11T22:30Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Milwaukee Bucks",
-          "away_score": "90",
-          "home": "Charlotte Hornets",
-          "home_score": "105",
-          "id": "401901821",
-          "start": "2026-10-11T23:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Chicago Bulls",
-          "away_score": "128",
-          "home": "Denver Nuggets",
-          "home_score": "133",
-          "id": "401908941",
-          "start": "2026-10-12T01:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
           "away": "London Lions",
-          "away_score": "0",
+          "away_score": "66",
           "home": "Portland Trail Blazers",
-          "home_score": "0",
+          "home_score": "119",
           "id": "401914130",
           "start": "2026-10-12T20:00Z",
-          "state": "pre",
-          "status": "10/12 - 4:00 PM EDT"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Oklahoma City Thunder",
-          "away_score": "0",
+          "away_score": "110",
           "home": "Atlanta Hawks",
-          "home_score": "0",
+          "home_score": "113",
           "id": "401898402",
           "start": "2026-10-12T23:00Z",
-          "state": "pre",
-          "status": "10/12 - 7:00 PM EDT"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Brooklyn Nets",
-          "away_score": "0",
+          "away_score": "131",
           "home": "Washington Wizards",
-          "home_score": "0",
+          "home_score": "122",
           "id": "401901824",
           "start": "2026-10-12T23:00Z",
-          "state": "pre",
-          "status": "10/12 - 7:00 PM EDT"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Minnesota Timberwolves",
-          "away_score": "0",
+          "away_score": "114",
           "home": "New York Knicks",
-          "home_score": "0",
+          "home_score": "96",
           "id": "401914124",
           "start": "2026-10-12T23:30Z",
-          "state": "pre",
-          "status": "10/12 - 7:30 PM EDT"
+          "state": "in",
+          "status": "2:58 - 4th"
         },
         {
           "away": "San Antonio Spurs",
-          "away_score": "0",
+          "away_score": "47",
           "home": "Utah Jazz",
-          "home_score": "0",
+          "home_score": "52",
           "id": "401898721",
           "start": "2026-10-13T01:00Z",
-          "state": "pre",
-          "status": "10/12 - 9:00 PM EDT"
+          "state": "in",
+          "status": "4:23 - 2nd"
         },
         {
           "away": "Cleveland Cavaliers",
@@ -629,107 +538,97 @@
           "start": "2026-10-14T02:00Z",
           "state": "pre",
           "status": "10/13 - 10:00 PM EDT"
+        },
+        {
+          "away": "Brooklyn Nets",
+          "away_score": "0",
+          "home": "Miami Heat",
+          "home_score": "0",
+          "id": "401898404",
+          "start": "2026-10-14T23:30Z",
+          "state": "pre",
+          "status": "10/14 - 7:30 PM EDT"
+        },
+        {
+          "away": "Charlotte Hornets",
+          "away_score": "0",
+          "home": "Boston Celtics",
+          "home_score": "0",
+          "id": "401898405",
+          "start": "2026-10-14T23:30Z",
+          "state": "pre",
+          "status": "10/14 - 7:30 PM EDT"
+        },
+        {
+          "away": "Phoenix Suns",
+          "away_score": "0",
+          "home": "San Antonio Spurs",
+          "home_score": "0",
+          "id": "401898722",
+          "start": "2026-10-15T00:00Z",
+          "state": "pre",
+          "status": "10/14 - 8:00 PM EDT"
+        },
+        {
+          "away": "New Orleans Pelicans",
+          "away_score": "0",
+          "home": "Dallas Mavericks",
+          "home_score": "0",
+          "id": "401901825",
+          "start": "2026-10-15T00:00Z",
+          "state": "pre",
+          "status": "10/14 - 8:00 PM EDT"
+        },
+        {
+          "away": "Chicago Bulls",
+          "away_score": "0",
+          "home": "Milwaukee Bucks",
+          "home_score": "0",
+          "id": "401908942",
+          "start": "2026-10-15T00:00Z",
+          "state": "pre",
+          "status": "10/14 - 8:00 PM EDT"
+        },
+        {
+          "away": "Detroit Pistons",
+          "away_score": "0",
+          "home": "Minnesota Timberwolves",
+          "home_score": "0",
+          "id": "401914125",
+          "start": "2026-10-15T00:00Z",
+          "state": "pre",
+          "status": "10/14 - 8:00 PM EDT"
+        },
+        {
+          "away": "Denver Nuggets",
+          "away_score": "0",
+          "home": "LA Clippers",
+          "home_score": "0",
+          "id": "401918011",
+          "start": "2026-10-15T02:30Z",
+          "state": "pre",
+          "status": "10/14 - 10:30 PM EDT"
         }
       ],
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "pl": {
       "matches": [
         {
-          "away": "Everton",
-          "away_score": "2",
-          "home": "Hull City",
-          "home_score": "2",
-          "id": "401878774",
-          "start": "2026-10-11T13:00Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Nottingham Forest",
-          "away_score": "1",
-          "home": "Crystal Palace",
-          "home_score": "3",
-          "id": "401879266",
-          "start": "2026-10-11T13:00Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Manchester City",
-          "away_score": "3",
-          "home": "Liverpool",
-          "home_score": "0",
-          "id": "401879264",
-          "start": "2026-10-11T15:30Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
           "away": "Newcastle United",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Coventry City",
-          "home_score": "0",
+          "home_score": "4",
           "id": "401879267",
           "start": "2026-10-12T19:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         }
       ],
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "sa": {
       "matches": [
-        {
-          "away": "AS Roma",
-          "away_score": "0",
-          "home": "Como",
-          "home_score": "0",
-          "id": "401874940",
-          "start": "2026-10-11T10:30Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Bologna",
-          "away_score": "2",
-          "home": "Lecce",
-          "home_score": "1",
-          "id": "401874776",
-          "start": "2026-10-11T13:00Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Monza",
-          "away_score": "1",
-          "home": "Lazio",
-          "home_score": "3",
-          "id": "401874951",
-          "start": "2026-10-11T13:00Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "AC Milan",
-          "away_score": "1",
-          "home": "Sassuolo",
-          "home_score": "1",
-          "id": "401874789",
-          "start": "2026-10-11T16:00Z",
-          "state": "post",
-          "status": "FT"
-        },
-        {
-          "away": "Juventus",
-          "away_score": "1",
-          "home": "Cagliari",
-          "home_score": "1",
-          "id": "401874764",
-          "start": "2026-10-11T18:45Z",
-          "state": "post",
-          "status": "FT"
-        },
         {
           "away": "Venezia",
           "away_score": "1",
@@ -742,16 +641,16 @@
         },
         {
           "away": "Udinese",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Torino",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401874763",
           "start": "2026-10-12T18:45Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         }
       ],
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     }
   },
   "schema": 1,
@@ -800,6 +699,19 @@
               "w": 13
             },
             {
+              "d": 7,
+              "ga": 22,
+              "gd": 13,
+              "gf": 35,
+              "id": "529",
+              "l": 5,
+              "name": "IF Elfsborg",
+              "p": 23,
+              "pts": 40,
+              "rank": 4,
+              "w": 11
+            },
+            {
               "d": 9,
               "ga": 30,
               "gd": 12,
@@ -809,21 +721,21 @@
               "name": "BK Häcken",
               "p": 23,
               "pts": 39,
-              "rank": 4,
+              "rank": 5,
               "w": 10
             },
             {
-              "d": 7,
-              "ga": 22,
-              "gd": 9,
-              "gf": 31,
-              "id": "529",
-              "l": 5,
-              "name": "IF Elfsborg",
-              "p": 22,
-              "pts": 37,
-              "rank": 5,
-              "w": 10
+              "d": 3,
+              "ga": 33,
+              "gd": 5,
+              "gf": 38,
+              "id": "2720",
+              "l": 9,
+              "name": "Malmö FF",
+              "p": 23,
+              "pts": 36,
+              "rank": 6,
+              "w": 11
             },
             {
               "d": 5,
@@ -835,7 +747,7 @@
               "name": "Västerås SK",
               "p": 23,
               "pts": 35,
-              "rank": 6,
+              "rank": 7,
               "w": 10
             },
             {
@@ -848,19 +760,6 @@
               "name": "IFK Göteborg",
               "p": 23,
               "pts": 35,
-              "rank": 7,
-              "w": 10
-            },
-            {
-              "d": 3,
-              "ga": 33,
-              "gd": 4,
-              "gf": 37,
-              "id": "2720",
-              "l": 9,
-              "name": "Malmö FF",
-              "p": 22,
-              "pts": 33,
               "rank": 8,
               "w": 10
             },
@@ -931,13 +830,13 @@
             },
             {
               "d": 4,
-              "ga": 36,
-              "gd": -15,
+              "ga": 37,
+              "gd": -16,
               "gf": 21,
               "id": "3052",
-              "l": 13,
+              "l": 14,
               "name": "Kalmar FF",
-              "p": 22,
+              "p": 23,
               "pts": 19,
               "rank": 14,
               "w": 5
@@ -957,13 +856,13 @@
             },
             {
               "d": 5,
-              "ga": 40,
-              "gd": -24,
+              "ga": 44,
+              "gd": -28,
               "gf": 16,
               "id": "3017",
-              "l": 14,
+              "l": 15,
               "name": "Halmstads BK",
-              "p": 22,
+              "p": 23,
               "pts": 14,
               "rank": 16,
               "w": 3
@@ -973,7 +872,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "bl": {
       "groups": [
@@ -1218,7 +1117,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "ch": {
       "groups": [
@@ -1541,7 +1440,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "ll": {
       "groups": [
@@ -1600,15 +1499,15 @@
               "w": 6
             },
             {
-              "d": 1,
-              "ga": 9,
+              "d": 2,
+              "ga": 12,
               "gd": 1,
-              "gf": 10,
+              "gf": 13,
               "id": "243",
               "l": 2,
               "name": "Sevilla",
-              "p": 7,
-              "pts": 13,
+              "p": 8,
+              "pts": 14,
               "rank": 5,
               "w": 4
             },
@@ -1757,6 +1656,19 @@
             },
             {
               "d": 3,
+              "ga": 15,
+              "gd": -4,
+              "gf": 11,
+              "id": "1538",
+              "l": 3,
+              "name": "Levante",
+              "p": 7,
+              "pts": 6,
+              "rank": 17,
+              "w": 1
+            },
+            {
+              "d": 3,
               "ga": 17,
               "gd": -6,
               "gf": 11,
@@ -1765,19 +1677,6 @@
               "name": "Elche",
               "p": 8,
               "pts": 6,
-              "rank": 17,
-              "w": 1
-            },
-            {
-              "d": 2,
-              "ga": 12,
-              "gd": -4,
-              "gf": 8,
-              "id": "1538",
-              "l": 3,
-              "name": "Levante",
-              "p": 6,
-              "pts": 5,
               "rank": 18,
               "w": 1
             },
@@ -1812,7 +1711,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "nba": {
       "groups": [
@@ -1821,36 +1720,36 @@
             {
               "diff": 49,
               "gb": 0,
+              "id": "17",
+              "l": 0,
+              "name": "Brooklyn Nets",
+              "pct": 1,
+              "rank": 1,
+              "w": 3
+            },
+            {
+              "diff": 49,
+              "gb": 0.5,
               "id": "2",
               "l": 0,
               "name": "Boston Celtics",
-              "pct": 1,
-              "rank": 1,
-              "w": 2
-            },
-            {
-              "diff": 8,
-              "gb": 0,
-              "id": "27",
-              "l": 0,
-              "name": "Washington Wizards",
               "pct": 1,
               "rank": 2,
               "w": 2
             },
             {
-              "diff": 40,
-              "gb": 0,
-              "id": "17",
-              "l": 0,
-              "name": "Brooklyn Nets",
-              "pct": 1,
+              "diff": 3,
+              "gb": 0.5,
+              "id": "1",
+              "l": 1,
+              "name": "Atlanta Hawks",
+              "pct": 0.75,
               "rank": 3,
-              "w": 2
+              "w": 3
             },
             {
               "diff": 33,
-              "gb": 0.5,
+              "gb": 1,
               "id": "14",
               "l": 1,
               "name": "Miami Heat",
@@ -1859,18 +1758,18 @@
               "w": 2
             },
             {
-              "diff": 0,
-              "gb": 0.5,
-              "id": "1",
+              "diff": -1,
+              "gb": 1,
+              "id": "27",
               "l": 1,
-              "name": "Atlanta Hawks",
+              "name": "Washington Wizards",
               "pct": 0.6667,
               "rank": 5,
               "w": 2
             },
             {
               "diff": 3,
-              "gb": 1,
+              "gb": 1.5,
               "id": "5",
               "l": 1,
               "name": "Cleveland Cavaliers",
@@ -1880,7 +1779,7 @@
             },
             {
               "diff": -19,
-              "gb": 1,
+              "gb": 1.5,
               "id": "30",
               "l": 1,
               "name": "Charlotte Hornets",
@@ -1890,7 +1789,7 @@
             },
             {
               "diff": 9,
-              "gb": 1,
+              "gb": 1.5,
               "id": "11",
               "l": 1,
               "name": "Indiana Pacers",
@@ -1900,7 +1799,7 @@
             },
             {
               "diff": -4,
-              "gb": 1,
+              "gb": 1.5,
               "id": "8",
               "l": 1,
               "name": "Detroit Pistons",
@@ -1910,7 +1809,7 @@
             },
             {
               "diff": -10,
-              "gb": 1,
+              "gb": 1.5,
               "id": "19",
               "l": 1,
               "name": "Orlando Magic",
@@ -1920,7 +1819,7 @@
             },
             {
               "diff": -16,
-              "gb": 1,
+              "gb": 1.5,
               "id": "28",
               "l": 1,
               "name": "Toronto Raptors",
@@ -1930,7 +1829,7 @@
             },
             {
               "diff": -2,
-              "gb": 1.5,
+              "gb": 2,
               "id": "4",
               "l": 2,
               "name": "Chicago Bulls",
@@ -1940,7 +1839,7 @@
             },
             {
               "diff": -21,
-              "gb": 1.5,
+              "gb": 2,
               "id": "20",
               "l": 2,
               "name": "Philadelphia 76ers",
@@ -1950,7 +1849,7 @@
             },
             {
               "diff": -32,
-              "gb": 1.5,
+              "gb": 2,
               "id": "15",
               "l": 2,
               "name": "Milwaukee Bucks",
@@ -1960,7 +1859,7 @@
             },
             {
               "diff": -25,
-              "gb": 2,
+              "gb": 2.5,
               "id": "18",
               "l": 2,
               "name": "New York Knicks",
@@ -1974,18 +1873,18 @@
         {
           "items": [
             {
-              "diff": 5,
+              "diff": 58,
               "gb": 0,
               "id": "22",
               "l": 0,
               "name": "Portland Trail Blazers",
               "pct": 1,
               "rank": 1,
-              "w": 1
+              "w": 2
             },
             {
               "diff": 9,
-              "gb": 0,
+              "gb": 0.5,
               "id": "29",
               "l": 1,
               "name": "Memphis Grizzlies",
@@ -1995,7 +1894,7 @@
             },
             {
               "diff": 9,
-              "gb": 0,
+              "gb": 0.5,
               "id": "16",
               "l": 1,
               "name": "Minnesota Timberwolves",
@@ -2005,7 +1904,7 @@
             },
             {
               "diff": 2,
-              "gb": 0,
+              "gb": 0.5,
               "id": "13",
               "l": 1,
               "name": "Los Angeles Lakers",
@@ -2015,7 +1914,7 @@
             },
             {
               "diff": 4,
-              "gb": 0,
+              "gb": 0.5,
               "id": "7",
               "l": 1,
               "name": "Denver Nuggets",
@@ -2025,7 +1924,7 @@
             },
             {
               "diff": 23,
-              "gb": 0.5,
+              "gb": 1,
               "id": "9",
               "l": 2,
               "name": "Golden State Warriors",
@@ -2035,7 +1934,7 @@
             },
             {
               "diff": -5,
-              "gb": 0.5,
+              "gb": 1,
               "id": "12",
               "l": 1,
               "name": "LA Clippers",
@@ -2045,7 +1944,7 @@
             },
             {
               "diff": 1,
-              "gb": 0.5,
+              "gb": 1,
               "id": "26",
               "l": 1,
               "name": "Utah Jazz",
@@ -2055,7 +1954,7 @@
             },
             {
               "diff": 1,
-              "gb": 0.5,
+              "gb": 1,
               "id": "10",
               "l": 1,
               "name": "Houston Rockets",
@@ -2065,7 +1964,7 @@
             },
             {
               "diff": -1,
-              "gb": 0.5,
+              "gb": 1,
               "id": "6",
               "l": 1,
               "name": "Dallas Mavericks",
@@ -2075,7 +1974,7 @@
             },
             {
               "diff": -4,
-              "gb": 0.5,
+              "gb": 1,
               "id": "3",
               "l": 1,
               "name": "New Orleans Pelicans",
@@ -2085,7 +1984,7 @@
             },
             {
               "diff": -5,
-              "gb": 1,
+              "gb": 1.5,
               "id": "21",
               "l": 2,
               "name": "Phoenix Suns",
@@ -2094,28 +1993,28 @@
               "w": 1
             },
             {
-              "diff": -8,
-              "gb": 1.5,
-              "id": "25",
+              "diff": -11,
+              "gb": 2,
+              "id": "24",
               "l": 2,
-              "name": "Oklahoma City Thunder",
+              "name": "San Antonio Spurs",
               "pct": 0,
               "rank": 13,
               "w": 0
             },
             {
               "diff": -11,
-              "gb": 1.5,
-              "id": "24",
-              "l": 2,
-              "name": "San Antonio Spurs",
+              "gb": 2.5,
+              "id": "25",
+              "l": 3,
+              "name": "Oklahoma City Thunder",
               "pct": 0,
               "rank": 14,
               "w": 0
             },
             {
               "diff": -33,
-              "gb": 2,
+              "gb": 2.5,
               "id": "23",
               "l": 3,
               "name": "Sacramento Kings",
@@ -2128,7 +2027,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "pl": {
       "groups": [
@@ -2266,13 +2165,13 @@
             },
             {
               "d": 2,
-              "ga": 9,
-              "gd": 0,
-              "gf": 9,
+              "ga": 13,
+              "gd": -3,
+              "gf": 10,
               "id": "361",
-              "l": 1,
+              "l": 2,
               "name": "Newcastle United",
-              "p": 5,
+              "p": 6,
               "pts": 8,
               "rank": 11,
               "w": 2
@@ -2304,6 +2203,19 @@
               "w": 1
             },
             {
+              "d": 0,
+              "ga": 11,
+              "gd": -6,
+              "gf": 5,
+              "id": "388",
+              "l": 4,
+              "name": "Coventry City",
+              "p": 6,
+              "pts": 6,
+              "rank": 14,
+              "w": 2
+            },
+            {
               "d": 2,
               "ga": 8,
               "gd": -3,
@@ -2313,7 +2225,7 @@
               "name": "Nottingham Forest",
               "p": 6,
               "pts": 5,
-              "rank": 14,
+              "rank": 15,
               "w": 1
             },
             {
@@ -2326,7 +2238,7 @@
               "name": "Aston Villa",
               "p": 6,
               "pts": 5,
-              "rank": 15,
+              "rank": 16,
               "w": 1
             },
             {
@@ -2339,7 +2251,7 @@
               "name": "Sunderland",
               "p": 6,
               "pts": 4,
-              "rank": 16,
+              "rank": 17,
               "w": 1
             },
             {
@@ -2352,7 +2264,7 @@
               "name": "AFC Bournemouth",
               "p": 6,
               "pts": 3,
-              "rank": 17,
+              "rank": 18,
               "w": 0
             },
             {
@@ -2365,21 +2277,8 @@
               "name": "Tottenham Hotspur",
               "p": 6,
               "pts": 3,
-              "rank": 18,
-              "w": 0
-            },
-            {
-              "d": 0,
-              "ga": 10,
-              "gd": -9,
-              "gf": 1,
-              "id": "388",
-              "l": 4,
-              "name": "Coventry City",
-              "p": 5,
-              "pts": 3,
               "rank": 19,
-              "w": 1
+              "w": 0
             },
             {
               "d": 2,
@@ -2399,7 +2298,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     },
     "sa": {
       "groups": [
@@ -2549,6 +2448,19 @@
               "w": 2
             },
             {
+              "d": 1,
+              "ga": 9,
+              "gd": -2,
+              "gf": 7,
+              "id": "239",
+              "l": 3,
+              "name": "Torino",
+              "p": 6,
+              "pts": 7,
+              "rank": 12,
+              "w": 2
+            },
+            {
               "d": 0,
               "ga": 12,
               "gd": -6,
@@ -2558,7 +2470,7 @@
               "name": "Lecce",
               "p": 6,
               "pts": 6,
-              "rank": 12,
+              "rank": 13,
               "w": 2
             },
             {
@@ -2571,31 +2483,18 @@
               "name": "Bologna",
               "p": 6,
               "pts": 5,
-              "rank": 13,
-              "w": 1
-            },
-            {
-              "d": 1,
-              "ga": 11,
-              "gd": -3,
-              "gf": 8,
-              "id": "118",
-              "l": 3,
-              "name": "Udinese",
-              "p": 5,
-              "pts": 4,
               "rank": 14,
               "w": 1
             },
             {
               "d": 1,
-              "ga": 8,
-              "gd": -3,
-              "gf": 5,
-              "id": "239",
-              "l": 3,
-              "name": "Torino",
-              "p": 5,
+              "ga": 13,
+              "gd": -4,
+              "gf": 9,
+              "id": "118",
+              "l": 4,
+              "name": "Udinese",
+              "p": 6,
               "pts": 4,
               "rank": 15,
               "w": 1
@@ -2670,8 +2569,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-10-12T18:46:37+00:00"
+      "updated_at": "2026-10-13T02:00:35+00:00"
     }
   },
-  "updated_at": "2026-10-12T18:46:37+00:00"
+  "updated_at": "2026-10-13T02:00:35+00:00"
 }
