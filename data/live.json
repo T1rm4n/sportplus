@@ -72,7 +72,7 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "drivers": {
       "items": [
@@ -263,18 +263,18 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     }
   },
-  "last_attempt": "2026-10-13T22:44:32+00:00",
+  "last_attempt": "2026-10-14T04:53:09+00:00",
   "leagues": {
     "all": {
       "matches": [],
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "bl": {
       "matches": [],
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "ch": {
       "matches": [
@@ -399,63 +399,63 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "ll": {
       "matches": [],
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "nba": {
       "matches": [
         {
           "away": "Cleveland Cavaliers",
-          "away_score": "0",
+          "away_score": "116",
           "home": "Orlando Magic",
-          "home_score": "0",
+          "home_score": "132",
           "id": "401898403",
           "start": "2026-10-13T23:00Z",
-          "state": "pre",
-          "status": "10/13 - 7:00 PM EDT"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "New York Knicks",
-          "away_score": "0",
+          "away_score": "98",
           "home": "Toronto Raptors",
-          "home_score": "0",
+          "home_score": "148",
           "id": "401908944",
           "start": "2026-10-13T23:00Z",
-          "state": "pre",
-          "status": "10/13 - 7:00 PM EDT"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Indiana Pacers",
-          "away_score": "0",
+          "away_score": "112",
           "home": "Oklahoma City Thunder",
-          "home_score": "0",
+          "home_score": "114",
           "id": "401908621",
           "start": "2026-10-14T00:00Z",
-          "state": "pre",
-          "status": "10/13 - 8:00 PM EDT"
+          "state": "post",
+          "status": "Final/OT"
         },
         {
           "away": "Golden State Warriors",
-          "away_score": "0",
+          "away_score": "101",
           "home": "Los Angeles Lakers",
-          "home_score": "0",
+          "home_score": "89",
           "id": "401898718",
           "start": "2026-10-14T02:00Z",
-          "state": "pre",
-          "status": "10/13 - 10:00 PM EDT"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Portland Trail Blazers",
-          "away_score": "0",
+          "away_score": "110",
           "home": "Sacramento Kings",
-          "home_score": "0",
+          "home_score": "98",
           "id": "401901826",
           "start": "2026-10-14T02:00Z",
-          "state": "pre",
-          "status": "10/13 - 10:00 PM EDT"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Brooklyn Nets",
@@ -548,15 +548,15 @@
           "status": "10/15 - 8:30 PM EDT"
         }
       ],
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "pl": {
       "matches": [],
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "sa": {
       "matches": [],
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     }
   },
   "schema": 1,
@@ -778,7 +778,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "bl": {
       "groups": [
@@ -1023,7 +1023,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "ch": {
       "groups": [
@@ -1346,7 +1346,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "ll": {
       "groups": [
@@ -1617,7 +1617,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "nba": {
       "groups": [
@@ -1674,13 +1674,33 @@
               "w": 2
             },
             {
-              "diff": 3,
-              "gb": 1.5,
-              "id": "5",
+              "diff": 34,
+              "gb": 1,
+              "id": "28",
               "l": 1,
-              "name": "Cleveland Cavaliers",
-              "pct": 0.5,
+              "name": "Toronto Raptors",
+              "pct": 0.6667,
               "rank": 6,
+              "w": 2
+            },
+            {
+              "diff": 6,
+              "gb": 1,
+              "id": "19",
+              "l": 1,
+              "name": "Orlando Magic",
+              "pct": 0.6667,
+              "rank": 7,
+              "w": 2
+            },
+            {
+              "diff": -4,
+              "gb": 1.5,
+              "id": "8",
+              "l": 1,
+              "name": "Detroit Pistons",
+              "pct": 0.5,
+              "rank": 8,
               "w": 1
             },
             {
@@ -1690,46 +1710,26 @@
               "l": 1,
               "name": "Charlotte Hornets",
               "pct": 0.5,
-              "rank": 7,
-              "w": 1
-            },
-            {
-              "diff": 9,
-              "gb": 1.5,
-              "id": "11",
-              "l": 1,
-              "name": "Indiana Pacers",
-              "pct": 0.5,
-              "rank": 8,
-              "w": 1
-            },
-            {
-              "diff": -4,
-              "gb": 1.5,
-              "id": "8",
-              "l": 1,
-              "name": "Detroit Pistons",
-              "pct": 0.5,
               "rank": 9,
               "w": 1
             },
             {
-              "diff": -10,
-              "gb": 1.5,
-              "id": "19",
-              "l": 1,
-              "name": "Orlando Magic",
-              "pct": 0.5,
+              "diff": -13,
+              "gb": 2,
+              "id": "5",
+              "l": 2,
+              "name": "Cleveland Cavaliers",
+              "pct": 0.3333,
               "rank": 10,
               "w": 1
             },
             {
-              "diff": -16,
-              "gb": 1.5,
-              "id": "28",
-              "l": 1,
-              "name": "Toronto Raptors",
-              "pct": 0.5,
+              "diff": 7,
+              "gb": 2,
+              "id": "11",
+              "l": 2,
+              "name": "Indiana Pacers",
+              "pct": 0.3333,
               "rank": 11,
               "w": 1
             },
@@ -1764,10 +1764,10 @@
               "w": 1
             },
             {
-              "diff": -43,
-              "gb": 3,
+              "diff": -93,
+              "gb": 3.5,
               "id": "18",
-              "l": 3,
+              "l": 4,
               "name": "New York Knicks",
               "pct": 0,
               "rank": 15,
@@ -1779,18 +1779,18 @@
         {
           "items": [
             {
-              "diff": 58,
+              "diff": 70,
               "gb": 0,
               "id": "22",
               "l": 0,
               "name": "Portland Trail Blazers",
               "pct": 1,
               "rank": 1,
-              "w": 2
+              "w": 3
             },
             {
               "diff": 27,
-              "gb": 0,
+              "gb": 0.5,
               "id": "16",
               "l": 1,
               "name": "Minnesota Timberwolves",
@@ -1800,7 +1800,7 @@
             },
             {
               "diff": 9,
-              "gb": 0.5,
+              "gb": 1,
               "id": "29",
               "l": 1,
               "name": "Memphis Grizzlies",
@@ -1809,48 +1809,48 @@
               "w": 2
             },
             {
-              "diff": 2,
-              "gb": 0.5,
-              "id": "13",
+              "diff": 11,
+              "gb": 1,
+              "id": "26",
               "l": 1,
-              "name": "Los Angeles Lakers",
+              "name": "Utah Jazz",
               "pct": 0.6667,
               "rank": 4,
               "w": 2
             },
             {
-              "diff": 11,
-              "gb": 0.5,
-              "id": "26",
+              "diff": 4,
+              "gb": 1,
+              "id": "7",
               "l": 1,
-              "name": "Utah Jazz",
+              "name": "Denver Nuggets",
               "pct": 0.6667,
               "rank": 5,
               "w": 2
             },
             {
-              "diff": 4,
-              "gb": 0.5,
-              "id": "7",
-              "l": 1,
-              "name": "Denver Nuggets",
-              "pct": 0.6667,
-              "rank": 6,
-              "w": 2
-            },
-            {
-              "diff": 23,
+              "diff": 35,
               "gb": 1,
               "id": "9",
               "l": 2,
               "name": "Golden State Warriors",
+              "pct": 0.6,
+              "rank": 6,
+              "w": 3
+            },
+            {
+              "diff": -10,
+              "gb": 1.5,
+              "id": "13",
+              "l": 2,
+              "name": "Los Angeles Lakers",
               "pct": 0.5,
               "rank": 7,
               "w": 2
             },
             {
               "diff": -5,
-              "gb": 1,
+              "gb": 1.5,
               "id": "12",
               "l": 1,
               "name": "LA Clippers",
@@ -1860,7 +1860,7 @@
             },
             {
               "diff": 1,
-              "gb": 1,
+              "gb": 1.5,
               "id": "10",
               "l": 1,
               "name": "Houston Rockets",
@@ -1870,7 +1870,7 @@
             },
             {
               "diff": -1,
-              "gb": 1,
+              "gb": 1.5,
               "id": "6",
               "l": 1,
               "name": "Dallas Mavericks",
@@ -1880,7 +1880,7 @@
             },
             {
               "diff": -4,
-              "gb": 1,
+              "gb": 1.5,
               "id": "3",
               "l": 1,
               "name": "New Orleans Pelicans",
@@ -1890,7 +1890,7 @@
             },
             {
               "diff": -5,
-              "gb": 1.5,
+              "gb": 2,
               "id": "21",
               "l": 2,
               "name": "Phoenix Suns",
@@ -1899,18 +1899,18 @@
               "w": 1
             },
             {
-              "diff": -11,
+              "diff": -9,
               "gb": 2.5,
               "id": "25",
               "l": 3,
               "name": "Oklahoma City Thunder",
-              "pct": 0,
+              "pct": 0.25,
               "rank": 13,
-              "w": 0
+              "w": 1
             },
             {
               "diff": -21,
-              "gb": 2.5,
+              "gb": 3,
               "id": "24",
               "l": 3,
               "name": "San Antonio Spurs",
@@ -1919,10 +1919,10 @@
               "w": 0
             },
             {
-              "diff": -33,
-              "gb": 2.5,
+              "diff": -45,
+              "gb": 3.5,
               "id": "23",
-              "l": 3,
+              "l": 4,
               "name": "Sacramento Kings",
               "pct": 0,
               "rank": 15,
@@ -1933,7 +1933,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "pl": {
       "groups": [
@@ -2204,7 +2204,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     },
     "sa": {
       "groups": [
@@ -2475,8 +2475,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-10-13T22:44:32+00:00"
+      "updated_at": "2026-10-14T04:53:09+00:00"
     }
   },
-  "updated_at": "2026-10-13T22:44:32+00:00"
+  "updated_at": "2026-10-14T04:53:09+00:00"
 }
