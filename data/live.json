@@ -72,7 +72,7 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "drivers": {
       "items": [
@@ -263,10 +263,10 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     }
   },
-  "last_attempt": "2026-10-18T04:32:46+00:00",
+  "last_attempt": "2026-10-18T11:03:35+00:00",
   "leagues": {
     "all": {
       "matches": [
@@ -341,7 +341,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "bl": {
       "matches": [
@@ -426,7 +426,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "ch": {
       "matches": [
@@ -541,7 +541,7 @@
           "status": "FT"
         }
       ],
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "ll": {
       "matches": [
@@ -636,11 +636,11 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "nba": {
       "matches": [],
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "pl": {
       "matches": [
@@ -745,7 +745,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "sa": {
       "matches": [
@@ -781,13 +781,13 @@
         },
         {
           "away": "Lecce",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Udinese",
           "home_score": "0",
           "id": "401874771",
           "start": "2026-10-18T10:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "31'"
         },
         {
           "away": "Como",
@@ -840,7 +840,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     }
   },
   "schema": 1,
@@ -1062,7 +1062,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "bl": {
       "groups": [
@@ -1307,7 +1307,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "ch": {
       "groups": [
@@ -1630,7 +1630,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "ll": {
       "groups": [
@@ -1901,7 +1901,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "nba": {
       "groups": [
@@ -2018,7 +2018,7 @@
               "w": 1
             },
             {
-              "diff": -59,
+              "diff": -58,
               "gb": 3,
               "id": "30",
               "l": 3,
@@ -2063,7 +2063,7 @@
         {
           "items": [
             {
-              "diff": 28,
+              "diff": 27,
               "gb": 0,
               "id": "29",
               "l": 1,
@@ -2217,7 +2217,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "pl": {
       "groups": [
@@ -2488,7 +2488,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     },
     "sa": {
       "groups": [
@@ -2759,8 +2759,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-10-18T04:32:46+00:00"
+      "updated_at": "2026-10-18T11:03:35+00:00"
     }
   },
-  "updated_at": "2026-10-18T04:32:46+00:00"
+  "updated_at": "2026-10-18T11:03:35+00:00"
 }
