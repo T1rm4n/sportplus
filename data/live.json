@@ -72,7 +72,7 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "drivers": {
       "items": [
@@ -263,10 +263,10 @@
       ],
       "round": "17",
       "season": "2026",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     }
   },
-  "last_attempt": "2026-10-24T10:58:59+00:00",
+  "last_attempt": "2026-10-24T15:56:25+00:00",
   "leagues": {
     "all": {
       "matches": [
@@ -292,43 +292,43 @@
         },
         {
           "away": "AIK",
-          "away_score": "0",
+          "away_score": "2",
           "home": "IK Sirius",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401842853",
           "start": "2026-10-24T13:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Degerfors IF",
           "away_score": "0",
           "home": "BK Häcken",
-          "home_score": "0",
+          "home_score": "4",
           "id": "401842856",
           "start": "2026-10-24T13:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Örgryte IS",
           "away_score": "0",
           "home": "Djurgården",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401842850",
           "start": "2026-10-24T15:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "26'"
         },
         {
           "away": "IF Brommapojkarna",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Kalmar FF",
           "home_score": "0",
           "id": "401842855",
           "start": "2026-10-24T15:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "25'"
         },
         {
           "away": "IFK Göteborg",
@@ -351,7 +351,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "bl": {
       "matches": [
@@ -369,11 +369,11 @@
           "away": "Hamburg SV",
           "away_score": "0",
           "home": "SC Paderborn 07",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401884755",
           "start": "2026-10-24T13:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Schalke 04",
@@ -382,38 +382,38 @@
           "home_score": "0",
           "id": "401884756",
           "start": "2026-10-24T13:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Werder Bremen",
-          "away_score": "0",
+          "away_score": "3",
           "home": "Mainz",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401884757",
           "start": "2026-10-24T13:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "1. FC Union Berlin",
-          "away_score": "0",
+          "away_score": "1",
           "home": "FC Augsburg",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401884758",
           "start": "2026-10-24T13:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "SV Elversberg",
           "away_score": "0",
           "home": "RB Leipzig",
-          "home_score": "0",
+          "home_score": "4",
           "id": "401884762",
           "start": "2026-10-24T13:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Eintracht Frankfurt",
@@ -446,7 +446,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "ch": {
       "matches": [
@@ -462,53 +462,53 @@
         },
         {
           "away": "Derby County",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Sheffield United",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401880200",
           "start": "2026-10-24T11:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Millwall",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Portsmouth",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401880203",
           "start": "2026-10-24T11:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Norwich City",
-          "away_score": "0",
+          "away_score": "3",
           "home": "Charlton Athletic",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401880205",
           "start": "2026-10-24T11:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Watford",
           "away_score": "0",
           "home": "Wolverhampton Wanderers",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401880197",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Southampton",
-          "away_score": "0",
+          "away_score": "3",
           "home": "West Ham United",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401880198",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Bristol City",
@@ -517,61 +517,61 @@
           "home_score": "0",
           "id": "401880199",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Swansea City",
           "away_score": "0",
           "home": "Queens Park Rangers",
-          "home_score": "0",
+          "home_score": "5",
           "id": "401880201",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "West Bromwich Albion",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Preston North End",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401880202",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Burnley",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Lincoln City",
-          "home_score": "0",
+          "home_score": "4",
           "id": "401880204",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Birmingham City",
           "away_score": "0",
           "home": "Cardiff City",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401880206",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Wrexham",
           "away_score": "0",
           "home": "Blackburn Rovers",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401880208",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         }
       ],
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "ll": {
       "matches": [
@@ -587,23 +587,23 @@
         },
         {
           "away": "Elche",
-          "away_score": "0",
+          "away_score": "3",
           "home": "Rayo Vallecano",
           "home_score": "0",
           "id": "401882830",
           "start": "2026-10-24T12:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Espanyol",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Racing Santander",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401882831",
           "start": "2026-10-24T14:15Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "83'"
         },
         {
           "away": "Villarreal",
@@ -666,7 +666,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "nba": {
       "matches": [
@@ -941,7 +941,7 @@
           "status": "10/25 - 9:00 PM EDT"
         }
       ],
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "pl": {
       "matches": [
@@ -957,33 +957,33 @@
         },
         {
           "away": "Manchester City",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Aston Villa",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401879256",
           "start": "2026-10-24T11:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Everton",
           "away_score": "0",
           "home": "Arsenal",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401878768",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "90'+8'"
         },
         {
           "away": "Fulham",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Coventry City",
           "home_score": "0",
           "id": "401879255",
           "start": "2026-10-24T14:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Tottenham Hotspur",
@@ -1046,7 +1046,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "sa": {
       "matches": [
@@ -1062,23 +1062,23 @@
         },
         {
           "away": "Bologna",
-          "away_score": "0",
+          "away_score": "2",
           "home": "Cagliari",
           "home_score": "0",
           "id": "401874958",
           "start": "2026-10-24T13:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Sassuolo",
           "away_score": "0",
           "home": "Como",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401874961",
           "start": "2026-10-24T13:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "AS Roma",
@@ -1151,7 +1151,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     }
   },
   "schema": 1,
@@ -1162,13 +1162,13 @@
           "items": [
             {
               "d": 4,
-              "ga": 30,
-              "gd": 25,
-              "gf": 55,
+              "ga": 32,
+              "gd": 24,
+              "gf": 56,
               "id": "8547",
-              "l": 3,
+              "l": 4,
               "name": "IK Sirius",
-              "p": 24,
+              "p": 25,
               "pts": 55,
               "rank": 1,
               "w": 17
@@ -1202,15 +1202,15 @@
             {
               "d": 9,
               "ga": 30,
-              "gd": 13,
-              "gf": 43,
+              "gd": 17,
+              "gf": 47,
               "id": "7834",
               "l": 4,
               "name": "BK Häcken",
-              "p": 24,
-              "pts": 42,
+              "p": 25,
+              "pts": 45,
               "rank": 4,
-              "w": 11
+              "w": 12
             },
             {
               "d": 9,
@@ -1252,6 +1252,19 @@
               "w": 11
             },
             {
+              "d": 7,
+              "ga": 43,
+              "gd": -3,
+              "gf": 40,
+              "id": "994",
+              "l": 8,
+              "name": "AIK",
+              "p": 25,
+              "pts": 37,
+              "rank": 8,
+              "w": 10
+            },
+            {
               "d": 6,
               "ga": 43,
               "gd": -9,
@@ -1261,21 +1274,8 @@
               "name": "IFK Göteborg",
               "p": 24,
               "pts": 36,
-              "rank": 8,
-              "w": 10
-            },
-            {
-              "d": 7,
-              "ga": 42,
-              "gd": -4,
-              "gf": 38,
-              "id": "994",
-              "l": 8,
-              "name": "AIK",
-              "p": 24,
-              "pts": 34,
               "rank": 9,
-              "w": 9
+              "w": 10
             },
             {
               "d": 6,
@@ -1331,13 +1331,13 @@
             },
             {
               "d": 5,
-              "ga": 37,
-              "gd": -16,
+              "ga": 41,
+              "gd": -20,
               "gf": 21,
               "id": "20856",
-              "l": 14,
+              "l": 15,
               "name": "Degerfors IF",
-              "p": 24,
+              "p": 25,
               "pts": 20,
               "rank": 14,
               "w": 5
@@ -1373,7 +1373,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "bl": {
       "groups": [
@@ -1432,81 +1432,107 @@
               "w": 4
             },
             {
-              "d": 1,
-              "ga": 10,
-              "gd": 4,
-              "gf": 14,
-              "id": "2950",
-              "l": 2,
-              "name": "Mainz",
-              "p": 6,
-              "pts": 10,
+              "d": 0,
+              "ga": 11,
+              "gd": 9,
+              "gf": 20,
+              "id": "11420",
+              "l": 3,
+              "name": "RB Leipzig",
+              "p": 7,
+              "pts": 12,
               "rank": 5,
-              "w": 3
+              "w": 4
             },
             {
-              "d": 1,
-              "ga": 11,
+              "d": 3,
+              "ga": 14,
               "gd": 1,
-              "gf": 12,
-              "id": "10388",
-              "l": 2,
-              "name": "SV Elversberg",
-              "p": 6,
-              "pts": 10,
+              "gf": 15,
+              "id": "137",
+              "l": 1,
+              "name": "Werder Bremen",
+              "p": 7,
+              "pts": 12,
               "rank": 6,
               "w": 3
             },
             {
-              "d": 0,
-              "ga": 11,
-              "gd": 5,
+              "d": 1,
+              "ga": 13,
+              "gd": 3,
               "gf": 16,
-              "id": "11420",
+              "id": "2950",
               "l": 3,
-              "name": "RB Leipzig",
-              "p": 6,
-              "pts": 9,
+              "name": "Mainz",
+              "p": 7,
+              "pts": 10,
               "rank": 7,
               "w": 3
             },
             {
-              "d": 3,
-              "ga": 12,
-              "gd": 0,
+              "d": 1,
+              "ga": 15,
+              "gd": -3,
               "gf": 12,
-              "id": "137",
-              "l": 1,
-              "name": "Werder Bremen",
-              "p": 6,
-              "pts": 9,
+              "id": "10388",
+              "l": 3,
+              "name": "SV Elversberg",
+              "p": 7,
+              "pts": 10,
               "rank": 8,
+              "w": 3
+            },
+            {
+              "d": 3,
+              "ga": 13,
+              "gd": 4,
+              "gf": 17,
+              "id": "3841",
+              "l": 2,
+              "name": "FC Augsburg",
+              "p": 7,
+              "pts": 9,
+              "rank": 9,
               "w": 2
             },
             {
               "d": 0,
-              "ga": 15,
-              "gd": -9,
+              "ga": 16,
+              "gd": -10,
               "gf": 6,
               "id": "127",
-              "l": 3,
+              "l": 4,
               "name": "Hamburg SV",
-              "p": 6,
+              "p": 7,
               "pts": 9,
-              "rank": 9,
+              "rank": 10,
               "w": 3
             },
             {
               "d": 2,
-              "ga": 12,
-              "gd": 4,
-              "gf": 16,
-              "id": "3841",
-              "l": 2,
-              "name": "FC Augsburg",
-              "p": 6,
+              "ga": 11,
+              "gd": -3,
+              "gf": 8,
+              "id": "122",
+              "l": 3,
+              "name": "FC Cologne",
+              "p": 7,
               "pts": 8,
-              "rank": 10,
+              "rank": 11,
+              "w": 2
+            },
+            {
+              "d": 2,
+              "ga": 9,
+              "gd": -3,
+              "gf": 6,
+              "id": "3307",
+              "l": 3,
+              "name": "SC Paderborn 07",
+              "p": 7,
+              "pts": 8,
+              "rank": 12,
               "w": 2
             },
             {
@@ -1519,20 +1545,7 @@
               "name": "Eintracht Frankfurt",
               "p": 6,
               "pts": 8,
-              "rank": 11,
-              "w": 2
-            },
-            {
-              "d": 1,
-              "ga": 11,
-              "gd": -3,
-              "gf": 8,
-              "id": "122",
-              "l": 3,
-              "name": "FC Cologne",
-              "p": 6,
-              "pts": 7,
-              "rank": 12,
+              "rank": 13,
               "w": 2
             },
             {
@@ -1545,7 +1558,7 @@
               "name": "TSG Hoffenheim",
               "p": 6,
               "pts": 6,
-              "rank": 13,
+              "rank": 14,
               "w": 2
             },
             {
@@ -1558,45 +1571,32 @@
               "name": "VfB Stuttgart",
               "p": 7,
               "pts": 6,
-              "rank": 14,
+              "rank": 15,
               "w": 2
             },
             {
-              "d": 2,
+              "d": 3,
               "ga": 7,
               "gd": -3,
               "gf": 4,
               "id": "133",
               "l": 3,
               "name": "Schalke 04",
-              "p": 6,
-              "pts": 5,
-              "rank": 15,
-              "w": 1
-            },
-            {
-              "d": 2,
-              "ga": 9,
-              "gd": -4,
-              "gf": 5,
-              "id": "3307",
-              "l": 3,
-              "name": "SC Paderborn 07",
-              "p": 6,
-              "pts": 5,
+              "p": 7,
+              "pts": 6,
               "rank": 16,
               "w": 1
             },
             {
-              "d": 2,
-              "ga": 17,
+              "d": 3,
+              "ga": 18,
               "gd": -12,
-              "gf": 5,
+              "gf": 6,
               "id": "598",
               "l": 3,
               "name": "1. FC Union Berlin",
-              "p": 6,
-              "pts": 5,
+              "p": 7,
+              "pts": 6,
               "rank": 17,
               "w": 1
             },
@@ -1618,7 +1618,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "ch": {
       "groups": [
@@ -1639,13 +1639,13 @@
             },
             {
               "d": 2,
-              "ga": 8,
-              "gd": 8,
+              "ga": 13,
+              "gd": 3,
               "gf": 16,
               "id": "318",
-              "l": 2,
+              "l": 3,
               "name": "Swansea City",
-              "p": 11,
+              "p": 12,
               "pts": 23,
               "rank": 2,
               "w": 7
@@ -1664,6 +1664,19 @@
               "w": 6
             },
             {
+              "d": 3,
+              "ga": 13,
+              "gd": 3,
+              "gf": 16,
+              "id": "383",
+              "l": 3,
+              "name": "West Bromwich Albion",
+              "p": 12,
+              "pts": 21,
+              "rank": 4,
+              "w": 6
+            },
+            {
               "d": 5,
               "ga": 11,
               "gd": 9,
@@ -1673,33 +1686,33 @@
               "name": "Birmingham City",
               "p": 11,
               "pts": 20,
-              "rank": 4,
+              "rank": 5,
+              "w": 5
+            },
+            {
+              "d": 5,
+              "ga": 12,
+              "gd": 8,
+              "gf": 20,
+              "id": "334",
+              "l": 2,
+              "name": "Queens Park Rangers",
+              "p": 12,
+              "pts": 20,
+              "rank": 6,
               "w": 5
             },
             {
               "d": 2,
-              "ga": 12,
-              "gd": 3,
-              "gf": 15,
-              "id": "383",
-              "l": 3,
-              "name": "West Bromwich Albion",
-              "p": 11,
-              "pts": 20,
-              "rank": 5,
-              "w": 6
-            },
-            {
-              "d": 1,
               "ga": 16,
               "gd": 2,
               "gf": 18,
               "id": "336",
               "l": 4,
               "name": "Stoke City",
-              "p": 11,
-              "pts": 19,
-              "rank": 6,
+              "p": 12,
+              "pts": 20,
+              "rank": 7,
               "w": 6
             },
             {
@@ -1712,7 +1725,33 @@
               "name": "Wolverhampton Wanderers",
               "p": 11,
               "pts": 18,
-              "rank": 7,
+              "rank": 8,
+              "w": 5
+            },
+            {
+              "d": 3,
+              "ga": 16,
+              "gd": 3,
+              "gf": 19,
+              "id": "365",
+              "l": 4,
+              "name": "Blackburn Rovers",
+              "p": 12,
+              "pts": 18,
+              "rank": 9,
+              "w": 5
+            },
+            {
+              "d": 3,
+              "ga": 15,
+              "gd": 1,
+              "gf": 16,
+              "id": "385",
+              "l": 4,
+              "name": "Portsmouth",
+              "p": 12,
+              "pts": 18,
+              "rank": 10,
               "w": 5
             },
             {
@@ -1725,111 +1764,59 @@
               "name": "Southampton",
               "p": 11,
               "pts": 17,
-              "rank": 8,
+              "rank": 11,
               "w": 6
             },
             {
-              "d": 5,
-              "ga": 12,
-              "gd": 3,
-              "gf": 15,
-              "id": "334",
-              "l": 2,
-              "name": "Queens Park Rangers",
-              "p": 11,
-              "pts": 17,
-              "rank": 9,
-              "w": 4
-            },
-            {
-              "d": 3,
-              "ga": 16,
+              "d": 4,
+              "ga": 15,
               "gd": 1,
-              "gf": 17,
-              "id": "365",
-              "l": 4,
-              "name": "Blackburn Rovers",
-              "p": 11,
-              "pts": 15,
-              "rank": 10,
-              "w": 4
-            },
-            {
-              "d": 3,
-              "ga": 14,
-              "gd": 1,
-              "gf": 15,
+              "gf": 16,
               "id": "398",
               "l": 4,
               "name": "Sheffield United",
-              "p": 11,
-              "pts": 15,
-              "rank": 11,
-              "w": 4
-            },
-            {
-              "d": 3,
-              "ga": 18,
-              "gd": 0,
-              "gf": 18,
-              "id": "391",
-              "l": 4,
-              "name": "Millwall",
-              "p": 11,
-              "pts": 15,
+              "p": 12,
+              "pts": 16,
               "rank": 12,
               "w": 4
             },
             {
               "d": 3,
-              "ga": 14,
-              "gd": 0,
-              "gf": 14,
-              "id": "385",
-              "l": 4,
-              "name": "Portsmouth",
-              "p": 11,
+              "ga": 20,
+              "gd": -1,
+              "gf": 19,
+              "id": "391",
+              "l": 5,
+              "name": "Millwall",
+              "p": 12,
               "pts": 15,
               "rank": 13,
               "w": 4
             },
             {
-              "d": 5,
-              "ga": 16,
-              "gd": -1,
-              "gf": 15,
-              "id": "352",
-              "l": 3,
-              "name": "Wrexham",
-              "p": 11,
-              "pts": 14,
-              "rank": 14,
-              "w": 3
-            },
-            {
-              "d": 2,
+              "d": 3,
               "ga": 15,
               "gd": -3,
               "gf": 12,
               "id": "333",
               "l": 5,
               "name": "Bristol City",
-              "p": 11,
-              "pts": 14,
-              "rank": 15,
+              "p": 12,
+              "pts": 15,
+              "rank": 14,
               "w": 4
             },
             {
               "d": 5,
-              "ga": 15,
-              "gd": -5,
-              "gf": 10,
-              "id": "372",
-              "l": 3,
-              "name": "Charlton Athletic",
-              "p": 11,
+              "ga": 18,
+              "gd": -3,
+              "gf": 15,
+              "id": "352",
+              "l": 4,
+              "name": "Wrexham",
+              "p": 12,
               "pts": 14,
-              "rank": 16,
+              "rank": 15,
               "w": 3
             },
             {
@@ -1842,7 +1829,33 @@
               "name": "Bolton Wanderers",
               "p": 12,
               "pts": 14,
+              "rank": 16,
+              "w": 4
+            },
+            {
+              "d": 5,
+              "ga": 18,
+              "gd": -7,
+              "gf": 11,
+              "id": "372",
+              "l": 4,
+              "name": "Charlton Athletic",
+              "p": 12,
+              "pts": 14,
               "rank": 17,
+              "w": 3
+            },
+            {
+              "d": 0,
+              "ga": 22,
+              "gd": -2,
+              "gf": 20,
+              "id": "381",
+              "l": 8,
+              "name": "Norwich City",
+              "p": 12,
+              "pts": 12,
+              "rank": 18,
               "w": 4
             },
             {
@@ -1855,7 +1868,7 @@
               "name": "Lincoln City",
               "p": 11,
               "pts": 12,
-              "rank": 18,
+              "rank": 19,
               "w": 3
             },
             {
@@ -1868,7 +1881,7 @@
               "name": "Cardiff City",
               "p": 11,
               "pts": 11,
-              "rank": 19,
+              "rank": 20,
               "w": 2
             },
             {
@@ -1881,19 +1894,6 @@
               "name": "Watford",
               "p": 11,
               "pts": 11,
-              "rank": 20,
-              "w": 3
-            },
-            {
-              "d": 0,
-              "ga": 21,
-              "gd": -4,
-              "gf": 17,
-              "id": "381",
-              "l": 8,
-              "name": "Norwich City",
-              "p": 11,
-              "pts": 9,
               "rank": 21,
               "w": 3
             },
@@ -1911,28 +1911,28 @@
               "w": 1
             },
             {
-              "d": 3,
-              "ga": 20,
+              "d": 4,
+              "ga": 21,
               "gd": -11,
-              "gf": 9,
+              "gf": 10,
               "id": "374",
               "l": 7,
               "name": "Derby County",
-              "p": 11,
-              "pts": 6,
+              "p": 12,
+              "pts": 7,
               "rank": 23,
               "w": 1
             },
             {
-              "d": 1,
-              "ga": 24,
+              "d": 2,
+              "ga": 25,
               "gd": -15,
-              "gf": 9,
+              "gf": 10,
               "id": "394",
               "l": 9,
               "name": "Preston North End",
-              "p": 11,
-              "pts": 4,
+              "p": 12,
+              "pts": 5,
               "rank": 24,
               "w": 1
             }
@@ -1941,7 +1941,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "ll": {
       "groups": [
@@ -2091,6 +2091,19 @@
               "w": 2
             },
             {
+              "d": 4,
+              "ga": 17,
+              "gd": -3,
+              "gf": 14,
+              "id": "3751",
+              "l": 4,
+              "name": "Elche",
+              "p": 10,
+              "pts": 10,
+              "rank": 12,
+              "w": 2
+            },
+            {
               "d": 3,
               "ga": 13,
               "gd": 0,
@@ -2100,7 +2113,7 @@
               "name": "Villarreal",
               "p": 9,
               "pts": 9,
-              "rank": 12,
+              "rank": 13,
               "w": 2
             },
             {
@@ -2111,19 +2124,6 @@
               "id": "93",
               "l": 3,
               "name": "Athletic Club",
-              "p": 8,
-              "pts": 9,
-              "rank": 13,
-              "w": 2
-            },
-            {
-              "d": 3,
-              "ga": 17,
-              "gd": -5,
-              "gf": 12,
-              "id": "101",
-              "l": 3,
-              "name": "Rayo Vallecano",
               "p": 8,
               "pts": 9,
               "rank": 14,
@@ -2143,6 +2143,19 @@
               "w": 2
             },
             {
+              "d": 3,
+              "ga": 20,
+              "gd": -8,
+              "gf": 12,
+              "id": "101",
+              "l": 4,
+              "name": "Rayo Vallecano",
+              "p": 9,
+              "pts": 9,
+              "rank": 16,
+              "w": 2
+            },
+            {
               "d": 2,
               "ga": 12,
               "gd": -1,
@@ -2152,7 +2165,7 @@
               "name": "Espanyol",
               "p": 9,
               "pts": 8,
-              "rank": 16,
+              "rank": 17,
               "w": 2
             },
             {
@@ -2165,21 +2178,8 @@
               "name": "Racing Santander",
               "p": 9,
               "pts": 8,
-              "rank": 17,
-              "w": 2
-            },
-            {
-              "d": 4,
-              "ga": 17,
-              "gd": -6,
-              "gf": 11,
-              "id": "3751",
-              "l": 4,
-              "name": "Elche",
-              "p": 9,
-              "pts": 7,
               "rank": 18,
-              "w": 1
+              "w": 2
             },
             {
               "d": 3,
@@ -2212,7 +2212,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "nba": {
       "groups": [
@@ -2528,7 +2528,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "pl": {
       "groups": [
@@ -2536,13 +2536,13 @@
           "items": [
             {
               "d": 0,
-              "ga": 7,
-              "gd": 12,
-              "gf": 19,
+              "ga": 9,
+              "gd": 11,
+              "gf": 20,
               "id": "382",
-              "l": 0,
+              "l": 1,
               "name": "Manchester City",
-              "p": 7,
+              "p": 8,
               "pts": 21,
               "rank": 1,
               "w": 7
@@ -2600,6 +2600,19 @@
               "w": 3
             },
             {
+              "d": 2,
+              "ga": 12,
+              "gd": -3,
+              "gf": 9,
+              "id": "362",
+              "l": 3,
+              "name": "Aston Villa",
+              "p": 8,
+              "pts": 11,
+              "rank": 6,
+              "w": 3
+            },
+            {
               "d": 4,
               "ga": 8,
               "gd": 5,
@@ -2609,7 +2622,7 @@
               "name": "Brentford",
               "p": 7,
               "pts": 10,
-              "rank": 6,
+              "rank": 7,
               "w": 2
             },
             {
@@ -2622,7 +2635,7 @@
               "name": "Leeds United",
               "p": 7,
               "pts": 10,
-              "rank": 7,
+              "rank": 8,
               "w": 2
             },
             {
@@ -2635,7 +2648,7 @@
               "name": "Everton",
               "p": 7,
               "pts": 10,
-              "rank": 8,
+              "rank": 9,
               "w": 2
             },
             {
@@ -2648,7 +2661,7 @@
               "name": "Ipswich Town",
               "p": 8,
               "pts": 10,
-              "rank": 9,
+              "rank": 10,
               "w": 3
             },
             {
@@ -2661,7 +2674,20 @@
               "name": "Hull City",
               "p": 7,
               "pts": 9,
-              "rank": 10,
+              "rank": 11,
+              "w": 2
+            },
+            {
+              "d": 2,
+              "ga": 10,
+              "gd": -2,
+              "gf": 8,
+              "id": "370",
+              "l": 4,
+              "name": "Fulham",
+              "p": 8,
+              "pts": 8,
+              "rank": 12,
               "w": 2
             },
             {
@@ -2674,20 +2700,7 @@
               "name": "Newcastle United",
               "p": 7,
               "pts": 8,
-              "rank": 11,
-              "w": 2
-            },
-            {
-              "d": 2,
-              "ga": 11,
-              "gd": -4,
-              "gf": 7,
-              "id": "362",
-              "l": 3,
-              "name": "Aston Villa",
-              "p": 7,
-              "pts": 8,
-              "rank": 12,
+              "rank": 13,
               "w": 2
             },
             {
@@ -2700,7 +2713,7 @@
               "name": "Manchester United",
               "p": 7,
               "pts": 7,
-              "rank": 13,
+              "rank": 14,
               "w": 1
             },
             {
@@ -2713,7 +2726,7 @@
               "name": "Crystal Palace",
               "p": 7,
               "pts": 7,
-              "rank": 14,
+              "rank": 15,
               "w": 2
             },
             {
@@ -2726,7 +2739,7 @@
               "name": "AFC Bournemouth",
               "p": 7,
               "pts": 6,
-              "rank": 15,
+              "rank": 16,
               "w": 1
             },
             {
@@ -2739,7 +2752,7 @@
               "name": "Nottingham Forest",
               "p": 8,
               "pts": 6,
-              "rank": 16,
+              "rank": 17,
               "w": 1
             },
             {
@@ -2752,34 +2765,21 @@
               "name": "Tottenham Hotspur",
               "p": 7,
               "pts": 6,
-              "rank": 17,
+              "rank": 18,
               "w": 1
             },
             {
               "d": 0,
-              "ga": 14,
-              "gd": -8,
+              "ga": 15,
+              "gd": -9,
               "gf": 6,
               "id": "388",
-              "l": 5,
+              "l": 6,
               "name": "Coventry City",
-              "p": 7,
+              "p": 8,
               "pts": 6,
-              "rank": 18,
-              "w": 2
-            },
-            {
-              "d": 2,
-              "ga": 10,
-              "gd": -3,
-              "gf": 7,
-              "id": "370",
-              "l": 4,
-              "name": "Fulham",
-              "p": 7,
-              "pts": 5,
               "rank": 19,
-              "w": 1
+              "w": 2
             },
             {
               "d": 1,
@@ -2799,7 +2799,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     },
     "sa": {
       "groups": [
@@ -2845,6 +2845,19 @@
               "w": 5
             },
             {
+              "d": 2,
+              "ga": 7,
+              "gd": 7,
+              "gf": 14,
+              "id": "2572",
+              "l": 1,
+              "name": "Como",
+              "p": 8,
+              "pts": 17,
+              "rank": 4,
+              "w": 5
+            },
+            {
               "d": 3,
               "ga": 7,
               "gd": 7,
@@ -2854,19 +2867,6 @@
               "name": "AC Milan",
               "p": 7,
               "pts": 15,
-              "rank": 4,
-              "w": 4
-            },
-            {
-              "d": 2,
-              "ga": 7,
-              "gd": 5,
-              "gf": 12,
-              "id": "2572",
-              "l": 1,
-              "name": "Como",
-              "p": 7,
-              "pts": 14,
               "rank": 5,
               "w": 4
             },
@@ -2885,25 +2885,25 @@
             },
             {
               "d": 1,
-              "ga": 7,
-              "gd": -1,
-              "gf": 6,
-              "id": "2925",
-              "l": 2,
-              "name": "Cagliari",
-              "p": 7,
-              "pts": 13,
-              "rank": 7,
-              "w": 4
-            },
-            {
-              "d": 1,
               "ga": 11,
               "gd": 2,
               "gf": 13,
               "id": "239",
               "l": 3,
               "name": "Torino",
+              "p": 8,
+              "pts": 13,
+              "rank": 7,
+              "w": 4
+            },
+            {
+              "d": 1,
+              "ga": 9,
+              "gd": -3,
+              "gf": 6,
+              "id": "2925",
+              "l": 3,
+              "name": "Cagliari",
               "p": 8,
               "pts": 13,
               "rank": 8,
@@ -2963,15 +2963,28 @@
             },
             {
               "d": 2,
-              "ga": 14,
+              "ga": 10,
               "gd": -2,
-              "gf": 12,
-              "id": "3997",
-              "l": 3,
-              "name": "Sassuolo",
-              "p": 7,
+              "gf": 8,
+              "id": "107",
+              "l": 4,
+              "name": "Bologna",
+              "p": 8,
               "pts": 8,
               "rank": 13,
+              "w": 2
+            },
+            {
+              "d": 2,
+              "ga": 16,
+              "gd": -4,
+              "gf": 12,
+              "id": "3997",
+              "l": 4,
+              "name": "Sassuolo",
+              "p": 8,
+              "pts": 8,
+              "rank": 14,
               "w": 2
             },
             {
@@ -2984,21 +2997,8 @@
               "name": "Monza",
               "p": 8,
               "pts": 7,
-              "rank": 14,
-              "w": 2
-            },
-            {
-              "d": 2,
-              "ga": 10,
-              "gd": -4,
-              "gf": 6,
-              "id": "107",
-              "l": 4,
-              "name": "Bologna",
-              "p": 7,
-              "pts": 5,
               "rank": 15,
-              "w": 1
+              "w": 2
             },
             {
               "d": 1,
@@ -3070,8 +3070,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-10-24T10:58:59+00:00"
+      "updated_at": "2026-10-24T15:56:25+00:00"
     }
   },
-  "updated_at": "2026-10-24T10:58:59+00:00"
+  "updated_at": "2026-10-24T15:56:25+00:00"
 }
