@@ -72,7 +72,7 @@
       ],
       "round": "18",
       "season": "2026",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "drivers": {
       "items": [
@@ -263,22 +263,22 @@
       ],
       "round": "18",
       "season": "2026",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     }
   },
-  "last_attempt": "2026-10-27T14:31:05+00:00",
+  "last_attempt": "2026-10-27T20:41:47+00:00",
   "leagues": {
     "all": {
       "matches": [
         {
           "away": "IF Elfsborg",
-          "away_score": "0",
+          "away_score": "2",
           "home": "AIK",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401842858",
           "start": "2026-10-27T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Djurgården",
@@ -321,15 +321,15 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "bl": {
       "matches": [],
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "ch": {
       "matches": [],
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "ll": {
       "matches": [
@@ -344,7 +344,7 @@
           "status": "FT"
         }
       ],
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "nba": {
       "matches": [
@@ -599,43 +599,43 @@
           "status": "10/28 - 10:30 PM EDT"
         }
       ],
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "pl": {
       "matches": [],
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "sa": {
       "matches": [
         {
           "away": "Lazio",
-          "away_score": "0",
+          "away_score": "6",
           "home": "Sassuolo",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401874980",
           "start": "2026-10-27T17:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Cagliari",
-          "away_score": "0",
+          "away_score": "1",
           "home": "AS Roma",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401874780",
           "start": "2026-10-27T19:45Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "HT"
         },
         {
           "away": "Como",
           "away_score": "0",
           "home": "Torino",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401874786",
           "start": "2026-10-27T19:45Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "HT"
         },
         {
           "away": "Internazionale",
@@ -688,7 +688,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     }
   },
   "schema": 1,
@@ -750,15 +750,15 @@
               "w": 12
             },
             {
-              "d": 9,
-              "ga": 24,
+              "d": 10,
+              "ga": 26,
               "gd": 13,
-              "gf": 37,
+              "gf": 39,
               "id": "529",
               "l": 5,
               "name": "IF Elfsborg",
-              "p": 25,
-              "pts": 42,
+              "p": 26,
+              "pts": 43,
               "rank": 5,
               "w": 11
             },
@@ -776,6 +776,19 @@
               "w": 11
             },
             {
+              "d": 8,
+              "ga": 45,
+              "gd": -3,
+              "gf": 42,
+              "id": "994",
+              "l": 8,
+              "name": "AIK",
+              "p": 26,
+              "pts": 38,
+              "rank": 7,
+              "w": 10
+            },
+            {
               "d": 4,
               "ga": 34,
               "gd": 4,
@@ -785,21 +798,8 @@
               "name": "Malmö FF",
               "p": 25,
               "pts": 37,
-              "rank": 7,
-              "w": 11
-            },
-            {
-              "d": 7,
-              "ga": 43,
-              "gd": -3,
-              "gf": 40,
-              "id": "994",
-              "l": 8,
-              "name": "AIK",
-              "p": 25,
-              "pts": 37,
               "rank": 8,
-              "w": 10
+              "w": 11
             },
             {
               "d": 7,
@@ -910,7 +910,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "bl": {
       "groups": [
@@ -1155,7 +1155,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "ch": {
       "groups": [
@@ -1478,7 +1478,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "ll": {
       "groups": [
@@ -1749,7 +1749,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "nba": {
       "groups": [
@@ -2065,7 +2065,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "pl": {
       "groups": [
@@ -2336,12 +2336,25 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     },
     "sa": {
       "groups": [
         {
           "items": [
+            {
+              "d": 1,
+              "ga": 7,
+              "gd": 15,
+              "gf": 22,
+              "id": "112",
+              "l": 0,
+              "name": "Lazio",
+              "p": 9,
+              "pts": 25,
+              "rank": 1,
+              "w": 8
+            },
             {
               "d": 1,
               "ga": 10,
@@ -2350,19 +2363,6 @@
               "id": "110",
               "l": 0,
               "name": "Internazionale",
-              "p": 8,
-              "pts": 22,
-              "rank": 1,
-              "w": 7
-            },
-            {
-              "d": 1,
-              "ga": 5,
-              "gd": 11,
-              "gf": 16,
-              "id": "112",
-              "l": 0,
-              "name": "Lazio",
               "p": 8,
               "pts": 22,
               "rank": 2,
@@ -2513,13 +2513,13 @@
             },
             {
               "d": 2,
-              "ga": 16,
-              "gd": -4,
-              "gf": 12,
+              "ga": 22,
+              "gd": -8,
+              "gf": 14,
               "id": "3997",
-              "l": 4,
+              "l": 5,
               "name": "Sassuolo",
-              "p": 8,
+              "p": 9,
               "pts": 8,
               "rank": 14,
               "w": 2
@@ -2607,8 +2607,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-10-27T14:31:05+00:00"
+      "updated_at": "2026-10-27T20:41:47+00:00"
     }
   },
-  "updated_at": "2026-10-27T14:31:05+00:00"
+  "updated_at": "2026-10-27T20:41:47+00:00"
 }
