@@ -72,7 +72,7 @@
       ],
       "round": "18",
       "season": "2026",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "drivers": {
       "items": [
@@ -263,10 +263,10 @@
       ],
       "round": "18",
       "season": "2026",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     }
   },
-  "last_attempt": "2026-10-28T16:37:24+00:00",
+  "last_attempt": "2026-10-28T22:34:29+00:00",
   "leagues": {
     "all": {
       "matches": [
@@ -282,33 +282,33 @@
         },
         {
           "away": "Djurgården",
-          "away_score": "0",
+          "away_score": "1",
           "home": "IFK Göteborg",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401842860",
           "start": "2026-10-28T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Malmö FF",
-          "away_score": "0",
+          "away_score": "3",
           "home": "Halmstads BK",
           "home_score": "0",
           "id": "401842862",
           "start": "2026-10-28T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Västerås SK",
-          "away_score": "0",
+          "away_score": "3",
           "home": "Degerfors IF",
           "home_score": "0",
           "id": "401842863",
           "start": "2026-10-28T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "BK Häcken",
@@ -317,8 +317,8 @@
           "home_score": "0",
           "id": "401842864",
           "start": "2026-10-28T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "IK Sirius",
@@ -351,19 +351,19 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "bl": {
       "matches": [],
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "ch": {
       "matches": [],
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "ll": {
       "matches": [],
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "nba": {
       "matches": [
@@ -558,11 +558,11 @@
           "status": "10/29 - 10:00 PM EDT"
         }
       ],
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "pl": {
       "matches": [],
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "sa": {
       "matches": [
@@ -598,13 +598,13 @@
         },
         {
           "away": "Internazionale",
-          "away_score": "0",
+          "away_score": "2",
           "home": "Venezia",
           "home_score": "0",
           "id": "401874773",
           "start": "2026-10-28T17:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Udinese",
@@ -613,38 +613,38 @@
           "home_score": "0",
           "id": "401874965",
           "start": "2026-10-28T17:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Bologna",
-          "away_score": "0",
+          "away_score": "4",
           "home": "AC Milan",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401874993",
           "start": "2026-10-28T17:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Napoli",
-          "away_score": "0",
+          "away_score": "4",
           "home": "Monza",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401874799",
           "start": "2026-10-28T19:45Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Juventus",
           "away_score": "0",
           "home": "Genoa",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401874988",
           "start": "2026-10-28T19:45Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Lecce",
@@ -667,7 +667,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     }
   },
   "schema": 1,
@@ -703,28 +703,28 @@
               "w": 15
             },
             {
-              "d": 3,
-              "ga": 23,
+              "d": 4,
+              "ga": 24,
               "gd": 29,
-              "gf": 52,
+              "gf": 53,
               "id": "2339",
               "l": 7,
               "name": "Djurgården",
-              "p": 25,
-              "pts": 48,
+              "p": 26,
+              "pts": 49,
               "rank": 3,
               "w": 15
             },
             {
-              "d": 9,
+              "d": 10,
               "ga": 30,
               "gd": 17,
               "gf": 47,
               "id": "7834",
               "l": 4,
               "name": "BK Häcken",
-              "p": 25,
-              "pts": 45,
+              "p": 26,
+              "pts": 46,
               "rank": 4,
               "w": 12
             },
@@ -744,15 +744,28 @@
             {
               "d": 5,
               "ga": 38,
-              "gd": -2,
-              "gf": 36,
+              "gd": 1,
+              "gf": 39,
               "id": "22163",
               "l": 9,
               "name": "Västerås SK",
-              "p": 25,
-              "pts": 38,
+              "p": 26,
+              "pts": 41,
               "rank": 6,
-              "w": 11
+              "w": 12
+            },
+            {
+              "d": 4,
+              "ga": 34,
+              "gd": 7,
+              "gf": 41,
+              "id": "2720",
+              "l": 10,
+              "name": "Malmö FF",
+              "p": 26,
+              "pts": 40,
+              "rank": 7,
+              "w": 12
             },
             {
               "d": 8,
@@ -764,45 +777,32 @@
               "name": "AIK",
               "p": 26,
               "pts": 38,
-              "rank": 7,
+              "rank": 8,
               "w": 10
             },
             {
-              "d": 4,
-              "ga": 34,
-              "gd": 4,
-              "gf": 38,
-              "id": "2720",
-              "l": 10,
-              "name": "Malmö FF",
-              "p": 25,
-              "pts": 37,
-              "rank": 8,
-              "w": 11
-            },
-            {
-              "d": 7,
-              "ga": 44,
+              "d": 8,
+              "ga": 45,
               "gd": -9,
-              "gf": 35,
+              "gf": 36,
               "id": "2556",
               "l": 8,
               "name": "IFK Göteborg",
-              "p": 25,
-              "pts": 37,
+              "p": 26,
+              "pts": 38,
               "rank": 9,
               "w": 10
             },
             {
-              "d": 6,
+              "d": 7,
               "ga": 43,
               "gd": -4,
               "gf": 39,
               "id": "8221",
               "l": 10,
               "name": "IF Brommapojkarna",
-              "p": 25,
-              "pts": 33,
+              "p": 26,
+              "pts": 34,
               "rank": 10,
               "w": 9
             },
@@ -847,13 +847,13 @@
             },
             {
               "d": 5,
-              "ga": 41,
-              "gd": -20,
+              "ga": 44,
+              "gd": -23,
               "gf": 21,
               "id": "20856",
-              "l": 15,
+              "l": 16,
               "name": "Degerfors IF",
-              "p": 25,
+              "p": 26,
               "pts": 20,
               "rank": 14,
               "w": 5
@@ -873,13 +873,13 @@
             },
             {
               "d": 5,
-              "ga": 46,
-              "gd": -28,
+              "ga": 49,
+              "gd": -31,
               "gf": 18,
               "id": "3017",
-              "l": 16,
+              "l": 17,
               "name": "Halmstads BK",
-              "p": 25,
+              "p": 26,
               "pts": 17,
               "rank": 16,
               "w": 4
@@ -889,7 +889,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "bl": {
       "groups": [
@@ -1134,7 +1134,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "ch": {
       "groups": [
@@ -1457,7 +1457,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "ll": {
       "groups": [
@@ -1728,7 +1728,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "nba": {
       "groups": [
@@ -2044,7 +2044,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "pl": {
       "groups": [
@@ -2315,12 +2315,25 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     },
     "sa": {
       "groups": [
         {
           "items": [
+            {
+              "d": 1,
+              "ga": 10,
+              "gd": 15,
+              "gf": 25,
+              "id": "110",
+              "l": 0,
+              "name": "Internazionale",
+              "p": 9,
+              "pts": 25,
+              "rank": 1,
+              "w": 8
+            },
             {
               "d": 1,
               "ga": 7,
@@ -2331,21 +2344,8 @@
               "name": "Lazio",
               "p": 9,
               "pts": 25,
-              "rank": 1,
-              "w": 8
-            },
-            {
-              "d": 1,
-              "ga": 10,
-              "gd": 13,
-              "gf": 23,
-              "id": "110",
-              "l": 0,
-              "name": "Internazionale",
-              "p": 8,
-              "pts": 22,
               "rank": 2,
-              "w": 7
+              "w": 8
             },
             {
               "d": 3,
@@ -2375,13 +2375,13 @@
             },
             {
               "d": 3,
-              "ga": 7,
-              "gd": 9,
-              "gf": 16,
+              "ga": 11,
+              "gd": 7,
+              "gf": 18,
               "id": "103",
-              "l": 0,
+              "l": 1,
               "name": "AC Milan",
-              "p": 8,
+              "p": 9,
               "pts": 18,
               "rank": 5,
               "w": 5
@@ -2401,15 +2401,28 @@
             },
             {
               "d": 2,
-              "ga": 8,
-              "gd": 3,
-              "gf": 11,
-              "id": "111",
-              "l": 2,
-              "name": "Juventus",
-              "p": 8,
+              "ga": 11,
+              "gd": 6,
+              "gf": 17,
+              "id": "114",
+              "l": 3,
+              "name": "Napoli",
+              "p": 9,
               "pts": 14,
               "rank": 7,
+              "w": 4
+            },
+            {
+              "d": 2,
+              "ga": 10,
+              "gd": 1,
+              "gf": 11,
+              "id": "111",
+              "l": 3,
+              "name": "Juventus",
+              "p": 9,
+              "pts": 14,
+              "rank": 8,
               "w": 4
             },
             {
@@ -2422,7 +2435,7 @@
               "name": "Torino",
               "p": 9,
               "pts": 13,
-              "rank": 8,
+              "rank": 9,
               "w": 4
             },
             {
@@ -2435,20 +2448,20 @@
               "name": "Cagliari",
               "p": 9,
               "pts": 13,
-              "rank": 9,
+              "rank": 10,
               "w": 4
             },
             {
               "d": 2,
-              "ga": 10,
-              "gd": 3,
-              "gf": 13,
-              "id": "114",
-              "l": 3,
-              "name": "Napoli",
-              "p": 8,
+              "ga": 12,
+              "gd": 0,
+              "gf": 12,
+              "id": "107",
+              "l": 4,
+              "name": "Bologna",
+              "p": 9,
               "pts": 11,
-              "rank": 10,
+              "rank": 11,
               "w": 3
             },
             {
@@ -2461,7 +2474,20 @@
               "name": "Atalanta",
               "p": 8,
               "pts": 10,
-              "rank": 11,
+              "rank": 12,
+              "w": 3
+            },
+            {
+              "d": 1,
+              "ga": 13,
+              "gd": -5,
+              "gf": 8,
+              "id": "3263",
+              "l": 5,
+              "name": "Genoa",
+              "p": 9,
+              "pts": 10,
+              "rank": 13,
               "w": 3
             },
             {
@@ -2474,21 +2500,8 @@
               "name": "Lecce",
               "p": 8,
               "pts": 9,
-              "rank": 12,
+              "rank": 14,
               "w": 3
-            },
-            {
-              "d": 2,
-              "ga": 10,
-              "gd": -2,
-              "gf": 8,
-              "id": "107",
-              "l": 4,
-              "name": "Bologna",
-              "p": 8,
-              "pts": 8,
-              "rank": 13,
-              "w": 2
             },
             {
               "d": 2,
@@ -2500,46 +2513,46 @@
               "name": "Sassuolo",
               "p": 9,
               "pts": 8,
-              "rank": 14,
-              "w": 2
-            },
-            {
-              "d": 1,
-              "ga": 18,
-              "gd": -3,
-              "gf": 15,
-              "id": "4007",
-              "l": 5,
-              "name": "Monza",
-              "p": 8,
-              "pts": 7,
               "rank": 15,
               "w": 2
             },
             {
               "d": 1,
-              "ga": 13,
-              "gd": -7,
-              "gf": 6,
-              "id": "3263",
-              "l": 5,
-              "name": "Genoa",
-              "p": 8,
+              "ga": 22,
+              "gd": -6,
+              "gf": 16,
+              "id": "4007",
+              "l": 6,
+              "name": "Monza",
+              "p": 9,
               "pts": 7,
               "rank": 16,
               "w": 2
             },
             {
-              "d": 1,
+              "d": 2,
               "ga": 18,
               "gd": -9,
               "gf": 9,
               "id": "118",
               "l": 6,
               "name": "Udinese",
-              "p": 8,
-              "pts": 4,
+              "p": 9,
+              "pts": 5,
               "rank": 17,
+              "w": 1
+            },
+            {
+              "d": 2,
+              "ga": 15,
+              "gd": -10,
+              "gf": 5,
+              "id": "115",
+              "l": 6,
+              "name": "Parma",
+              "p": 9,
+              "pts": 5,
+              "rank": 18,
               "w": 1
             },
             {
@@ -2552,31 +2565,18 @@
               "name": "Fiorentina",
               "p": 8,
               "pts": 4,
-              "rank": 18,
-              "w": 1
-            },
-            {
-              "d": 1,
-              "ga": 15,
-              "gd": -10,
-              "gf": 5,
-              "id": "115",
-              "l": 6,
-              "name": "Parma",
-              "p": 8,
-              "pts": 4,
               "rank": 19,
               "w": 1
             },
             {
               "d": 0,
-              "ga": 17,
-              "gd": -11,
+              "ga": 19,
+              "gd": -13,
               "gf": 6,
               "id": "17530",
-              "l": 7,
+              "l": 8,
               "name": "Venezia",
-              "p": 8,
+              "p": 9,
               "pts": 3,
               "rank": 20,
               "w": 1
@@ -2586,8 +2586,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-10-28T16:37:24+00:00"
+      "updated_at": "2026-10-28T22:34:29+00:00"
     }
   },
-  "updated_at": "2026-10-28T16:37:24+00:00"
+  "updated_at": "2026-10-28T22:34:29+00:00"
 }
