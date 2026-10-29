@@ -72,7 +72,7 @@
       ],
       "round": "18",
       "season": "2026",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "drivers": {
       "items": [
@@ -263,10 +263,10 @@
       ],
       "round": "18",
       "season": "2026",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     }
   },
-  "last_attempt": "2026-10-29T12:59:31+00:00",
+  "last_attempt": "2026-10-29T19:37:57+00:00",
   "leagues": {
     "all": {
       "matches": [
@@ -314,11 +314,11 @@
           "away": "IK Sirius",
           "away_score": "0",
           "home": "Hammarby IF",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401842861",
           "start": "2026-10-29T17:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "GAIS",
@@ -327,21 +327,21 @@
           "home_score": "0",
           "id": "401842859",
           "start": "2026-10-29T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "82'"
         },
         {
           "away": "Mjällby AIF",
-          "away_score": "0",
+          "away_score": "2",
           "home": "Örgryte IS",
-          "home_score": "0",
+          "home_score": "1",
           "id": "401842865",
           "start": "2026-10-29T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "76'"
         }
       ],
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "bl": {
       "matches": [
@@ -356,7 +356,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "ch": {
       "matches": [
@@ -371,7 +371,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "ll": {
       "matches": [
@@ -386,7 +386,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "nba": {
       "matches": [
@@ -641,11 +641,11 @@
           "status": "10/30 - 10:00 PM EDT"
         }
       ],
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "pl": {
       "matches": [],
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "sa": {
       "matches": [
@@ -701,13 +701,13 @@
         },
         {
           "away": "Lecce",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Frosinone",
-          "home_score": "0",
+          "home_score": "5",
           "id": "401874976",
           "start": "2026-10-29T17:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Atalanta",
@@ -720,7 +720,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     }
   },
   "schema": 1,
@@ -942,7 +942,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "bl": {
       "groups": [
@@ -1187,7 +1187,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "ch": {
       "groups": [
@@ -1510,7 +1510,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "ll": {
       "groups": [
@@ -1781,7 +1781,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "nba": {
       "groups": [
@@ -2097,7 +2097,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "pl": {
       "groups": [
@@ -2368,7 +2368,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     },
     "sa": {
       "groups": [
@@ -2441,16 +2441,16 @@
             },
             {
               "d": 2,
-              "ga": 13,
-              "gd": 4,
-              "gf": 17,
+              "ga": 14,
+              "gd": 8,
+              "gf": 22,
               "id": "4057",
               "l": 2,
               "name": "Frosinone",
-              "p": 8,
-              "pts": 14,
+              "p": 9,
+              "pts": 17,
               "rank": 6,
-              "w": 4
+              "w": 5
             },
             {
               "d": 2,
@@ -2545,13 +2545,13 @@
             },
             {
               "d": 0,
-              "ga": 14,
-              "gd": -5,
-              "gf": 9,
+              "ga": 19,
+              "gd": -9,
+              "gf": 10,
               "id": "113",
-              "l": 5,
+              "l": 6,
               "name": "Lecce",
-              "p": 8,
+              "p": 9,
               "pts": 9,
               "rank": 14,
               "w": 3
@@ -2639,8 +2639,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-10-29T12:59:31+00:00"
+      "updated_at": "2026-10-29T19:37:57+00:00"
     }
   },
-  "updated_at": "2026-10-29T12:59:31+00:00"
+  "updated_at": "2026-10-29T19:37:57+00:00"
 }
