@@ -5,37 +5,37 @@
       "items": [
         {
           "name": "Mercedes",
-          "points": 607.0,
+          "points": 630.0,
           "position": 1,
           "wins": 12
         },
         {
           "name": "Ferrari",
-          "points": 474.0,
+          "points": 504.0,
           "position": 2,
           "wins": 2
         },
         {
           "name": "Red Bull",
-          "points": 355.0,
+          "points": 380.0,
           "position": 3,
-          "wins": 2
+          "wins": 3
         },
         {
           "name": "McLaren",
-          "points": 355.0,
+          "points": 371.0,
           "position": 4,
           "wins": 2
         },
         {
           "name": "RB F1 Team",
-          "points": 102.0,
+          "points": 104.0,
           "position": 5,
           "wins": 0
         },
         {
           "name": "Alpine F1 Team",
-          "points": 69.0,
+          "points": 74.0,
           "position": 6,
           "wins": 0
         },
@@ -72,46 +72,46 @@
       ],
       "round": "19",
       "season": "2026",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "drivers": {
       "items": [
         {
           "name": "Andrea Kimi Antonelli",
           "number": "12",
-          "points": 365.0,
+          "points": 380.0,
           "position": 1,
           "team": "Mercedes",
           "wins": 9
         },
         {
-          "name": "George Russell",
-          "number": "63",
-          "points": 242.0,
+          "name": "Max Verstappen",
+          "number": "3",
+          "points": 261.0,
           "position": 2,
-          "team": "Mercedes",
+          "team": "Red Bull",
           "wins": 3
         },
         {
           "name": "Lewis Hamilton",
           "number": "44",
-          "points": 241.0,
+          "points": 259.0,
           "position": 3,
           "team": "Ferrari",
           "wins": 1
         },
         {
-          "name": "Max Verstappen",
-          "number": "3",
-          "points": 236.0,
+          "name": "George Russell",
+          "number": "63",
+          "points": 250.0,
           "position": 4,
-          "team": "Red Bull",
-          "wins": 2
+          "team": "Mercedes",
+          "wins": 3
         },
         {
           "name": "Charles Leclerc",
           "number": "16",
-          "points": 233.0,
+          "points": 245.0,
           "position": 5,
           "team": "Ferrari",
           "wins": 1
@@ -119,7 +119,7 @@
         {
           "name": "Lando Norris",
           "number": "1",
-          "points": 211.0,
+          "points": 221.0,
           "position": 6,
           "team": "McLaren",
           "wins": 2
@@ -127,7 +127,7 @@
         {
           "name": "Oscar Piastri",
           "number": "81",
-          "points": 144.0,
+          "points": 150.0,
           "position": 7,
           "team": "McLaren",
           "wins": 0
@@ -143,7 +143,7 @@
         {
           "name": "Liam Lawson",
           "number": "30",
-          "points": 77.0,
+          "points": 79.0,
           "position": 9,
           "team": "RB F1 Team",
           "wins": 0
@@ -151,7 +151,7 @@
         {
           "name": "Pierre Gasly",
           "number": "10",
-          "points": 42.0,
+          "points": 43.0,
           "position": 10,
           "team": "Alpine F1 Team",
           "wins": 0
@@ -167,7 +167,7 @@
         {
           "name": "Franco Colapinto",
           "number": "43",
-          "points": 27.0,
+          "points": 31.0,
           "position": 12,
           "team": "Alpine F1 Team",
           "wins": 0
@@ -253,28 +253,28 @@
           "wins": 0
         },
         {
-          "name": "Sergio Pérez",
-          "number": "11",
-          "points": 0.0,
-          "position": 23,
-          "team": "Cadillac F1 Team",
-          "wins": 0
-        },
-        {
           "name": "Ryo Hirakawa",
           "number": "50",
           "points": 0.0,
-          "position": 24,
+          "position": 23,
           "team": "Haas F1 Team",
+          "wins": 0
+        },
+        {
+          "name": "Sergio Pérez",
+          "number": "11",
+          "points": 0.0,
+          "position": 24,
+          "team": "Cadillac F1 Team",
           "wins": 0
         }
       ],
       "round": "19",
       "season": "2026",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     }
   },
-  "last_attempt": "2026-11-01T23:35:15+00:00",
+  "last_attempt": "2026-11-02T06:00:04+00:00",
   "leagues": {
     "all": {
       "matches": [
@@ -359,7 +359,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "bl": {
       "matches": [
@@ -384,7 +384,7 @@
           "status": "FT"
         }
       ],
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "ch": {
       "matches": [
@@ -479,7 +479,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "ll": {
       "matches": [
@@ -534,7 +534,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "nba": {
       "matches": [
@@ -550,33 +550,33 @@
         },
         {
           "away": "Brooklyn Nets",
-          "away_score": "43",
+          "away_score": "98",
           "home": "Indiana Pacers",
-          "home_score": "40",
+          "home_score": "90",
           "id": "401909904",
           "start": "2026-11-01T22:00Z",
-          "state": "in",
-          "status": "10:53 - 3rd"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "LA Clippers",
-          "away_score": "0",
+          "away_score": "112",
           "home": "Golden State Warriors",
-          "home_score": "0",
+          "home_score": "124",
           "id": "401909905",
           "start": "2026-11-02T01:30Z",
-          "state": "pre",
-          "status": "11/1 - 8:30 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Toronto Raptors",
-          "away_score": "0",
+          "away_score": "125",
           "home": "Los Angeles Lakers",
-          "home_score": "0",
+          "home_score": "131",
           "id": "401909906",
           "start": "2026-11-02T02:00Z",
-          "state": "pre",
-          "status": "11/1 - 9:00 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Oklahoma City Thunder",
@@ -729,7 +729,7 @@
           "status": "11/2 - 10:00 PM EST"
         }
       ],
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "pl": {
       "matches": [
@@ -754,7 +754,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "sa": {
       "matches": [
@@ -829,7 +829,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     }
   },
   "schema": 1,
@@ -1051,7 +1051,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "bl": {
       "groups": [
@@ -1296,7 +1296,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "ch": {
       "groups": [
@@ -1619,7 +1619,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "ll": {
       "groups": [
@@ -1890,7 +1890,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "nba": {
       "groups": [
@@ -1937,12 +1937,12 @@
               "w": 4
             },
             {
-              "diff": 53,
-              "gb": 2,
+              "diff": 47,
+              "gb": 2.5,
               "id": "28",
-              "l": 2,
+              "l": 3,
               "name": "Toronto Raptors",
-              "pct": 0.6,
+              "pct": 0.5,
               "rank": 5,
               "w": 3
             },
@@ -1977,21 +1977,21 @@
               "w": 3
             },
             {
-              "diff": -19,
-              "gb": 3.5,
-              "id": "14",
-              "l": 4,
-              "name": "Miami Heat",
-              "pct": 0.3333,
-              "rank": 9,
-              "w": 2
-            },
-            {
               "diff": -54,
               "gb": 3.5,
               "id": "19",
               "l": 4,
               "name": "Orlando Magic",
+              "pct": 0.3333,
+              "rank": 9,
+              "w": 2
+            },
+            {
+              "diff": -19,
+              "gb": 3.5,
+              "id": "14",
+              "l": 4,
+              "name": "Miami Heat",
               "pct": 0.3333,
               "rank": 10,
               "w": 2
@@ -2007,12 +2007,12 @@
               "w": 2
             },
             {
-              "diff": -19,
-              "gb": 3.5,
+              "diff": -27,
+              "gb": 4,
               "id": "11",
-              "l": 4,
+              "l": 5,
               "name": "Indiana Pacers",
-              "pct": 0.3333,
+              "pct": 0.2857,
               "rank": 12,
               "w": 2
             },
@@ -2037,14 +2037,14 @@
               "w": 1
             },
             {
-              "diff": -55,
-              "gb": 5,
+              "diff": -47,
+              "gb": 4.5,
               "id": "17",
               "l": 5,
               "name": "Brooklyn Nets",
-              "pct": 0,
+              "pct": 0.1667,
               "rank": 15,
-              "w": 0
+              "w": 1
             }
           ],
           "name": "Eastern Conference"
@@ -2082,14 +2082,14 @@
               "w": 4
             },
             {
-              "diff": 31,
-              "gb": 2,
+              "diff": 37,
+              "gb": 1.5,
               "id": "13",
               "l": 2,
               "name": "Los Angeles Lakers",
-              "pct": 0.6667,
+              "pct": 0.7143,
               "rank": 4,
-              "w": 4
+              "w": 5
             },
             {
               "diff": -3,
@@ -2132,24 +2132,24 @@
               "w": 3
             },
             {
+              "diff": 20,
+              "gb": 2.5,
+              "id": "9",
+              "l": 3,
+              "name": "Golden State Warriors",
+              "pct": 0.5714,
+              "rank": 9,
+              "w": 4
+            },
+            {
               "diff": 79,
               "gb": 2.5,
               "id": "16",
               "l": 3,
               "name": "Minnesota Timberwolves",
               "pct": 0.5714,
-              "rank": 9,
-              "w": 4
-            },
-            {
-              "diff": 8,
-              "gb": 3,
-              "id": "9",
-              "l": 3,
-              "name": "Golden State Warriors",
-              "pct": 0.5,
               "rank": 10,
-              "w": 3
+              "w": 4
             },
             {
               "diff": 11,
@@ -2172,12 +2172,12 @@
               "w": 1
             },
             {
-              "diff": -32,
-              "gb": 4.5,
+              "diff": -44,
+              "gb": 5,
               "id": "12",
-              "l": 4,
+              "l": 5,
               "name": "LA Clippers",
-              "pct": 0.2,
+              "pct": 0.1667,
               "rank": 13,
               "w": 1
             },
@@ -2206,7 +2206,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "pl": {
       "groups": [
@@ -2477,7 +2477,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     },
     "sa": {
       "groups": [
@@ -2748,8 +2748,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-11-01T23:35:15+00:00"
+      "updated_at": "2026-11-02T06:00:04+00:00"
     }
   },
-  "updated_at": "2026-11-01T23:35:15+00:00"
+  "updated_at": "2026-11-02T06:00:04+00:00"
 }
