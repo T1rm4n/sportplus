@@ -72,7 +72,7 @@
       ],
       "round": "19",
       "season": "2026",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "drivers": {
       "items": [
@@ -271,10 +271,10 @@
       ],
       "round": "19",
       "season": "2026",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     }
   },
-  "last_attempt": "2026-11-05T23:38:14+00:00",
+  "last_attempt": "2026-11-06T06:42:41+00:00",
   "leagues": {
     "all": {
       "matches": [
@@ -309,7 +309,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "bl": {
       "matches": [
@@ -374,7 +374,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "ch": {
       "matches": [
@@ -499,7 +499,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "ll": {
       "matches": [
@@ -554,29 +554,29 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "nba": {
       "matches": [
         {
           "away": "Orlando Magic",
-          "away_score": "0",
+          "away_score": "104",
           "home": "Phoenix Suns",
-          "home_score": "0",
+          "home_score": "117",
           "id": "401909936",
           "start": "2026-11-06T02:00Z",
-          "state": "pre",
-          "status": "11/5 - 9:00 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Miami Heat",
-          "away_score": "0",
+          "away_score": "100",
           "home": "Golden State Warriors",
-          "home_score": "0",
+          "home_score": "120",
           "id": "401909937",
           "start": "2026-11-06T03:00Z",
-          "state": "pre",
-          "status": "11/5 - 10:00 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Washington Wizards",
@@ -739,7 +739,7 @@
           "status": "11/7 - 10:00 PM EST"
         }
       ],
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "pl": {
       "matches": [
@@ -794,7 +794,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "sa": {
       "matches": [
@@ -849,7 +849,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     }
   },
   "schema": 1,
@@ -1071,7 +1071,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "bl": {
       "groups": [
@@ -1316,7 +1316,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "ch": {
       "groups": [
@@ -1639,7 +1639,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "ll": {
       "groups": [
@@ -1910,7 +1910,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "nba": {
       "groups": [
@@ -1997,21 +1997,21 @@
               "w": 4
             },
             {
-              "diff": -39,
-              "gb": 4.5,
-              "id": "14",
-              "l": 5,
-              "name": "Miami Heat",
-              "pct": 0.375,
-              "rank": 9,
-              "w": 3
-            },
-            {
               "diff": -100,
               "gb": 5,
               "id": "30",
               "l": 6,
               "name": "Charlotte Hornets",
+              "pct": 0.3333,
+              "rank": 9,
+              "w": 3
+            },
+            {
+              "diff": -59,
+              "gb": 5,
+              "id": "14",
+              "l": 6,
+              "name": "Miami Heat",
               "pct": 0.3333,
               "rank": 10,
               "w": 3
@@ -2027,12 +2027,12 @@
               "w": 3
             },
             {
-              "diff": -63,
-              "gb": 5,
+              "diff": -76,
+              "gb": 5.5,
               "id": "19",
-              "l": 5,
+              "l": 6,
               "name": "Orlando Magic",
-              "pct": 0.2857,
+              "pct": 0.25,
               "rank": 12,
               "w": 2
             },
@@ -2132,24 +2132,24 @@
               "w": 6
             },
             {
+              "diff": 43,
+              "gb": 1,
+              "id": "9",
+              "l": 3,
+              "name": "Golden State Warriors",
+              "pct": 0.6667,
+              "rank": 7,
+              "w": 6
+            },
+            {
               "diff": 101,
               "gb": 1,
               "id": "16",
               "l": 3,
               "name": "Minnesota Timberwolves",
               "pct": 0.6667,
-              "rank": 7,
-              "w": 6
-            },
-            {
-              "diff": 23,
-              "gb": 1.5,
-              "id": "9",
-              "l": 3,
-              "name": "Golden State Warriors",
-              "pct": 0.625,
               "rank": 8,
-              "w": 5
+              "w": 6
             },
             {
               "diff": 5,
@@ -2182,14 +2182,14 @@
               "w": 4
             },
             {
-              "diff": -66,
-              "gb": 4.5,
+              "diff": -53,
+              "gb": 4,
               "id": "21",
               "l": 5,
               "name": "Phoenix Suns",
-              "pct": 0.1667,
+              "pct": 0.2857,
               "rank": 12,
-              "w": 1
+              "w": 2
             },
             {
               "diff": -52,
@@ -2226,7 +2226,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "pl": {
       "groups": [
@@ -2497,7 +2497,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     },
     "sa": {
       "groups": [
@@ -2768,8 +2768,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-11-05T23:38:14+00:00"
+      "updated_at": "2026-11-06T06:42:41+00:00"
     }
   },
-  "updated_at": "2026-11-05T23:38:14+00:00"
+  "updated_at": "2026-11-06T06:42:41+00:00"
 }
