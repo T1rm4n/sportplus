@@ -72,7 +72,7 @@
       ],
       "round": "19",
       "season": "2026",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "drivers": {
       "items": [
@@ -271,22 +271,22 @@
       ],
       "round": "19",
       "season": "2026",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     }
   },
-  "last_attempt": "2026-11-06T15:55:17+00:00",
+  "last_attempt": "2026-11-06T21:29:16+00:00",
   "leagues": {
     "all": {
       "matches": [
         {
           "away": "IF Elfsborg",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Hammarby IF",
-          "home_score": "0",
+          "home_score": "4",
           "id": "401842876",
           "start": "2026-11-06T18:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "GAIS",
@@ -309,19 +309,19 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "bl": {
       "matches": [
         {
           "away": "Borussia Mönchengladbach",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Hamburg SV",
-          "home_score": "0",
+          "home_score": "3",
           "id": "401884739",
           "start": "2026-11-06T19:30Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "post",
+          "status": "FT"
         },
         {
           "away": "Eintracht Frankfurt",
@@ -374,19 +374,19 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "ch": {
       "matches": [
         {
           "away": "Bolton Wanderers",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Derby County",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401880167",
           "start": "2026-11-06T20:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "73'"
         },
         {
           "away": "Wolverhampton Wanderers",
@@ -499,7 +499,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "ll": {
       "matches": [
@@ -510,8 +510,8 @@
           "home_score": "0",
           "id": "401882809",
           "start": "2026-11-06T20:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "66'"
         },
         {
           "away": "Racing Santander",
@@ -554,7 +554,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "nba": {
       "matches": [
@@ -739,19 +739,19 @@
           "status": "11/7 - 10:00 PM EST"
         }
       ],
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "pl": {
       "matches": [
         {
           "away": "Coventry City",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Everton",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401879242",
           "start": "2026-11-06T20:00Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "70'"
         },
         {
           "away": "Tottenham Hotspur",
@@ -794,19 +794,19 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "sa": {
       "matches": [
         {
           "away": "Udinese",
-          "away_score": "0",
+          "away_score": "1",
           "home": "Venezia",
-          "home_score": "0",
+          "home_score": "2",
           "id": "401874815",
           "start": "2026-11-06T19:45Z",
-          "state": "pre",
-          "status": "Scheduled"
+          "state": "in",
+          "status": "86'"
         },
         {
           "away": "Frosinone",
@@ -849,7 +849,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     }
   },
   "schema": 1,
@@ -860,6 +860,19 @@
           "items": [
             {
               "d": 4,
+              "ga": 23,
+              "gd": 37,
+              "gf": 60,
+              "id": "2495",
+              "l": 6,
+              "name": "Hammarby IF",
+              "p": 28,
+              "pts": 58,
+              "rank": 1,
+              "w": 18
+            },
+            {
+              "d": 4,
               "ga": 34,
               "gd": 24,
               "gf": 58,
@@ -868,21 +881,8 @@
               "name": "IK Sirius",
               "p": 27,
               "pts": 58,
-              "rank": 1,
-              "w": 18
-            },
-            {
-              "d": 4,
-              "ga": 22,
-              "gd": 34,
-              "gf": 56,
-              "id": "2495",
-              "l": 6,
-              "name": "Hammarby IF",
-              "p": 27,
-              "pts": 55,
               "rank": 2,
-              "w": 17
+              "w": 18
             },
             {
               "d": 4,
@@ -912,13 +912,13 @@
             },
             {
               "d": 10,
-              "ga": 27,
-              "gd": 14,
-              "gf": 41,
+              "ga": 31,
+              "gd": 11,
+              "gf": 42,
               "id": "529",
-              "l": 5,
+              "l": 6,
               "name": "IF Elfsborg",
-              "p": 27,
+              "p": 28,
               "pts": 46,
               "rank": 5,
               "w": 12
@@ -1071,7 +1071,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "bl": {
       "groups": [
@@ -1169,6 +1169,19 @@
               "w": 4
             },
             {
+              "d": 0,
+              "ga": 20,
+              "gd": -10,
+              "gf": 10,
+              "id": "127",
+              "l": 5,
+              "name": "Hamburg SV",
+              "p": 9,
+              "pts": 12,
+              "rank": 8,
+              "w": 4
+            },
+            {
               "d": 2,
               "ga": 18,
               "gd": -5,
@@ -1178,7 +1191,7 @@
               "name": "Eintracht Frankfurt",
               "p": 8,
               "pts": 11,
-              "rank": 8,
+              "rank": 9,
               "w": 3
             },
             {
@@ -1191,7 +1204,7 @@
               "name": "Mainz",
               "p": 8,
               "pts": 10,
-              "rank": 9,
+              "rank": 10,
               "w": 3
             },
             {
@@ -1204,7 +1217,7 @@
               "name": "FC Augsburg",
               "p": 8,
               "pts": 9,
-              "rank": 10,
+              "rank": 11,
               "w": 2
             },
             {
@@ -1217,7 +1230,7 @@
               "name": "VfB Stuttgart",
               "p": 8,
               "pts": 9,
-              "rank": 11,
+              "rank": 12,
               "w": 3
             },
             {
@@ -1230,7 +1243,7 @@
               "name": "TSG Hoffenheim",
               "p": 8,
               "pts": 9,
-              "rank": 12,
+              "rank": 13,
               "w": 3
             },
             {
@@ -1243,7 +1256,7 @@
               "name": "FC Cologne",
               "p": 8,
               "pts": 9,
-              "rank": 13,
+              "rank": 14,
               "w": 2
             },
             {
@@ -1256,21 +1269,8 @@
               "name": "SC Paderborn 07",
               "p": 8,
               "pts": 9,
-              "rank": 14,
-              "w": 2
-            },
-            {
-              "d": 0,
-              "ga": 19,
-              "gd": -12,
-              "gf": 7,
-              "id": "127",
-              "l": 5,
-              "name": "Hamburg SV",
-              "p": 8,
-              "pts": 9,
               "rank": 15,
-              "w": 3
+              "w": 2
             },
             {
               "d": 4,
@@ -1300,13 +1300,13 @@
             },
             {
               "d": 1,
-              "ga": 22,
-              "gd": -11,
-              "gf": 11,
+              "ga": 25,
+              "gd": -13,
+              "gf": 12,
               "id": "268",
-              "l": 6,
+              "l": 7,
               "name": "Borussia Mönchengladbach",
-              "p": 8,
+              "p": 9,
               "pts": 4,
               "rank": 18,
               "w": 1
@@ -1316,7 +1316,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "ch": {
       "groups": [
@@ -1639,7 +1639,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "ll": {
       "groups": [
@@ -1910,7 +1910,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "nba": {
       "groups": [
@@ -2226,7 +2226,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "pl": {
       "groups": [
@@ -2497,7 +2497,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     },
     "sa": {
       "groups": [
@@ -2768,8 +2768,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-11-06T15:55:17+00:00"
+      "updated_at": "2026-11-06T21:29:16+00:00"
     }
   },
-  "updated_at": "2026-11-06T15:55:17+00:00"
+  "updated_at": "2026-11-06T21:29:16+00:00"
 }
