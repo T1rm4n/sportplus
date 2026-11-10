@@ -72,7 +72,7 @@
       ],
       "round": "20",
       "season": "2026",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "drivers": {
       "items": [
@@ -270,7 +270,7 @@
         },
         {
           "name": "Rafael Camara",
-          "number": "",
+          "number": "51",
           "points": 0.0,
           "position": 25,
           "team": "Haas F1 Team",
@@ -279,26 +279,26 @@
       ],
       "round": "20",
       "season": "2026",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     }
   },
-  "last_attempt": "2026-11-10T04:06:53+00:00",
+  "last_attempt": "2026-11-10T12:38:32+00:00",
   "leagues": {
     "all": {
       "matches": [],
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "bl": {
       "matches": [],
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "ch": {
       "matches": [],
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "ll": {
       "matches": [],
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "nba": {
       "matches": [
@@ -364,23 +364,23 @@
         },
         {
           "away": "San Antonio Spurs",
-          "away_score": "110",
+          "away_score": "122",
           "home": "Phoenix Suns",
-          "home_score": "80",
+          "home_score": "96",
           "id": "401909958",
           "start": "2026-11-10T02:00Z",
-          "state": "in",
-          "status": "6:47 - 4th"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "New Orleans Pelicans",
-          "away_score": "43",
+          "away_score": "87",
           "home": "Golden State Warriors",
-          "home_score": "72",
+          "home_score": "138",
           "id": "401909959",
           "start": "2026-11-10T03:00Z",
-          "state": "in",
-          "status": "6.7 - 2nd"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Milwaukee Bucks",
@@ -543,15 +543,15 @@
           "status": "11/11 - 10:00 PM EST"
         }
       ],
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "pl": {
       "matches": [],
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "sa": {
       "matches": [],
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     }
   },
   "schema": 1,
@@ -773,7 +773,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "bl": {
       "groups": [
@@ -1018,7 +1018,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "ch": {
       "groups": [
@@ -1341,7 +1341,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "ll": {
       "groups": [
@@ -1612,7 +1612,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "nba": {
       "groups": [
@@ -1784,23 +1784,33 @@
               "w": 10
             },
             {
+              "diff": 129,
+              "gb": 0.5,
+              "id": "24",
+              "l": 2,
+              "name": "San Antonio Spurs",
+              "pct": 0.8182,
+              "rank": 2,
+              "w": 9
+            },
+            {
               "diff": 80,
               "gb": 1,
               "id": "25",
               "l": 2,
               "name": "Oklahoma City Thunder",
               "pct": 0.8,
-              "rank": 2,
+              "rank": 3,
               "w": 8
             },
             {
-              "diff": 103,
-              "gb": 1,
-              "id": "24",
-              "l": 2,
-              "name": "San Antonio Spurs",
-              "pct": 0.8,
-              "rank": 3,
+              "diff": 101,
+              "gb": 1.5,
+              "id": "9",
+              "l": 3,
+              "name": "Golden State Warriors",
+              "pct": 0.7273,
+              "rank": 4,
               "w": 8
             },
             {
@@ -1810,7 +1820,7 @@
               "l": 3,
               "name": "Minnesota Timberwolves",
               "pct": 0.7273,
-              "rank": 4,
+              "rank": 5,
               "w": 8
             },
             {
@@ -1820,7 +1830,7 @@
               "l": 3,
               "name": "Houston Rockets",
               "pct": 0.7273,
-              "rank": 5,
+              "rank": 6,
               "w": 8
             },
             {
@@ -1829,16 +1839,6 @@
               "id": "29",
               "l": 3,
               "name": "Memphis Grizzlies",
-              "pct": 0.7,
-              "rank": 6,
-              "w": 7
-            },
-            {
-              "diff": 50,
-              "gb": 2,
-              "id": "9",
-              "l": 3,
-              "name": "Golden State Warriors",
               "pct": 0.7,
               "rank": 7,
               "w": 7
@@ -1874,22 +1874,22 @@
               "w": 5
             },
             {
-              "diff": -3,
-              "gb": 5,
+              "diff": -54,
+              "gb": 5.5,
               "id": "3",
-              "l": 6,
+              "l": 7,
               "name": "New Orleans Pelicans",
-              "pct": 0.4,
+              "pct": 0.3636,
               "rank": 11,
               "w": 4
             },
             {
-              "diff": -50,
-              "gb": 5,
+              "diff": -76,
+              "gb": 5.5,
               "id": "21",
-              "l": 5,
+              "l": 6,
               "name": "Phoenix Suns",
-              "pct": 0.375,
+              "pct": 0.3333,
               "rank": 12,
               "w": 3
             },
@@ -1928,7 +1928,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "pl": {
       "groups": [
@@ -2199,7 +2199,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     },
     "sa": {
       "groups": [
@@ -2470,8 +2470,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-11-10T04:06:53+00:00"
+      "updated_at": "2026-11-10T12:38:32+00:00"
     }
   },
-  "updated_at": "2026-11-10T04:06:53+00:00"
+  "updated_at": "2026-11-10T12:38:32+00:00"
 }
