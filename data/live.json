@@ -72,7 +72,7 @@
       ],
       "round": "20",
       "season": "2026",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "drivers": {
       "items": [
@@ -279,14 +279,45 @@
       ],
       "round": "20",
       "season": "2026",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     }
   },
-  "last_attempt": "2026-11-19T20:35:48+00:00",
+  "last_attempt": "2026-11-20T03:13:51+00:00",
   "leagues": {
     "all": {
-      "matches": [],
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "matches": [
+        {
+          "away": "Degerfors IF",
+          "away_score": "0",
+          "home": "AIK",
+          "home_score": "0",
+          "id": "401842882",
+          "start": "2026-11-21T14:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Malmö FF",
+          "away_score": "0",
+          "home": "Mjällby AIF",
+          "home_score": "0",
+          "id": "401842886",
+          "start": "2026-11-21T14:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Västerås SK",
+          "away_score": "0",
+          "home": "GAIS",
+          "home_score": "0",
+          "id": "401842889",
+          "start": "2026-11-21T16:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "bl": {
       "matches": [
@@ -299,13 +330,184 @@
           "start": "2026-11-20T19:30Z",
           "state": "pre",
           "status": "Scheduled"
+        },
+        {
+          "away": "SC Freiburg",
+          "away_score": "0",
+          "home": "SV Elversberg",
+          "home_score": "0",
+          "id": "401884728",
+          "start": "2026-11-21T14:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Borussia Dortmund",
+          "away_score": "0",
+          "home": "Borussia Mönchengladbach",
+          "home_score": "0",
+          "id": "401884731",
+          "start": "2026-11-21T14:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "RB Leipzig",
+          "away_score": "0",
+          "home": "1. FC Union Berlin",
+          "home_score": "0",
+          "id": "401884732",
+          "start": "2026-11-21T14:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "TSG Hoffenheim",
+          "away_score": "0",
+          "home": "Eintracht Frankfurt",
+          "home_score": "0",
+          "id": "401884734",
+          "start": "2026-11-21T14:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "SC Paderborn 07",
+          "away_score": "0",
+          "home": "Bayer Leverkusen",
+          "home_score": "0",
+          "id": "401884735",
+          "start": "2026-11-21T14:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "VfB Stuttgart",
+          "away_score": "0",
+          "home": "Schalke 04",
+          "home_score": "0",
+          "id": "401884729",
+          "start": "2026-11-21T17:30Z",
+          "state": "pre",
+          "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "ch": {
-      "matches": [],
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "matches": [
+        {
+          "away": "Derby County",
+          "away_score": "0",
+          "home": "Southampton",
+          "home_score": "0",
+          "id": "401880153",
+          "start": "2026-11-21T12:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Cardiff City",
+          "away_score": "0",
+          "home": "Norwich City",
+          "home_score": "0",
+          "id": "401880155",
+          "start": "2026-11-21T12:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Queens Park Rangers",
+          "away_score": "0",
+          "home": "Millwall",
+          "home_score": "0",
+          "id": "401880156",
+          "start": "2026-11-21T12:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Charlton Athletic",
+          "away_score": "0",
+          "home": "Wolverhampton Wanderers",
+          "home_score": "0",
+          "id": "401880149",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Preston North End",
+          "away_score": "0",
+          "home": "West Ham United",
+          "home_score": "0",
+          "id": "401880150",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "West Bromwich Albion",
+          "away_score": "0",
+          "home": "Swansea City",
+          "home_score": "0",
+          "id": "401880151",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Birmingham City",
+          "away_score": "0",
+          "home": "Stoke City",
+          "home_score": "0",
+          "id": "401880152",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Watford",
+          "away_score": "0",
+          "home": "Sheffield United",
+          "home_score": "0",
+          "id": "401880154",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Bristol City",
+          "away_score": "0",
+          "home": "Middlesbrough",
+          "home_score": "0",
+          "id": "401880157",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Wrexham",
+          "away_score": "0",
+          "home": "Lincoln City",
+          "home_score": "0",
+          "id": "401880158",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Portsmouth",
+          "away_score": "0",
+          "home": "Bolton Wanderers",
+          "home_score": "0",
+          "id": "401880160",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "ll": {
       "matches": [
@@ -318,171 +520,91 @@
           "start": "2026-11-20T20:00Z",
           "state": "pre",
           "status": "Scheduled"
+        },
+        {
+          "away": "Deportivo",
+          "away_score": "0",
+          "home": "Alavés",
+          "home_score": "0",
+          "id": "401882806",
+          "start": "2026-11-21T13:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Valencia",
+          "away_score": "0",
+          "home": "Rayo Vallecano",
+          "home_score": "0",
+          "id": "401882799",
+          "start": "2026-11-21T15:15Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Real Betis",
+          "away_score": "0",
+          "home": "Sevilla",
+          "home_score": "0",
+          "id": "401882797",
+          "start": "2026-11-21T17:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Celta Vigo",
+          "away_score": "0",
+          "home": "Real Madrid",
+          "home_score": "0",
+          "id": "401882798",
+          "start": "2026-11-21T20:00Z",
+          "state": "pre",
+          "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "nba": {
       "matches": [
         {
-          "away": "Memphis Grizzlies",
-          "away_score": "124",
-          "home": "Cleveland Cavaliers",
-          "home_score": "121",
-          "id": "401910007",
-          "start": "2026-11-19T00:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Houston Rockets",
-          "away_score": "119",
-          "home": "Indiana Pacers",
-          "home_score": "104",
-          "id": "401910008",
-          "start": "2026-11-19T00:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Milwaukee Bucks",
-          "away_score": "130",
-          "home": "Miami Heat",
-          "home_score": "137",
-          "id": "401910009",
-          "start": "2026-11-19T00:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Philadelphia 76ers",
-          "away_score": "121",
-          "home": "Orlando Magic",
-          "home_score": "116",
-          "id": "401910010",
-          "start": "2026-11-19T00:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Chicago Bulls",
-          "away_score": "137",
-          "home": "Brooklyn Nets",
-          "home_score": "107",
-          "id": "401910011",
-          "start": "2026-11-19T00:30Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Washington Wizards",
-          "away_score": "103",
-          "home": "Toronto Raptors",
-          "home_score": "99",
-          "id": "401910012",
-          "start": "2026-11-19T00:30Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Detroit Pistons",
-          "away_score": "122",
-          "home": "New Orleans Pelicans",
-          "home_score": "109",
-          "id": "401910013",
-          "start": "2026-11-19T01:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Atlanta Hawks",
-          "away_score": "117",
-          "home": "Oklahoma City Thunder",
-          "home_score": "112",
-          "id": "401910014",
-          "start": "2026-11-19T01:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
           "away": "Golden State Warriors",
-          "away_score": "94",
-          "home": "Dallas Mavericks",
-          "home_score": "116",
-          "id": "401910016",
-          "start": "2026-11-19T01:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Boston Celtics",
-          "away_score": "101",
-          "home": "Denver Nuggets",
-          "home_score": "105",
-          "id": "401910015",
-          "start": "2026-11-19T02:30Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Utah Jazz",
-          "away_score": "109",
-          "home": "Los Angeles Lakers",
-          "home_score": "97",
-          "id": "401910017",
-          "start": "2026-11-19T03:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Phoenix Suns",
-          "away_score": "128",
-          "home": "Sacramento Kings",
-          "home_score": "107",
-          "id": "401910018",
-          "start": "2026-11-19T03:00Z",
-          "state": "post",
-          "status": "Final"
-        },
-        {
-          "away": "Golden State Warriors",
-          "away_score": "0",
+          "away_score": "85",
           "home": "Memphis Grizzlies",
-          "home_score": "0",
+          "home_score": "115",
           "id": "401910019",
           "start": "2026-11-20T01:00Z",
-          "state": "pre",
-          "status": "11/19 - 8:00 PM EST"
+          "state": "in",
+          "status": "4:38 - 4th"
         },
         {
           "away": "Portland Trail Blazers",
-          "away_score": "0",
+          "away_score": "103",
           "home": "Milwaukee Bucks",
-          "home_score": "0",
+          "home_score": "100",
           "id": "401910020",
           "start": "2026-11-20T01:00Z",
-          "state": "pre",
-          "status": "11/19 - 8:00 PM EST"
+          "state": "in",
+          "status": "7:21 - 4th"
         },
         {
           "away": "New York Knicks",
-          "away_score": "0",
+          "away_score": "102",
           "home": "Minnesota Timberwolves",
-          "home_score": "0",
+          "home_score": "93",
           "id": "401910021",
           "start": "2026-11-20T01:00Z",
-          "state": "pre",
-          "status": "11/19 - 8:00 PM EST"
+          "state": "in",
+          "status": "3:18 - 4th"
         },
         {
           "away": "LA Clippers",
-          "away_score": "0",
+          "away_score": "103",
           "home": "San Antonio Spurs",
-          "home_score": "0",
+          "home_score": "109",
           "id": "401910022",
           "start": "2026-11-20T01:00Z",
-          "state": "pre",
-          "status": "11/19 - 8:00 PM EST"
+          "state": "in",
+          "status": "5:48 - 4th"
         },
         {
           "away": "Charlotte Hornets",
@@ -573,17 +695,189 @@
           "start": "2026-11-21T03:00Z",
           "state": "pre",
           "status": "11/20 - 10:00 PM EST"
+        },
+        {
+          "away": "Milwaukee Bucks",
+          "away_score": "0",
+          "home": "Philadelphia 76ers",
+          "home_score": "0",
+          "id": "401910023",
+          "start": "2026-11-21T18:00Z",
+          "state": "pre",
+          "status": "11/21 - 1:00 PM EST"
+        },
+        {
+          "away": "Portland Trail Blazers",
+          "away_score": "0",
+          "home": "New York Knicks",
+          "home_score": "0",
+          "id": "401910024",
+          "start": "2026-11-22T00:30Z",
+          "state": "pre",
+          "status": "11/21 - 7:30 PM EST"
+        },
+        {
+          "away": "LA Clippers",
+          "away_score": "0",
+          "home": "Dallas Mavericks",
+          "home_score": "0",
+          "id": "401910025",
+          "start": "2026-11-22T01:00Z",
+          "state": "pre",
+          "status": "11/21 - 8:00 PM EST"
+        },
+        {
+          "away": "Memphis Grizzlies",
+          "away_score": "0",
+          "home": "Minnesota Timberwolves",
+          "home_score": "0",
+          "id": "401910026",
+          "start": "2026-11-22T01:00Z",
+          "state": "pre",
+          "status": "11/21 - 8:00 PM EST"
+        },
+        {
+          "away": "New Orleans Pelicans",
+          "away_score": "0",
+          "home": "San Antonio Spurs",
+          "home_score": "0",
+          "id": "401910027",
+          "start": "2026-11-22T01:00Z",
+          "state": "pre",
+          "status": "11/21 - 8:00 PM EST"
+        },
+        {
+          "away": "Boston Celtics",
+          "away_score": "0",
+          "home": "Sacramento Kings",
+          "home_score": "0",
+          "id": "401910028",
+          "start": "2026-11-22T03:00Z",
+          "state": "pre",
+          "status": "11/21 - 10:00 PM EST"
         }
       ],
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "pl": {
-      "matches": [],
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "matches": [
+        {
+          "away": "Fulham",
+          "away_score": "0",
+          "home": "Manchester City",
+          "home_score": "0",
+          "id": "401879233",
+          "start": "2026-11-21T12:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Ipswich Town",
+          "away_score": "0",
+          "home": "Tottenham Hotspur",
+          "home_score": "0",
+          "id": "401878754",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Sunderland",
+          "away_score": "0",
+          "home": "Aston Villa",
+          "home_score": "0",
+          "id": "401878756",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Crystal Palace",
+          "away_score": "0",
+          "home": "Coventry City",
+          "home_score": "0",
+          "id": "401879235",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Leeds United",
+          "away_score": "0",
+          "home": "Chelsea",
+          "home_score": "0",
+          "id": "401879236",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Nottingham Forest",
+          "away_score": "0",
+          "home": "AFC Bournemouth",
+          "home_score": "0",
+          "id": "401879238",
+          "start": "2026-11-21T15:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Arsenal",
+          "away_score": "0",
+          "home": "Newcastle United",
+          "home_score": "0",
+          "id": "401879232",
+          "start": "2026-11-21T17:30Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "sa": {
-      "matches": [],
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "matches": [
+        {
+          "away": "Lecce",
+          "away_score": "0",
+          "home": "Lazio",
+          "home_score": "0",
+          "id": "401874981",
+          "start": "2026-11-21T14:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Cagliari",
+          "away_score": "0",
+          "home": "Como",
+          "home_score": "0",
+          "id": "401875056",
+          "start": "2026-11-21T14:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "AS Roma",
+          "away_score": "0",
+          "home": "Parma",
+          "home_score": "0",
+          "id": "401874967",
+          "start": "2026-11-21T17:00Z",
+          "state": "pre",
+          "status": "Scheduled"
+        },
+        {
+          "away": "Torino",
+          "away_score": "0",
+          "home": "Napoli",
+          "home_score": "0",
+          "id": "401875067",
+          "start": "2026-11-21T19:45Z",
+          "state": "pre",
+          "status": "Scheduled"
+        }
+      ],
+      "updated_at": "2026-11-20T03:13:51+00:00"
     }
   },
   "schema": 1,
@@ -805,7 +1099,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "bl": {
       "groups": [
@@ -1050,7 +1344,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "ch": {
       "groups": [
@@ -1373,7 +1667,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "ll": {
       "groups": [
@@ -1644,7 +1938,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "nba": {
       "groups": [
@@ -1960,7 +2254,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "pl": {
       "groups": [
@@ -2231,7 +2525,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     },
     "sa": {
       "groups": [
@@ -2502,8 +2796,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-11-19T20:35:48+00:00"
+      "updated_at": "2026-11-20T03:13:51+00:00"
     }
   },
-  "updated_at": "2026-11-19T20:35:48+00:00"
+  "updated_at": "2026-11-20T03:13:51+00:00"
 }
