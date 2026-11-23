@@ -72,7 +72,7 @@
       ],
       "round": "21",
       "season": "2026",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "drivers": {
       "items": [
@@ -279,10 +279,10 @@
       ],
       "round": "21",
       "season": "2026",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     }
   },
-  "last_attempt": "2026-11-22T23:36:13+00:00",
+  "last_attempt": "2026-11-23T07:36:29+00:00",
   "leagues": {
     "all": {
       "matches": [
@@ -337,7 +337,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "bl": {
       "matches": [
@@ -362,7 +362,7 @@
           "status": "FT"
         }
       ],
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "ch": {
       "matches": [
@@ -457,7 +457,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "ll": {
       "matches": [
@@ -512,7 +512,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "nba": {
       "matches": [
@@ -528,63 +528,63 @@
         },
         {
           "away": "Oklahoma City Thunder",
-          "away_score": "24",
+          "away_score": "113",
           "home": "Miami Heat",
-          "home_score": "36",
+          "home_score": "123",
           "id": "401910030",
           "start": "2026-11-22T23:00Z",
-          "state": "in",
-          "status": "End of 1st"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Orlando Magic",
-          "away_score": "0",
+          "away_score": "96",
           "home": "Washington Wizards",
-          "home_score": "0",
+          "home_score": "116",
           "id": "401910031",
           "start": "2026-11-23T00:00Z",
-          "state": "pre",
-          "status": "11/22 - 7:00 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Denver Nuggets",
-          "away_score": "0",
+          "away_score": "151",
           "home": "Chicago Bulls",
-          "home_score": "0",
+          "home_score": "145",
           "id": "401910032",
           "start": "2026-11-23T00:00Z",
-          "state": "pre",
-          "status": "11/22 - 7:00 PM EST"
+          "state": "post",
+          "status": "Final/OT"
         },
         {
           "away": "Dallas Mavericks",
-          "away_score": "0",
+          "away_score": "116",
           "home": "Utah Jazz",
-          "home_score": "0",
+          "home_score": "114",
           "id": "401910033",
           "start": "2026-11-23T00:00Z",
-          "state": "pre",
-          "status": "11/22 - 7:00 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Indiana Pacers",
-          "away_score": "0",
+          "away_score": "106",
           "home": "New York Knicks",
-          "home_score": "0",
+          "home_score": "113",
           "id": "401910034",
           "start": "2026-11-23T01:00Z",
-          "state": "pre",
-          "status": "11/22 - 8:00 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Boston Celtics",
-          "away_score": "0",
+          "away_score": "87",
           "home": "Golden State Warriors",
-          "home_score": "0",
+          "home_score": "88",
           "id": "401910035",
           "start": "2026-11-23T01:30Z",
-          "state": "pre",
-          "status": "11/22 - 8:30 PM EST"
+          "state": "post",
+          "status": "Final"
         },
         {
           "away": "Memphis Grizzlies",
@@ -717,7 +717,7 @@
           "status": "11/24 - 10:00 PM EST"
         }
       ],
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "pl": {
       "matches": [
@@ -752,7 +752,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "sa": {
       "matches": [
@@ -817,7 +817,7 @@
           "status": "Scheduled"
         }
       ],
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     }
   },
   "schema": 1,
@@ -1039,7 +1039,7 @@
         }
       ],
       "season": "2026 Swedish Allsvenskan",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "bl": {
       "groups": [
@@ -1284,7 +1284,7 @@
         }
       ],
       "season": "2026-27 German Bundesliga",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "ch": {
       "groups": [
@@ -1607,7 +1607,7 @@
         }
       ],
       "season": "2026-27 English League Championship",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "ll": {
       "groups": [
@@ -1878,7 +1878,7 @@
         }
       ],
       "season": "2026-27 Spanish LALIGA",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "nba": {
       "groups": [
@@ -1895,34 +1895,34 @@
               "w": 14
             },
             {
-              "diff": 156,
-              "gb": 2.5,
-              "id": "2",
-              "l": 5,
-              "name": "Boston Celtics",
-              "pct": 0.6875,
-              "rank": 2,
-              "w": 11
-            },
-            {
               "diff": 53,
               "gb": 3,
               "id": "1",
               "l": 6,
               "name": "Atlanta Hawks",
               "pct": 0.6471,
+              "rank": 2,
+              "w": 11
+            },
+            {
+              "diff": 155,
+              "gb": 3,
+              "id": "2",
+              "l": 6,
+              "name": "Boston Celtics",
+              "pct": 0.6471,
               "rank": 3,
               "w": 11
             },
             {
-              "diff": 90,
-              "gb": 3.5,
+              "diff": 97,
+              "gb": 3,
               "id": "18",
               "l": 6,
               "name": "New York Knicks",
-              "pct": 0.625,
+              "pct": 0.6471,
               "rank": 4,
-              "w": 10
+              "w": 11
             },
             {
               "diff": 77,
@@ -1935,14 +1935,14 @@
               "w": 10
             },
             {
-              "diff": 10,
-              "gb": 4,
+              "diff": 20,
+              "gb": 3.5,
               "id": "14",
               "l": 6,
               "name": "Miami Heat",
-              "pct": 0.6,
+              "pct": 0.625,
               "rank": 6,
-              "w": 9
+              "w": 10
             },
             {
               "diff": 40,
@@ -1955,13 +1955,23 @@
               "w": 9
             },
             {
-              "diff": -46,
-              "gb": 6,
+              "diff": -66,
+              "gb": 6.5,
               "id": "19",
-              "l": 8,
+              "l": 9,
               "name": "Orlando Magic",
-              "pct": 0.4667,
+              "pct": 0.4375,
               "rank": 8,
+              "w": 7
+            },
+            {
+              "diff": -91,
+              "gb": 7.5,
+              "id": "27",
+              "l": 11,
+              "name": "Washington Wizards",
+              "pct": 0.3889,
+              "rank": 9,
               "w": 7
             },
             {
@@ -1971,26 +1981,16 @@
               "l": 10,
               "name": "Toronto Raptors",
               "pct": 0.375,
-              "rank": 9,
-              "w": 6
-            },
-            {
-              "diff": -111,
-              "gb": 8,
-              "id": "27",
-              "l": 11,
-              "name": "Washington Wizards",
-              "pct": 0.3529,
               "rank": 10,
               "w": 6
             },
             {
-              "diff": -58,
-              "gb": 8.5,
+              "diff": -65,
+              "gb": 9,
               "id": "11",
-              "l": 11,
+              "l": 12,
               "name": "Indiana Pacers",
-              "pct": 0.3125,
+              "pct": 0.2941,
               "rank": 11,
               "w": 5
             },
@@ -2005,12 +2005,12 @@
               "w": 4
             },
             {
-              "diff": -121,
-              "gb": 9,
+              "diff": -127,
+              "gb": 9.5,
               "id": "4",
-              "l": 11,
+              "l": 12,
               "name": "Chicago Bulls",
-              "pct": 0.2667,
+              "pct": 0.25,
               "rank": 13,
               "w": 4
             },
@@ -2090,14 +2090,14 @@
               "w": 12
             },
             {
-              "diff": 21,
-              "gb": 3.5,
+              "diff": 27,
+              "gb": 3,
               "id": "7",
               "l": 5,
               "name": "Denver Nuggets",
-              "pct": 0.6429,
+              "pct": 0.6667,
               "rank": 6,
-              "w": 9
+              "w": 10
             },
             {
               "diff": 93,
@@ -2110,24 +2110,24 @@
               "w": 10
             },
             {
-              "diff": 72,
-              "gb": 3.5,
-              "id": "25",
-              "l": 6,
-              "name": "Oklahoma City Thunder",
-              "pct": 0.625,
+              "diff": -1,
+              "gb": 4,
+              "id": "6",
+              "l": 7,
+              "name": "Dallas Mavericks",
+              "pct": 0.5882,
               "rank": 8,
               "w": 10
             },
             {
-              "diff": -3,
-              "gb": 4.5,
-              "id": "6",
+              "diff": 62,
+              "gb": 4,
+              "id": "25",
               "l": 7,
-              "name": "Dallas Mavericks",
-              "pct": 0.5625,
+              "name": "Oklahoma City Thunder",
+              "pct": 0.5882,
               "rank": 9,
-              "w": 9
+              "w": 10
             },
             {
               "diff": -13,
@@ -2140,14 +2140,14 @@
               "w": 8
             },
             {
-              "diff": -15,
-              "gb": 5.5,
+              "diff": -14,
+              "gb": 5,
               "id": "9",
               "l": 8,
               "name": "Golden State Warriors",
-              "pct": 0.5,
+              "pct": 0.5294,
               "rank": 11,
-              "w": 8
+              "w": 9
             },
             {
               "diff": -148,
@@ -2170,12 +2170,12 @@
               "w": 4
             },
             {
-              "diff": -126,
-              "gb": 11,
+              "diff": -128,
+              "gb": 11.5,
               "id": "26",
-              "l": 14,
+              "l": 15,
               "name": "Utah Jazz",
-              "pct": 0.1765,
+              "pct": 0.1667,
               "rank": 14,
               "w": 3
             },
@@ -2194,7 +2194,7 @@
         }
       ],
       "season": "2026-27",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "pl": {
       "groups": [
@@ -2465,7 +2465,7 @@
         }
       ],
       "season": "2026-27 English Premier League",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     },
     "sa": {
       "groups": [
@@ -2736,8 +2736,8 @@
         }
       ],
       "season": "2026-27 Italian Serie A",
-      "updated_at": "2026-11-22T23:36:13+00:00"
+      "updated_at": "2026-11-23T07:36:29+00:00"
     }
   },
-  "updated_at": "2026-11-22T23:36:13+00:00"
+  "updated_at": "2026-11-23T07:36:29+00:00"
 }
